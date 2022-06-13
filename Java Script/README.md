@@ -1,2 +1,2 @@
 # YAZILIM
-{} () https://yusuf-1689.github.io/YAZILIM/
+{}()https://yusuf-1689.github.io/YAZILIM/
