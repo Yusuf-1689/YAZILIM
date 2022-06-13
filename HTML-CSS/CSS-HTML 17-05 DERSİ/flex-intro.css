@@ -1,0 +1,134 @@
+
+*{
+    font-size: 1.2rem;
+}
+.container {
+    background-color: yellowgreen;
+    display: flex;
+    /*! Elemanların diziliş yönü : column, row, row-reverse, column-reverse*/
+    flex-direction: row;
+    /* div leri yukarıdan aşağı dizer */
+    /* flex-direction: column; */
+  
+    /*? sıkıştırma veya alt satıra geçebilme:flex-wrap: wrap, nowrap, wrap-reverse*/
+    flex-wrap: wrap;
+  
+    /*! Yatay Hizalama: Justify-center
+    /** flex-start, flex-end,center, space-around,space-evenly, space-between*/
+    justify-content: center;
+    /* sola yaslar */
+    /* justify-content: flex-start */
+    /* ortalar */
+    /* justify-content: center; */
+    /* justify-content: baseline; */
+    align-items: center;
+    /* ilk yazdığımız satırlar arası ikinci değer sütünlar arası boşluk miktarı  değer */
+    gap: 20px 20px;
+  }
+  
+  .container div {
+    width: 5rem;
+    height: 5rem;
+    background-color: violet;
+    margin: 1rem;
+  }
+  .container1{
+      height: 20rem;
+      background-color: lightcoral;
+      display: flex;
+      justify-content: center;
+      /* tersten saydırır */
+      /* flex-direction: row-reverse; */
+      align-items: stretch;
+      gap: 10px 20px;
+     
+  }
+
+  /** bir child element stretch ile container'ın sınırlarına dayandığında child'in içerisindeki içeriği (Örn yazı) yine dikey olarak ortaya hizalamak için nested flex yapısı kullanılabilir*/
+
+  .container1 div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 5rem;
+      margin: 1rem 0;
+      background-color: lightskyblue;
+      text-align: center;
+  }
+
+  ul{
+      height: 20rem;
+      background-color: rgb(255, 225, 0);
+      list-style-type:none;
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      overflow: auto;
+      /* align-items: flex-end; */
+      /*!Çok satırlı verilerin dikeyde hizalama için kullanılır.*/
+      /* align-content: flex-start; */
+      /* text-align: center; */
+  }
+
+  ul li{
+      background-color: mediumorchid;
+      width: 4rem;
+      height: 4rem;
+  }
+
+  .container3{
+      background-color: mediumspringgreen;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      
+  }
+
+  .container3 div{
+      background-color: mediumvioletred;
+      width: 5rem;
+      margin: 1rem;
+      flex-grow: 1; 
+      /*? tüm div'lerin büyüme oranına 1 verdik.*/
+  }
+
+  div.grow2{
+      /*? grow2 classindakiler diğerlerine göre 2 kat daha fazla büyüyebilir.*/
+      flex-grow: 2;
+  }
+  div.grow3{
+      /*? grow3 classindakiler diğerlerine göre 3 kat daha fazla büyüyebilir.*/
+      flex-grow: 3;
+  }
+  div.nogrow{
+       /*? nogrow classindakiler diğerlerine göre hiç büyümezler*/
+      flex-grow: 0;
+  }
+
+  .container4{
+      background-color: indianred;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+  }
+
+  .container4 div {
+      background-color: yellowgreen;
+      margin: 1rem;
+  }
+
+  div.div1{
+      width: 10%;
+  }
+  div.div2{
+    width: 20%;
+  }
+  div.div3{
+    width: 30%;
+  }
+  div.div4{
+    width: 40%;
+  }
