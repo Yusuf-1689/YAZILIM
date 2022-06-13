@@ -1,0 +1,24 @@
+.container {
+    background-color: yellowgreen;
+    display: flex;
+    /* flex-direction: column;
+    flex-direction: column-reverse; */
+    flex-direction: row;
+    /* flex-direction: row-reverse; */
+    /* flex-wrap: wrap; */
+    /* /* sıkıştırma veya alt satıra geçebilme: flex-wrap:  özelliği */
+    flex-wrap: nowrap;
+    /* justify-content: center; */
+    */
+    /* justify-content: center; ortalar */
+    /* justify-content: space-between; */
+    /* justify-content: space-between; sağa ve sola yasla daha sonra ortala */
+    justify-content: space-evenly;
+}
+
+.container div {
+    width: 5rem;
+    height: 5rem;
+    background-color: violet;
+    margin: 1rem;
+}
