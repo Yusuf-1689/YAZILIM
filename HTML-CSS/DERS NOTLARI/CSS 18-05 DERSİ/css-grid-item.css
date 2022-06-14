@@ -1,0 +1,72 @@
+
+* {
+    margin: 0.4;
+}
+
+.container{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 20vh) 10vh 5vh 5vh;
+    row-gap: 5px;
+    column-gap: 5px;
+    /* justify-content: center; */
+    /* justify-items: center; */
+    /* itemleri yatayda hizalamak için justify-items: center; */
+    /* align-items:  center; */
+    /* itemleri dikeyde hizalamak için align-items:  center; */
+
+}
+
+.content img, iframe{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content{
+    background-color: lightskyblue;
+    border: 1px solid blue;
+}
+
+.content1{
+    grid-column-start: 1;
+    /* 1 den 3 e kadar birleştir */
+    grid-column-end: 3;
+    background-color: burlywood;
+}
+
+.content4{
+    grid-row-start: 2;
+    /* 2 den başlayıp 4 e kadar birleştir */
+    grid-row-end: 4;
+    background-color: chartreuse;
+}
+
+.content6{
+    /* grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;*/
+    background-color: coral; 
+    /* grid-area: 4 /1 / span 3 / span 4 ; */
+    grid-area: 2/3 / span 2 / span 2 ;
+}
+/* .content8{
+    background-color: yellow;
+    grid-area: 4 /1 / span 3 / span 4 ;
+} */
+
+.content9{
+    background-color: crimson;
+    /* grid-row: 4/6; */
+    /* grid-column: 2/4; */
+
+    grid-area: 4/2/6/4;
+    
+}
+
+.content10{
+    grid-area: 4/4/6/4;
+    background-color: cyan;
+}
