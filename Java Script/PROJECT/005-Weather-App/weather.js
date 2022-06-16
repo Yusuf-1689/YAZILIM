@@ -26,8 +26,26 @@ const getWeatherDataFromApi = async () => {
         //axios.get(url) == axios(url)
         const response = await axios(url);
         const { name, main, sys, weather } = response.data;
-        console.log(response.data);
+        // console.log(response.data);
         let iconUrl = `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
+        // forEach => + nodeList
+        // map, filter, reduce => array
+
+        const cityListItems = list.querySelectorAll(".city");
+        const cityListItemsArray = Array.from(cityListItems);
+        if (cityListItemsArray.length > 0) {
+            const filteredArray = cityListItemsArray.filter(cityCard => cityCard.querySelector("span").innerText == name);
+            console.log(filteredArray.length);
+            if (filteredArray.length > 0) {
+                msg.innerText = `You already know the weather for ${name},
+                Please search for another city 😉`;
+                setTimeout(() => {
+                    msg.innerText = "";
+                }, 5000);
+                return;
+            }
+        }
+        console.log(cityListItems);
 
         const createdLi = document.createElement("li");
         createdLi.classList.add("city");
@@ -47,7 +65,10 @@ const getWeatherDataFromApi = async () => {
 
     }
     catch (error) {
-
+        msg.innerText = error;
+        setTimeout(() => {
+            msg.innerText = "";
+        }, 5000);
     }
     form.reset();
 }
