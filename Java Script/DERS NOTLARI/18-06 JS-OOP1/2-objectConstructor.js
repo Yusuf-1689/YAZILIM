@@ -68,21 +68,25 @@ function Book(title, author, year) {
   //!instance'larin proto alanini gormk icin .__proto__
   console.log(book1.__proto__);
 
-  // ------------- INHERITIANCE (Kalitim - ES5) ----------
+  //? INHERITANCE (Kalitim - ES5)
+//?-------------------------------------------------------------------
 
-  function Magazine(title, author,year, month) {
-    //**-- parent'in object constructorinin cagrilmasi
-    Book.call(this,title,author,year)
+function Magazine(title, author, year, month) {
+    //* parent'in object constructorinin cagrilmasi
+    Book.call(this, title, author, year);
     this.month = month;
   }
-
-  const mag1 = new Magazine('Scientific Research', 'Einstein', 1905, 'September');
-
-  console.log(mag1);
-
-  //**  Prototipler doğrudan miras olarak gelmez
+  
+  //! Prototipler dogrudan miras olarak gelmez.
   console.log(Magazine.prototype);
-
+  
+  //! Prototipleri miras almak icin Object.create() metodu kullanabilir.
+  
   Magazine.prototype = Object.create(Book.prototype);
   console.log(Magazine.prototype);
+  
+  //* Magazine nesnesinden bir instance olsuturulmasi
+  const mag1 = new Magazine('Scientific Research', 'Einstein', 1905, 'September');
+  
+  console.log(mag1);
   console.log(mag1.getAge());
