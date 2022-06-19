@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    
+ <h3>Welcome to Clarusway</h3>
+  <br><br>
+
+<form action="result.html" method="get">
+
+
+    <div>
+
+        <label for="name">İsim:</label>
+        <input id="name" type="text" name="isim" placeholder="adınızı giriniz...">
+        <br><br>
+        <label for="lname">Soyisim:</label>
+        <input id="lname" type="text" name="soyisim" placeholder="soyisim lütfen..." >
+
+    </div>
+    <br>
+    
+    <div>
+
+        <label for="sifre">Parola:</label>
+        
+        <input type="pasword" name="parola" id="sifre" placeholder="sifre lütfen...">
+
+    </div>
+    <br>
+
+    <div>
+        <label for="">Cinsiyet</label>
+        <br><br>
+        <label for="gender">Erkek</label>
+        <input type="radio" name="Cinsiyet" id="gender" value="erkek"  >
+        <label for=""></label>
+        <label for="gender">kadın</label>
+        <input type="radio" name="Cinsiyet" id="gender2" value="kadın" checked>
+
+    </div>
+
+    <p>Favori hayvan dostlarınızı seçin</p>
+    <input type="checkbox" name="animal_1" id="Panda" value="Panda" required> 
+    <label for="Panda">Panda</label>
+
+    <input type="checkbox" name="animal_2" id="Balık" value="Balık">
+    <label for="Balık">Balık</label>
+   
+    <input type="checkbox" name="animal_3" id="Kedi" value="Kedi">
+    <label for="Kedi">Kedi</label>
+
+    </div>
+    <br><br>
+
+    <div>
+
+        <label for="age">Yaş</label>
+        <input type="number" name="girilen yaş" id="age" step="5" placeholder="yaş giriniz...">  
+
+    </div>
+    <br>
+
+    <div>
+        <label for="">Search:</label>
+        <input type="search" name="arandı" id="Search" placeholder="arama...." >
+
+    </div>
+    <br>
+
+    <div>
+
+        <label for="">Renk Seçin:</label>
+        <input type="color" name="Seçilen Renk" id="color">
+
+    </div>
+    <br>
+
+        <div>
+            <label for="">Tarih:</label>
+            <input type="date" name="seçilen Tarih" id="date" min="2021-01-01">
+
+        </div>
+        <br>
+        
+        <div>
+            <label for="">E_mail Giriniz:</label>
+            <input type="email" name="" id="email">
+            
+        </div>
+        <br>
+        
+        <div>
+        <label for="file">Dosya seç</label>
+        <input type="file" name="Seçilen dosya" id="file">
+
+    </div>
+    <br>
+        
+        <div>
+            <label for="">Telefon Numarası</label>
+            <input type="tel" name="Tel.No" id="No">
+            
+        </div>
+        
+        <hr>
+        
+        <div>
+
+            <label for="">  Hangi tatlıyı seversiniz:</label>
+            <br><br>
+            <select name="seçilen_tatlılar" id="seker" size="3" multiple>
+
+                <option value="sütlaç">sütlaç</option>
+                <option value="keşkül">eşkül</option>
+                <option value="supangle">supangle</option>
+                <option value="aşure">aşure</option>
+                <option value="güllaç">güllaç</option>
+
+            </select>
+
+        </div>
+        <br>
+
+        <div>
+            <label for="seker2">  Hangi tatlıyı seversiniz:</label>
+            <br><br>
+
+            <select name="tatlılar" id="seker2" size="10" multiple>
+               <optgroup label="sütlü tatlılar">
+
+                <option value="sütlaç">sütlaç</option>
+                <option value="keşkül">eşkül</option>
+                <option value="supangle">supangle</option>
+
+               </optgroup>
+
+               <optgroup label="Şerbetli tatlılar">
+                <option value="baklava">baklava</option>
+                <option value="künefe">künefe</option>
+                <option value="katmer">katmer</option>
+
+               </optgroup>
+
+            </select>
+
+        </div>
+        <br>
+
+        <div>
+
+            <label for="yorum">Yorum</label> <br>
+            <br>
+
+            <textarea name="girilen_yorum" id="yorum"  style="resize: none; width: 75%;" placeholder="Lütfen yorum yaznız..."></textarea>
+
+        </div>
+        <br>
+
+        <div>
+
+            <label for="input-browser">Browser:</label>
+            <input type="text" name="Kullanılan browser" id="input-browser" list="browser">
+            
+            <datalist id="browser">
+
+                <option value="chrome"></option>
+                <option value="Firefox"></option>
+                <option value="safari"></option>
+                <option value="Brave"></option>
+
+            </datalist>
+
+        </div>
+
+        <div>
+
+            <fieldset>
+
+                <legend>Kişisel bilgiler</legend>
+                <br>
+                <label for="fname">Ad</label>
+                <br>
+                <input type="text" name="girilen_" id="fname" placeholder="adınız....">
+            
+                <br>
+                <label for="sname">Soyad</label>
+                <br>
+                <input type="text" name="girilen_soyad" id="sname" placeholder="soyadınız....">
+
+
+            </fieldset>
+
+
+        </div>
+
+
+
+
+
+    <br><br><br><br>
+
+    <input type="submit" value="Send">
+    <input type="reset" value="Sıfırla"> 
+
+
+
+
+
+    </form>
+
+
+    
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>
