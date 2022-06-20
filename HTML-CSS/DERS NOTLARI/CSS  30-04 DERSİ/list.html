@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LİST</title>
+
+    <style>
+.item{
+    /* list-style-type: none; */
+    /* listlerin sol tarafındaki noktaları siler */
+    /* list-style-position: inside; */
+    /* noktalar satır içeri girmiş oluyor */
+    /* list-style-image:url("./images/locaiton.png") ; */
+    /* noktalar yerine location emojisi verir */
+    /* list-style-type: "\263B"; */
+    /* farklı emoji verir */
+    list-style: square inside url("./images/rocket.png");
+    /* emojiler rocket olur */
+    /* ctrl+p ile yukarıda sekme açılır orada emoji ye gidilip seçilir. */
+}
+
+li:before{
+    content: "\263B";
+    color: tomato;
+    padding-right: 10px;
+    font-size: 50px;
+    /* li ile iteme aynı anda emoji verince çift emoji veriyor */
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <ul>
+        <li class="item item1">list1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, facilis voluptatibus. Provident repudiandae ut ipsum sequi, error pariatur numquam aut!</li>
+        <li class="item item2">list2</li>
+        <li class="item item3">list3</li>
+        <li class="item item4">list4</li>
+    </ul>
+
+
+</body>
+
+</html>

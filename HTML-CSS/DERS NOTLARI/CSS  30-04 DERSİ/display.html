@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DİSPLAY</title>
+
+    <style>
+
+        a{
+            display: block;
+            padding: 10px;
+        }
+
+        span{
+            background-color: orange;
+            /* padding: 10px; */
+            /* span a padding vermiyoruz */
+            display: block;
+            margin: 10px;
+            /* display: none; */
+            /* none den dolayı göstermiyor span yazısını */
+            /* visibility: hidden; */
+            /* orda olsun ama kimse görmesin ben bileyim şeklinde yeri boşluk olarak görünüyor. */
+        }
+
+        .box{
+
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin-top: 2rem;
+            padding: 2rem;
+            text-align:center ;
+            display: inline-block;
+            /* hem iline olur hemde block olur . */
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- ------inline elements----- -->
+
+ <a href="">Clarusway</a>   
+
+<button>CLARUSWAY</button> <span>merhaba ben span</span>
+
+
+<!-- ---------block elements----- -->
+
+<div class="box">box1</div>
+<div class="box">box2</div>
+<div class="box">box3</div>
+
+
+
+</body>
+
+</html>
