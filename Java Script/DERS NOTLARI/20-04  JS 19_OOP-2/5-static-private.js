@@ -2,7 +2,7 @@
 //*        OOP - Static and Private  (ES6)
 //* ======================================================
 
-//? Static degiskenler ve memtotlar butun bir class'i ilgilendiren
+//? Static degiskenler ve metotlar butun bir class'i ilgilendiren
 //? verileri tutmak veya degistirmek icin elverislidir.
 
 //? Eger nesnelerden bagimsiz sadece ilgili class' a ait bir degiskene
@@ -22,3 +22,42 @@
 
 //! Private metotlara ise class disirasindan da eriselemez.
 //! Private metotlara ancak class icerisindeki diger metotlar ile erisilebiler.
+
+class Book {
+    // static property
+    static counter = 0;
+
+    constructor(title, author, year) {
+      this.title = title;
+      this.author = author;
+      this.year = year;
+      Book.counter++;   // Classname.propertyName 
+    }
+    getSummary() {
+      return `${this.title} was written by ${this.author} in ${this.year} `;
+    }
+  }
+  
+  //? instance
+  const book1 = new Book('Kasagi', 'Omer Seyfettin', 1920);
+  const book2 = new Book('Sinekli Bakkal', 'H.Edip Adıvar', 1910);
+  const book3 = new Book('Sinekli Bakkal', 'H.Edip Adıvar', 1910);
+  
+ console.log(Book.counter);  // 3 
+ console.log(book1.counter);  // Undifined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -40,12 +40,20 @@ class Magazine extends Book {
     return `${this.title} was written by ${this.author} in ${this.year} in ${this.month}`;
   }
 
+  setPrice(price, taxRate){
+    this.price =( price * taxRate).toFixed(2);
+  }
+
+  setPriceParent(price){
+    super.setPrice(price);
+  }
 }
 
 const mag1 = new Magazine('Kasagi', 'Omer Seyfettin', 1940, 'Nov');
 console.log(mag1);
 console.log(mag1.getSummary());
-mag1.setPrice(100);
+// mag1.setPrice(100, 1.2);
+mag1.setPriceParent(100);
 console.log(mag1);
 
 
