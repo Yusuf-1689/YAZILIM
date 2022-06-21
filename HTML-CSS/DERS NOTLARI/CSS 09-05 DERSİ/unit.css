@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+}
+
+html {
+    font-size: 20px;
+    /* aksi belirtilmediği sürece default font-size genelde 1em=16px e eşittir. Buradan değer değiştirilebilir. */
+}
+
+body {
+    /* height: 400px; */
+    /* verilebilir */
+    /* height: 100%; */
+    /* verilmez */
+    height: 100vh;
+}
+
+.abs {
+    background-color: aqua;
+    width: 10mm;
+    width: 10cm;
+    width: 100px;
+}
+
+.div2 {
+    background-color: tomato;
+    width: 50%;
+    height: 50%;
+}
+
+.div3 {
+    background-color: violet;
+    width: 50%;
+    height: 50%;
+}
+
+
+/* ! viewport ölçü birimleri parent'ın büyüklüğü ile ilgili değildir. Sadece tarayıcının görülebilir alanına göre oranlama yapar.  */
+
+.div4 {
+    background-color: yellowgreen;
+    width: 40vw;
+    /* width: 90vw; */
+    /* sağa doğru uzatır (vw genişliğine uzatır)*/
+    height: 20vh;
+    /* vh yüksekliğine uzatır */
+}
+
+.div5 {
+    font-size: 1em;
+    /* 16px */
+}
+
+.div6 {
+    font-size: 2em;
+    /*  div5 in 2 katı oluyor 32px */
+}
+
+.div7 {
+    font-size: 3em;
+    /* div6 nın 3 katı oluyor. Katlayarak gidiyor..96px */
+    /* font-size: 0.5em; */
+    /* 0.5 verirsek div6 nın yarısı olur.parentının yarısı kadar */
+}
+
+.div8 {
+    font-size: 2rem;
+    /* 40 px */
+    /* yukarıda html ye tanımlamıştık 1rem=20 px diye */
+}
+
+.div9 {
+    font-size: 3rem;
+    /* 60px olur */
+}

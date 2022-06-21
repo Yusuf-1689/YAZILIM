@@ -1,0 +1,11 @@
+.img-float {
+    width: 30%;
+    float: left;
+    /* float: left resmi sola alır  */
+    margin-right: 1.3rem;
+}
+
+.clearflix {
+    clear: both;
+    /* clear demek float özelliği kaldırma anlamına geliyor left/right ne ise onu sonlandırmak için. */
+}
