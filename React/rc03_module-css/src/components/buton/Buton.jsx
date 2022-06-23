@@ -1,11 +1,18 @@
+import btnStyle from './buton.module.css';
 
+//* Eğer CSS'deki class adi kebap-case seklinde yazilmis ise
+//* module ile bu class'a erismek icin ornekte goruldugu gibi
+//* koseli parentez ile erisim yapilir.Koseli parentez erisimi
+//* en garanti yontemdir.
 
-import './Buton.css';
+//* ORN:moduleName["class-adi"]
 
-const Buton = () => {
+const Buton = ({ btnName }) => {
   return (
-    <div>Buton</div>
-  )
-}
+    <div className={btnStyle["title"]}>
+      <button className={btnStyle["btn-blue"]}>{btnName}</button>
+    </div>
+  );
+};
 
-export default Buton
+export default Buton;
