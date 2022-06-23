@@ -1,7 +1,11 @@
+import Buton from "./components/buton/Buton";
+import Card from "./components/card/Card";
+
 function App() {
   return (
     <>
-      <h1>APP</h1>
+      <Card />
+    
     </>
   );
 }
