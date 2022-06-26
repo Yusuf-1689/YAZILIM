@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Nova+Mono&family=Orbitron&family=Syne+Mono&display=swap');
+:root{
+    --color1: #F2C335;
+    --color2: #D9BCA3;
+    --color3: #A6826D;
+    --color4: #593122;
+    --color5: #F2AE2E;
+ }
+ body{
+    background-color: var(--color1);
+    color: var(--color4);
+    font-family: 'Nova Mono', monospace;
+ }
+ .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+ }
+ .buttons button {
+    background-color: var(--color2);
+    font-size: 2rem;
+    line-height: 1rem;
+    padding: 0.5rem;
+    color: var(--color4);
+    border: 2px solid var(--color3);
+    margin: 1rem;
+    width: 50px;
+    height: 60px;
+    cursor: pointer;
+ }
+ h1 {
+    background-color: var(--color5);
+    width: 200px;
+    padding: 0.5rem;
+ }
+ .timerDisplay {
+  font-size: 2rem;
+  margin: 1rem;
+  background-color: var(--color5);
+  padding: 1rem;
+ }
+ .png img {
+    width: 200px;
+    margin: 2rem;
+ }
