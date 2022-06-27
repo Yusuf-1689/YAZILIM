@@ -36,6 +36,7 @@ const Events = () => {
       {/* Eger bir event fonksiyonunun paremetresi olmasi gerkiyorsa
       bu fonksiyon bir arrow fonks. tarafindan  cagrilmalidir. Aksi
       takdirde event fonksiyonu event gerceklesmeden cagirilir */}
+      
       <button
         onClick={() => handleClear('Clear Btn pressed')}
         className="btn btn-dark"
