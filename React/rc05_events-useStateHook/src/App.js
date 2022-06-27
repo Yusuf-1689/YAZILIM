@@ -1,13 +1,10 @@
-import Events from "./components/1-event-intro/Events";
-
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import Events from './components/1-event-intro/Events';
 
 function App() {
   return (
     <div>
-      <Events/>
+      <Events />
     </div>
   );
 }
-
 export default App;
