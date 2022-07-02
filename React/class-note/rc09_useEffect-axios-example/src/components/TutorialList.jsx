@@ -1,7 +1,7 @@
 import { FaEdit } from 'react-icons/fa';
 import { AiFillDelete } from 'react-icons/ai';
 
-const TutorialList = ({ tutorials, deleteTutorial }) => {
+const TutorialList = ({ tutorials, deleteTutorial,editTutorial }) => {
   return (
     <div className="container mt-4">
       <table className="table table-striped">
@@ -27,6 +27,7 @@ const TutorialList = ({ tutorials, deleteTutorial }) => {
                   <FaEdit
                     size={20}
                     className="me-3 text-warning cursor-pointer"
+                    onClick={() => editTutorial(id , "CSS","Sttylesheet")}
                   />
                   <AiFillDelete
                     size={22}
