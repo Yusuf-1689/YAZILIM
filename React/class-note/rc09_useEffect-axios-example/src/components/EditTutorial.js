@@ -1,13 +1,28 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-const EditTutorial = ({ editTutorial, editIttem }) => {
+const EditTutorial = ({ editTutorial, editItem }) => {
+  const { id, title: newTitle, description } = editItem;
 
-  const [title, setTitle] = useState('');
-  const [desc, setDesc] = useState('');
+  const [title, setTitle] = useState(newTitle);
+  const [desc, setDesc] = useState(description);
+
+  //? https://reactjs.org/docs/hooks-reference.html#usestate
+  //! State degiskeninin degeri, 1.render ile initialState
+  //! parametresinin ilk degerini alir. Dolayisiyle bu durumda
+  //! prop'tan gelen ilk deger state'e aktarilir.
+  //! Sonradan degisen props degerleri useState'e aktarilmaz.
+  //! Eger props'tan gelen degerleri her degisimde useState'e
+  //! aktarmak istersek useEffect hook'unu componentDidUpdate
+  //! gibi kullanabiriz.
+
+  useEffect(() => {
+    setTitle(newTitle);
+    setDesc(description);
+  }, [newTitle, description]);
 
   const handleSave = (e) => {
     e.preventDefault();
-    // editTutorial({ id:id, title: title, description: desc });
+    editTutorial({ id: id, title: title, description: desc });
     setTitle('');
     setDesc('');
   };
