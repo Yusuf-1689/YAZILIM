@@ -22,7 +22,7 @@ const EditTutorial = ({ editTutorial, editItem }) => {
 
   const handleSave = (e) => {
     e.preventDefault();
-    editTutorial({ id: id, title: title, description: desc });
+    editTutorial({ id, title, desc });
     setTitle('');
     setDesc('');
   };
