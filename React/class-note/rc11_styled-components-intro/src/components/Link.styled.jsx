@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 const StyledLink = styled.a`
   font-size: 1rem;
@@ -7,6 +7,13 @@ const StyledLink = styled.a`
   &:hover {
     opacity: 0.5;
   }
+  ${(props) => props.secondary && css `
+  background-color:yellow;
+  border-radius:5px;
+  color:black;
+
+
+  `};
 `;
 
 export default StyledLink;
