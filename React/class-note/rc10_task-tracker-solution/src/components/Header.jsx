@@ -1,6 +1,7 @@
 import AddTaskForm from './AddTaskForm';
 import { useState } from 'react';
-const Header = () => {
+
+const Header = ({ tasks, setTasks }) => {
   const [show, setShow] = useState(false);
   const [btnStyle, setBtnStyle] = useState({
     name: 'SHOW ADD TASK BAR',
@@ -26,8 +27,8 @@ const Header = () => {
         name: 'CLOSE ADD TASK BAR',
         bgColor: 'red',
       });
-      setShow(!show);
     }
+    setShow(!show);
   };
   console.log(show);
 
@@ -41,7 +42,7 @@ const Header = () => {
       >
         {btnStyle.name}
       </button>
-      {show && <AddTaskForm />}
+      {show && <AddTaskForm tasks={tasks} setTasks={setTasks} />}
     </header>
   );
 };
