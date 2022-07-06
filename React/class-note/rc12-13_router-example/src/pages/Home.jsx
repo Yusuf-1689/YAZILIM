@@ -1,11 +1,11 @@
 import About from "../components/About";
-import CourseCard from "../components/Courses";
+import Courses from "../components/Courses";
 
 const Home = () => {
   return (
     <div>
       <About />
-      <CourseCard />
+      <Courses />
     </div>
   );
 };
