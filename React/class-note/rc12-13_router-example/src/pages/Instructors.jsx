@@ -27,7 +27,11 @@ const Instructors = () => {
               className="col-sm-12 col-md-6 col-lg-4"
               key={id}
               // onClick={() => navigate(`/instructors/${id}`)}
-              onClick={() => navigate(`/instructors/${id}`, { state: inst })}
+              //! Relative path
+              onClick={() => navigate(`${id}`, { state: inst })}
+
+              // Absolute path
+              // onClick={() => navigate(`/instructors/${id}`, { state: inst })}
               style={{ cursor: 'pointer' }}
             >
               <img

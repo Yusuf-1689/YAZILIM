@@ -38,6 +38,16 @@ function Nav() {
                 Instructors
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                style={({ isActive }) => ({ color: isActive && 'red' })}
+                to="/paths"
+                className="nav-link"
+                aria-current="page"
+              >
+                Paths
+              </NavLink>
+            </li>
 
             <li className="nav-item">
               <NavLink
