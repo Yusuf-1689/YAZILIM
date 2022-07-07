@@ -6,6 +6,7 @@ import Instructors from './pages/Instructors';
 import NotFound from './pages/NotFound';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import InstructorDetail from './pages/InstructorDetail';
+
 function App() {
   return (
     <>

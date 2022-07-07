@@ -23,17 +23,18 @@ const Instructors = () => {
         {instructors?.map((inst) => {
           const { id, name } = inst;
           return (
-            <div className="col-sm-12 col-md-6 col-lg-4" key={id} 
-            //  onClick={() => navigate(`/instructors/${id}`)}
-             onClick={() => navigate(`/instructors/${id}`, { state: inst })}
-             style={{ cursor: 'pointer' }}
-             >
+            <div
+              className="col-sm-12 col-md-6 col-lg-4"
+              key={id}
+              // onClick={() => navigate(`/instructors/${id}`)}
+              onClick={() => navigate(`/instructors/${id}`, { state: inst })}
+              style={{ cursor: 'pointer' }}
+            >
               <img
                 src={`https://avatars.dicebear.com/v2/avataaars/${id}.svg`}
                 alt=""
               />
               <h6>{name}</h6>
-              
             </div>
           );
         })}

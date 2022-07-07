@@ -1,5 +1,5 @@
-import About from "../components/About";
-import Courses from "../components/Courses";
+import About from '../components/About';
+import Courses from '../components/Courses';
 
 const Home = () => {
   return (
