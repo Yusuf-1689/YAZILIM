@@ -29,8 +29,7 @@ const Instructors = () => {
               // onClick={() => navigate(`/instructors/${id}`)}
               //! Relative path
               onClick={() => navigate(`${id}`, { state: inst })}
-
-              // Absolute path
+              //? Absolute path
               // onClick={() => navigate(`/instructors/${id}`, { state: inst })}
               style={{ cursor: 'pointer' }}
             >
