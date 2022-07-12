@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GRID</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+  </head>
+  <body>
+
+    <h1>GRID</h1>
+
+    <div class="container-fluid text-center display-6 text-white">
+        <div class="row">
+            <div class="col-6 bg-primary">6</div>
+            <div class="col-6 bg-secondary">6</div>
+            <div class="col-3 bg-secondary">3</div>
+            <div class="col-9 bg-warning">9</div>
+            <div class="col-3 bg-danger">3</div>
+            <div class="col-6 bg-secondary">6</div>
+            <div class="col-3 bg-success">3</div>
+
+            <div class="col-4 bg-warning">4</div>
+            <div class="col-4 bg-info">4</div>
+            <div class="col-4 bg-dark">4</div>
+        </div>
+      
+    </div>
+    <hr>
+
+    <h1 class="display-1">GRID-ALIGN</h1>
+
+    <div class="container text-center display-6 text-white border border-2 border-danger">
+        <div class="row justify-content-center">
+            <div class="col-3 bg-warning">CENTER</div>
+            <div class="col-3 bg-success">CENTER</div>
+        </div>
+        <div class="row justify-content-evenly">
+            <div class="col-3 bg-warning">EVENLY</div>
+            <div class="col-3 bg-success">EVENLY</div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-3 bg-warning">END</div>
+            <div class="col-3 bg-success">END</div>
+        </div>
+        <div class="row justify-content-start">
+            <div class="col-3 bg-warning">START</div>
+            <div class="col-3 bg-success">START</div>
+        </div>
+    </div>
+    <hr>
+    <h1>Breakpoint</h1>
+
+    <div class="container text text-center display-6 text-white">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 bg-success">1</div>
+            <div class="col-12 col-sm-6 col-md-3 bg-warning">2</div>
+            <div class="col-12 col-sm-6 col-md-3 bg-info">3</div>
+            <div class="col-12 col-sm-6 col-md-3 bg-danger">4</div>
+        </div>
+    </div>
+<hr>
+
+<div class="container h1 border border-2 border-danger  d-flex justify-content-end justify-content-lg-center justify-content-sm-center align-items-center " 
+style="height: 30vh;">
+    <div class="bg-danger">HTML</div>
+    <div class="bg-primary">CSS</div>
+    <div class="bg-warning">JS</div>
+</div>
+<hr>
+<h1>Display Property</h1>
+<div class="container h1 mb-4">
+    <div class="bg-warning d-sm-none d-md-inline">Content</div>
+</div>
+<hr>
+
+<h1>Sadece XS de gözükmeyecek</h1>
+<div class="container border mb-5">
+    <div class="bg-success d-none d-xl-inline d-lg-inline ">sadece XS görün</div>
+</div>
+<hr>
+<div class="">BUTTONS</div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
