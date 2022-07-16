@@ -1,6 +1,10 @@
+
+import { useContext } from 'react';
+import { StudentContext } from '../context/StudentContext';
 import StudentItem from './StudentItem';
 
-const StudentList = ({ students }) => {
+const StudentList = () => {
+  const {students} = useContext(StudentContext)
   return (
     <div>
       {students.map((student) => (
