@@ -1,9 +1,12 @@
+import UserContextProvider from './context/UserContextProvider';
 import ShowUsers from './pages/ShowUsers';
 
 function App() {
   return (
     <>
-      <ShowUsers />
+      <UserContextProvider>
+        <ShowUsers />
+      </UserContextProvider>
     </>
   );
 }
