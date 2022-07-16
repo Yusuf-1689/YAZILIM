@@ -4,9 +4,9 @@ const ShowUsers = ({ users }) => {
   return (
     <div>
       <h2>User List</h2>
-      {users.map((user) => (
+      {/* {users.map((user) => (
         <User key={user.id} user={user} />
-      ))}
+      ))} */}
     </div>
   );
 };
