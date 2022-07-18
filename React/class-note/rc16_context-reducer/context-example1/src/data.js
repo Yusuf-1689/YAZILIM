@@ -1,24 +1,24 @@
 const data = [
   {
     id: 1,
-    name: "Jason Response",
-    email: "jason@mail.com",
+    name: 'Jason Response',
+    email: 'jason@mail.com',
     age: 23,
-    color: "lightblue",
+    color: 'lightblue',
   },
   {
     id: 2,
-    name: "Benjamin Evalent",
-    email: "benjamin@mail.com",
+    name: 'Benjamin Evalent',
+    email: 'benjamin@mail.com',
     age: 20,
-    color: "honeydew",
+    color: 'honeydew',
   },
   {
     id: 3,
-    name: "Malcolm Function",
-    email: "malcolm@mail.com",
+    name: 'Malcolm Function',
+    email: 'malcolm@mail.com',
     age: 21,
-    color: "mistyrose",
+    color: 'mistyrose',
   },
 ];
 export default data;
