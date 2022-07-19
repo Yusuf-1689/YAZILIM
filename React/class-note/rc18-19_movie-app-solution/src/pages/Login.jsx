@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { signIn } from '../auth/firebase';
 
 const Login = () => {
   const [email, setEmail] = useState();
@@ -6,6 +7,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    signIn(email, password, navigate);
     console.log(email, password);
   };
 
