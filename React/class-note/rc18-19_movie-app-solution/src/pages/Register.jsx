@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createUser } from '../auth/firebase';
 
 const Register = () => {
   const [firstName, setFirstName] = useState();
@@ -9,6 +10,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(firstName, lastName);
+    createUser(email,password);
   };
 
   return (

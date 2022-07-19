@@ -47,9 +47,10 @@ const Login = () => {
           <input
             type="submit"
             className="btn btn-primary form-control"
-            value="Register"
+            value="Login"
           />
         </form>
+        <button className="btn btn-primary form-control">Continue with Google</button>
       </div>
     </div>
   );
