@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth,createUserWithEmailAndPassword } from "firebase/auth";
+import {signInWithEmailAndPassword, createUserWithEmailAndPassword, getAuth} from "firebase/auth";
 
 // TODO: Replace the following with your app's Firebase project configuration
 //* https://firebase.google.com/docs/auth/web/start
@@ -30,6 +30,7 @@ export const createUser = async(email, password) => {
     email, 
     password
     );
+      // navigate('/');
       console.log(userCredential);
   } catch (err)
   {
@@ -38,3 +39,17 @@ export const createUser = async(email, password) => {
   
 }
 
+export const signIn = async(email, password, navigate) => {
+  try {
+    let userCredential = await signInWithEmailAndPassword(
+     auth, 
+     email, 
+     password
+     );
+       navigate('/');
+       console.log(userCredential);
+   } catch (err)
+   {
+     console.log(err);
+   }
+}
