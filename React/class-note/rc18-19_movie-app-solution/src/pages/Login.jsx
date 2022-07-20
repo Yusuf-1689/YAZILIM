@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import { signIn } from '../auth/firebase';
+import { signIn } from '../auth/firebase.js';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
     signIn(email, password, navigate);
-    console.log(email, password);
+    // console.log(email, password);
   };
 
   return (
@@ -18,7 +20,7 @@ const Login = () => {
       </div>
       <div className="register-form">
         <h1 className="form-title display-3 ">Register</h1>
-        <form id="register" onSubmit={handleSubmit}>
+        <form id="register" onSubmit={handleLogin}>
           <div className="mb-3">
             <label htmlFor="email" className="form-label">
               Email
@@ -52,7 +54,9 @@ const Login = () => {
             value="Login"
           />
         </form>
-        <button className="btn btn-primary form-control">Continue with Google</button>
+        <button className="btn btn-primary form-control ">
+          Continue with Google
+        </button>
       </div>
     </div>
   );
