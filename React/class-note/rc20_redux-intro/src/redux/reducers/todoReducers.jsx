@@ -1,8 +1,18 @@
-const initialState = {};
+import { ADD_TODO, CLEAR_TODO, DELETE_TODO, TOGGLE_TODO } from "../types/todoTypes";
+
+const initialState = {
+  todoList: [{id:new Date().getTime, text: 'Work on Redux', completed: true}]
+};
 
 const todoReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case '':
+    case ADD_TODO:
+      return { ...state, ...payload };
+    case DELETE_TODO:
+      return { ...state, ...payload };
+    case CLEAR_TODO:
+      return { ...state, ...payload };
+    case TOGGLE_TODO:
       return { ...state, ...payload };
 
     default:
