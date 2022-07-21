@@ -15,8 +15,18 @@ const Counter = () => {
         >
           increase
         </button>
-        <button className="counter-button zero">reset</button>
-        <button className="counter-button negative">decrease</button>
+        <button 
+        className="counter-button zero"
+        onClick={() => dispatch({ type: 'RESET' })}
+        >
+          reset
+          </button>
+        <button 
+        className="counter-button negative"
+        onClick={() => dispatch({ type: 'DECREMENT' })}
+        >
+          decrease
+          </button>
       </div>
     </div>
   );
