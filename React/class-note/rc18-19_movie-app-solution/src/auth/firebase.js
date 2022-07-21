@@ -4,11 +4,17 @@ import {
   getAuth,
   GoogleAuthProvider,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
   updateProfile,
 } from 'firebase/auth';
+import {
+  toastErrorNotify,
+  toastSuccessNotify,
+  toastWarnNotify,
+} from '../helpers/ToastNotify';
 
 // TODO: Replace the following with your app's Firebase project configuration
 //* https://firebase.google.com/docs/auth/web/start
@@ -41,10 +47,11 @@ export const createUser = async (email, password, navigate, displayName) => {
     await updateProfile(auth.currentUser, {
       displayName: displayName,
     });
+    toastSuccessNotify('Registered successfully!');
     navigate('/');
     console.log(userCredential);
   } catch (err) {
-    console.log(err);
+    toastErrorNotify(err.message);
   }
 };
 
@@ -60,9 +67,11 @@ export const signIn = async (email, password, navigate) => {
       password
     );
     navigate('/');
+    toastSuccessNotify('Logged in successfully!');
     // sessionStorage.setItem('user', JSON.stringify(userCredential.user));
     console.log(userCredential);
   } catch (err) {
+    toastErrorNotify(err.message);
     console.log(err);
   }
 };
@@ -96,9 +105,25 @@ export const signUpProvider = (navigate) => {
     .then((result) => {
       console.log(result);
       navigate('/');
+      toastSuccessNotify('Logged out successfully!');
     })
     .catch((error) => {
       // Handle Errors here.
       console.log(error);
+    });
+};
+
+export const forgotPassword = (email) => {
+  //? Email yoluyla şifre sıfırlama için kullanılan firebase metodu
+  sendPasswordResetEmail(auth, email)
+    .then(() => {
+      // Password reset email sent!
+      toastWarnNotify('Please check your mail box!');
+      // alert("Please check your mail box!");
+    })
+    .catch((err) => {
+      toastErrorNotify(err.message);
+      // alert(err.message);
+      // ..
     });
 };

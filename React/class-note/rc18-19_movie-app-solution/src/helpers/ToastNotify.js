@@ -1,4 +1,5 @@
-import { toast } from "react-toastify";
+import { toast } from 'react-toastify';
+
 export const toastWarnNotify = (msg) => {
   toast.warn(msg, {
     autoClose: 5000,
@@ -9,6 +10,7 @@ export const toastWarnNotify = (msg) => {
     progress: undefined,
   });
 };
+
 export const toastSuccessNotify = (msg) => {
   toast.success(msg, {
     autoClose: 3000,
@@ -19,6 +21,7 @@ export const toastSuccessNotify = (msg) => {
     progress: undefined,
   });
 };
+
 export const toastErrorNotify = (msg) => {
   toast.error(msg, {
     autoClose: 5000,
