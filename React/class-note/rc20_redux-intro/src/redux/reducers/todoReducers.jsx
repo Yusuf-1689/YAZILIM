@@ -25,7 +25,7 @@ const todoReducer = (state = initialState, { type, payload }) => {
     case TOGGLE_TODO:
       return { ...state, ...payload };
     case CLEAR_TODO:
-      return { ...state, ...payload };
+      return initialState;
     default:
       return state;
   }
