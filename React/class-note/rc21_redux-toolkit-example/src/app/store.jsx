@@ -7,5 +7,6 @@ const store = configureStore({
     auth: authReducer,
     news: newsReducer,
   },
+  devTools: process.env.NODE_ENV !== 'production',
 });
 export default store;
