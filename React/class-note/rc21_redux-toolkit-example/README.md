@@ -3,7 +3,7 @@
 ## `Kurulum`
 
 ```
-npm install veya yarn 
+npm install veya yarn
 ```
 
 ## `Kullanilan Kutuphaneler`
