@@ -7,11 +7,20 @@ import Typography from '@mui/material/Typography';
 import { CardMedia } from '@mui/material';
 import loadingGif from '../assets/loading.gif';
 import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { clearNewList, getNews } from '../features/newsSlice';
 
 const News = () => {
   const dispatch = useDispatch();
   const { newsList, loading } = useSelector((state) => state.news);
 
+  useEffect(() => {
+    dispatch(getNews());
+    return () => {
+      dispatch(clearNewList)
+    }
+
+  }, [])
   return (
     <>
       {loading && (
