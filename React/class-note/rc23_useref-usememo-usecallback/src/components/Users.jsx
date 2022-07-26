@@ -4,8 +4,10 @@ const Users = ({ users }) => {
   console.log('Users Component Rendered');
 
   return (
-    <div>
-      <button onClick={null}>Add User</button>
+    <div className='users'>
+      <button id='add-button' onClick={null}>
+        Add User
+        </button>
       {users?.map((user) => null)}
     </div>
   );
