@@ -6,11 +6,18 @@ const UseRefComponent = () => {
   //* DOM elementlerine ulaşmamızı sağlar
   const inputRef = useRef(null);
   const divRef = useRef();
+
+  //* useRef ikinci kullanım
+  //* hafızada yeri değişmeyen bir obje oluşturur
+  //   const valueObj = {current: 0}
+  const valueRef = useRef(0);
+  console.log('valueRef', valueRef);
   useEffect(() => {
     // console.log(document.querySelector('input'));
     // document.querySelector('input').focus();
     // console.log(inputRef.current);
     // inputRef.current.focus();
+    // valueRef.current++;
   }, []);
 
   const ChangeBGColor = () => {
@@ -29,7 +36,10 @@ const UseRefComponent = () => {
     divRef.current.style.backgroundColor = inputRef.current.value;
   };
 
-  const increase = () => setValue(value + 1);
+  const increase = () => {
+    setValue(value + 1);
+    valueRef.current++;
+  };
   console.log(value);
 
   return (

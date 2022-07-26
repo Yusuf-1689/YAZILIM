@@ -1,11 +1,17 @@
-import React from "react";
+import React from 'react';
+import cw from '../assets/cw_logo.png';
 
-const Header = () => {
+const Header = React.memo(({ img }) => {
+  console.log('Rendering: Header Comp.');
   return (
-    <div>
-      <h2>Header</h2>
+    <div className="header">
+      <img
+        src={img ? img : cw}
+        alt="cw_logo"
+        style={{ margin: '1rem', maxHeight: '200px' }}
+      />
     </div>
   );
-};
+});
 
 export default Header;
