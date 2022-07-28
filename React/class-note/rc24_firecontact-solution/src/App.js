@@ -2,19 +2,19 @@ import './App.css';
 import Contacts from './components/contacts/Contacts';
 import FormComponent from './components/form/FormComponent';
 import {useState} from "react"
-import { AddUser } from "./utils/functions";
+import {AddUser} from "./utils/functions"
 
-const initialValues={username:"",phoneNumber:"",gender:""}
+const initialValues={username:"",phoneNumber:"",gender:"NO INFO"}
 
 function App() {
   const [info,setInfo]=useState(initialValues)
-  const handleSubmit = (e) => {
+  const handleSubmit=(e)=>{
     e.preventDefault();
     AddUser(info)
   }
   return (
     <div className="App">
-      <FormComponent info={info} setInfo={setInfo} handleSubmit={handleSubmit}/>
+      <FormComponent info={info} setInfo={setInfo} handleSubmit={handleSubmit} />
       <Contacts/>
     </div>
   );
