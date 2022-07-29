@@ -7,7 +7,6 @@ import Avatar from '@mui/material/Avatar';
 import { FaLock } from 'react-icons/fa';
 import { Formik, Form } from 'formik';
 
-
 const LoginPage = () => {
   return (
     <Container maxWidth="sm" sx={{ mt: '10rem', textAlign: 'center' }}>
@@ -37,39 +36,43 @@ const LoginPage = () => {
           actions.setSubmitting(false);
         }}
       >
-        {({ values,handleChange,errors })=> (
+        {({ values, handleChange, errors, touched }) => (
           <Form>
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-          <TextField
-            label="Full Name"
-            name="fullName"
-            id="fullName"
-            type="type"
-            variant="outlined"
-            value={values.fullName}
-            onChange={handleChange}
-          />
-          <TextField
-            label="Email"
-            name="email"
-            id="email"
-            type="email"
-            variant="outlined"
-          />
-          <TextField
-            label="password"
-            name="password"
-            id="password"
-            variant="outlined"
-          />
-          <Button type="submit" variant="contained" size="large">
-            Submit
-          </Button>
-        </Box>
-        </Form>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+              <TextField
+                label="Full Name"
+                name="fullName"
+                id="fullName"
+                type="type"
+                variant="outlined"
+                value={values.fullName}
+                onChange={handleChange}
+                helperText={touched.fullName && errors.fullName}
+                error={touched.fullName && Boolean(errors.fullNameloginpage)}
+              />
+              <TextField
+                label="Email"
+                name="email"
+                id="email"
+                type="email"
+                variant="outlined"
+                value={values.email}
+                onChange={handleChange}
+              />
+              <TextField
+                label="password"
+                name="password"
+                id="password"
+                variant="outlined"
+                value={values.password}
+                onChange={handleChange}
+              />
+              <Button type="submit" variant="contained" size="large">
+                Submit
+              </Button>
+            </Box>
+          </Form>
         )}
-        
-        
       </Formik>
     </Container>
   );
