@@ -48,7 +48,7 @@ const LoginPage = () => {
                 value={values.fullName}
                 onChange={handleChange}
                 helperText={touched.fullName && errors.fullName}
-                error={touched.fullName && Boolean(errors.fullNameloginpage)}
+                error={touched.fullName && Boolean(errors.fullName)}
               />
               <TextField
                 label="Email"
