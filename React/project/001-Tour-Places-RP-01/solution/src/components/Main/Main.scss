@@ -9,7 +9,7 @@
         background-color: $cardNavBgColor;
         margin: 1rem;
         padding: 1rem;
-        border-radius: 10px;
+        border-radius: 12px;
         box-shadow: 3px 3px 5px rgba(0,0,0,0.7);
         position: relative;
         overflow: hidden;
@@ -25,7 +25,7 @@
     }
     img {
         width: 500px;
-        height: 350px;
+        height: 380px;
         object-fit: cover;
         // filter: grayscale(0%);
         &:hover{
