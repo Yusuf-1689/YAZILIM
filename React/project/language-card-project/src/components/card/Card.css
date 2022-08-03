@@ -2,9 +2,9 @@
 
 .cards-area-container{
     height: 41rem;
-    width: 25rem;
+    width: 20rem;
     background-color: #c73015;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
     border-radius: 1rem;
     display: grid;
     grid-template-rows: 10% 90%;
