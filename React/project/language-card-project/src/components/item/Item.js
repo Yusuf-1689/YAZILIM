@@ -1,12 +1,11 @@
 
 
-
 import { useState } from "react";
 import "./Item.css";
 
 const Item = ({ card }) => {
   const [showLogo, setShowLogo] = useState(true);
-//   const { name, img, options } = card;
+  // const { name, img, options } = card;
 
   return (
     <div className="card" onClick={() => setShowLogo(!showLogo)}>
