@@ -32,7 +32,7 @@ const TutorialList = ({ tutorials, deleteTutorial, editTutorial }) => {
                     data-bs-toggle="modal"
                     data-bs-target="#edit-modal"
                     size={20}
-                    className="me-2 text-warning cursor-pointer"
+                    className="me-3 text-warning cursor-pointer"
                     onClick={() => setEditItem(item)}
                   />
                   <AiFillDelete

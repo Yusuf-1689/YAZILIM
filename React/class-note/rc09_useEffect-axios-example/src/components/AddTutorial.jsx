@@ -1,6 +1,9 @@
+
+
 import { useState } from 'react';
 
 const AddTutorial = ({ addTutorial }) => {
+  
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
 
