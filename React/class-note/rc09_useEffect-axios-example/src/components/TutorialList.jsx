@@ -7,7 +7,7 @@ const TutorialList = ({ tutorials, deleteTutorial, editTutorial }) => {
   const [editItem, setEditItem] = useState('');
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-3">
       <table className="table table-striped">
         <thead>
           <tr>
@@ -32,7 +32,7 @@ const TutorialList = ({ tutorials, deleteTutorial, editTutorial }) => {
                     data-bs-toggle="modal"
                     data-bs-target="#edit-modal"
                     size={20}
-                    className="me-3 text-warning cursor-pointer"
+                    className="me-1 text-warning cursor-pointer"
                     onClick={() => setEditItem(item)}
                   />
                   <AiFillDelete
