@@ -39,13 +39,15 @@ const Home = () => {
   const deleteTutorial = async (id) => {
     try {
       await axios.delete(`${url}/${id}`);
-    } catch (error) {
+    } 
+    catch (error) {
       console.log(error);
     }
     getTutorials();
   };
 
   //! Update (PUT:Whole Update,PATCH :Partially Update)
+
   const editTutorial = async (id, title, desc) => {
     const filtered = tutorials
       .filter((tutor) => tutor.id === id)
