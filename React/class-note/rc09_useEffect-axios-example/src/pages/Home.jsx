@@ -23,7 +23,7 @@ const Home = () => {
     getTutorials();
   }, []);
 
-  console.log(tutorials);
+  // console.log(tutorials);
 
   //! POST (Create)
   const addTutorial = async (tutorial) => {
