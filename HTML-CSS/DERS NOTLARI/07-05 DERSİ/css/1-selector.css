@@ -1,0 +1,69 @@
+body {
+    font-family: sans-serif;
+}
+h1 {
+    color: red;
+}
+nav.menu{
+    background-color: grey;
+    width: 150px;
+}
+nav.menu .list{
+    list-style-type: '🎗';
+    padding: 0;
+    list-style-position: inside;
+}
+nav.menu ul li a {
+    text-decoration: none;
+    color: white;
+}
+/* nav.menu .list .aktif{
+background-color: black;
+} */
+nav.menu .list li:first-child, li:last-child {
+    background-color: black;
+}
+nav.menu ul li:hover a {
+    color: yellow ;
+}
+nav.menu ul li:hover {
+    background-color: red;
+}
+nav.menu .list li:last-child::after{
+    content: '💛';
+}
+nav.menu .list li:first-child::before {
+content: '❗👍';
+}
+nav.menu .list li:first-child::before {
+    font-family: 'Font Awesome 5 free';
+    font-weight: 900;
+    color: green;
+    content: '\f0c7';
+}
+.menu > li {
+    color: aqua;
+}
+/* .kutu p{
+    color: green;
+} */
+
+/* parent'ı kutu olan tüm p elementlerini seçer */
+.kutu > p {
+    color: purple;
+}
+/* h2 + p {
+    background-color: pink;
+} */
+h2 ~ p {
+    background-color: yellowgreen;
+}
+
+
+
+
+
+
+
+
+
