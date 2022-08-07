@@ -9,7 +9,7 @@ function App() {
       
       <h1>FIREBLOG APP PROJECT</h1>
       <Navbar />
-      {/* <BlogCard /> */}
+      
     </div>
   );
 }
