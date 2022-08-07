@@ -4,8 +4,8 @@ import React from 'react'
 
 const Navbar = () => {
   return <div>
-    --------YUSUF BLOG -------
-    <img src="./assets/clwlogo.jpg" alt="" />
+
+    <img className='clwlogo ' src="./assets/clwlogo.jpg" alt="" />
     
   </div>
   
