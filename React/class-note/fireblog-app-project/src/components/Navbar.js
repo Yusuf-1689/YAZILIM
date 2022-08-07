@@ -7,7 +7,7 @@ import BlogForm from './BlogForm';
 const Navbar = () => {
   return <div className='Navbar'>
    
-    <div className=''>
+    <div className='navbarblog text-center justify-content-around'>
     <BlogCard />
     <BlogForm/>
 
