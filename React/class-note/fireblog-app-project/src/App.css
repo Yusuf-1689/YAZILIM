@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (min-width: 481px) {
+  body::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #ff7300; /* color of the tracking area */
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #fff; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 3px solid #ff7300; /* creates padding around scroll thumb */
+  }
+  textarea::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+  }
+
+  textarea::-webkit-scrollbar-track {
+    background: #ff7300; /* color of the tracking area */
+    border-radius: 0 5px 0 0;
+  }
+
+  textarea::-webkit-scrollbar-thumb {
+    background-color: #fff; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 3px solid #ff7300; /* creates padding around scroll thumb */
+  }
+}
