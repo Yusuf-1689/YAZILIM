@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import claruswayIcon from "../assets/cw.jpeg";
+import claruswayIcon from "../assets/clwlogo.jpg";
 import { AuthContext } from "../contexts/AuthContext";
 import { BlogContext } from "../contexts/BlogContext";
 import { logOut } from "../helpers/firebase";

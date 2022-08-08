@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import About from "../pages/About";
-import Dashboard from "../pages/Dashboard";
+// import Dashboard from "../pages/Dashboard";
 import Details from "../pages/Details";
 import Login from "../pages/Login";
 import NewBlog from "../pages/NewBlog";
