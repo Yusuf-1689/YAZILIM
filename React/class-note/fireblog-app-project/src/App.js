@@ -1,14 +1,11 @@
 
 import './App.css';
-import BlogCard from './components/BlogCard';
-import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
       
-      <Navbar />
-      
+      <h1>FIREBLOG APP PROJECT</h1>
     </div>
   );
 }
