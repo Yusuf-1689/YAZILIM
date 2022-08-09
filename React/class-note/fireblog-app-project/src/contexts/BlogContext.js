@@ -1,6 +1,6 @@
-import { onValue, ref } from "database";
+import { onValue, ref } from "firebase/database";
 import React, { createContext, useEffect, useState } from "react";
-import { db } from "../helpers";
+import { db } from "../helpers/firebase";
 
 export const BlogContext = createContext(null);
 
