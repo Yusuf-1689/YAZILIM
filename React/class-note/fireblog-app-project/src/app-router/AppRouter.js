@@ -15,7 +15,7 @@ const AppRouter = () => {
     <div className="appRouter relative">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        {/* <Route path="/" element={<Dashboard />} /> */}
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="details/:id" element={<PrivateRouter />}>

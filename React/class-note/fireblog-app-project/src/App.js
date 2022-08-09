@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
 import AppRouter from './app-router/AppRouter';
 import './App.css';
 import ToastDeneme from './components/ToastDeneme';
@@ -9,14 +9,14 @@ function App() {
 
   return (
     <div className="App h-screen font-ffKanit relative">
-      <BrowserRouter >
+      {/* <BrowserRouter > */}
         <BlogContextProvider >
           <AuthContextProvider >
             <AppRouter />
             <ToastDeneme />
           </AuthContextProvider>
         </BlogContextProvider>
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
     </div>
   );
 }
