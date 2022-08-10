@@ -41,14 +41,12 @@ const NewBlog = () => {
       },
 
     });
-
     setNewBlogTitle('');
     setNewBlogImgUrl('');
     setNewBlogContent('');
     navigate('/');
   }
 
-  
   return (
     <div className="newblog m-4 overflow-hidden">
       <form 
