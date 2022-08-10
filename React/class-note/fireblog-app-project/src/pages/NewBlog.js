@@ -49,9 +49,6 @@ const NewBlog = () => {
   }
 
   
-
-
-
   return (
     <div className="newblog m-4 overflow-hidden">
       <form 
