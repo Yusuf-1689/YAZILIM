@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import google from "../assets/google.png";
+// import google from "../assets/google.png";
 import { BlogContext } from "../contexts/BlogContext";
-import { forgotPassword, signIn, signUpProvider } from "../helpers/firebase";
+import { forgotPassword, signIn } from "../helpers/firebase";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -18,9 +18,9 @@ const Login = () => {
     setDisplay(true);
   };
 
-  const withGoogleSignUp = () => {
-    signUpProvider(navigate);
-  };
+  // const withGoogleSignUp = () => {
+  //   signUpProvider(navigate);
+  // };
 
   const getNewPassword = () => {
     
@@ -44,7 +44,7 @@ const Login = () => {
                 connect with each other all over the world via{" "}
                 <br />
                 <span className="block h-full text-center text-2xl tracking-tighter ">
-                  <span className="text-lime-600">&lt;David Moses</span>
+                  <span className="text-lime-600">&lt;Yusuf</span>
                   Blog/&gt;
                 </span>
               </p>
@@ -94,9 +94,9 @@ const Login = () => {
               <div className="form-control mt-6">
                 <button
                   className="btn bg-secondary border-none "
-                  onClick={withGoogleSignUp}
+                  // onClick={withGoogleSignUp}
                 >
-                  with <img src={google} alt="google" className="w-20 p-2 " />{" "}
+                  {/* with <img src={google} alt="google" className="w-20 p-2 " />{" "} */}
                 </button>
               </div>
             </div>
