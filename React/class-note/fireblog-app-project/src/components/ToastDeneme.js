@@ -22,8 +22,8 @@ const ToastDeneme = () => {
             <span className="text-white" >{msg}</span>
           </div>
         </div>
-      </div>) }
-      
+      </div>) 
+      }
     </div>
   );
 };
