@@ -8,7 +8,6 @@ const AuthContextProvider = ({children}) => {
     
 
     useEffect(() => {
-        // setCurrentUser(JSON.parse(sessionStorage.getItem('user')));
         userObserver(setCurrentUser);
         // console.log(currentUser);
 
