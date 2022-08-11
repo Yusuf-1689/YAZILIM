@@ -8,7 +8,6 @@ const BlogCard = () => {
     const [blogAllInfo, setBlogAllInfo] = useState([]);
     // const { blogAllInfo, setBlogAllInfo } = useContext(BlogContext);
     
-
     useEffect(() => {
         try {
             onValue(ref(db), (snapshot) => {
@@ -28,7 +27,6 @@ const BlogCard = () => {
         }
     }, []);
 // console.log(blogAllInfo);
-
 
     return ( 
         
