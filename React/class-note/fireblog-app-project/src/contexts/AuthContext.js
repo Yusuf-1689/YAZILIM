@@ -5,14 +5,12 @@ export const AuthContext = createContext(null);
 
 const AuthContextProvider = ({children}) => {
     const [currentUser, setCurrentUser] = useState(false);
-    
 
     useEffect(() => {
         userObserver(setCurrentUser);
         // console.log(currentUser);
 
     }, []);
-
 
     return ( 
         <AuthContext.Provider value={{currentUser}}>
