@@ -3,7 +3,7 @@ main {
     width: 70%;
     left: 70%;
     transform: translateX(-50%);
-    margin: 35px 0;
+    margin: 30px 0;
     display: grid;
     grid-template-columns: 465px 320px;
   }
