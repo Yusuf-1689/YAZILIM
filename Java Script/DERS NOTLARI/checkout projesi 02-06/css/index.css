@@ -38,7 +38,7 @@ main {
   
   .data-form .campo label {
     font-size: 12px;
-    color: #4f4f4f;
+    color: #4e4e4e;
     margin: 10px 0;
     position: relative;
     display: block;
@@ -51,7 +51,7 @@ main {
   .data-form .campo .input-field input {
     border: 1px solid #828282;
     padding: 8px 5px 8px 35px;
-    color: #828282;
+    color: #7e7d7d;
     font-size: 14px;
     border-radius: 5px;
     width: 100%;
