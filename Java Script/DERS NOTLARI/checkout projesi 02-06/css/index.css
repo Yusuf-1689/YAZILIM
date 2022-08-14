@@ -163,7 +163,7 @@ main {
   
   .quantity-controller {
     border-radius: 5px;
-    border: 1px solid rgb(136, 136, 136);
+    border: 1px solid rgb(134, 134, 134);
     display: flex;
     justify-content: space-around;
     width: 50%;
@@ -177,7 +177,7 @@ main {
   }
   
   .quantity-controller p {
-    line-height: 24px;
+    line-height: 25px;
   }
   
   .quantity-controller button {
