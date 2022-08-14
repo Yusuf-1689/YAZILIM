@@ -60,7 +60,7 @@ main {
   .data-form .campo .input-field i {
     position: absolute;
     color: #828282;
-    font-size: 16px;
+    font-size: 15px;
     top: 50%;
     transform: translateY(-50%);
     left: 3%;
