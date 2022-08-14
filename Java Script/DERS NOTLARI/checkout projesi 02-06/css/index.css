@@ -119,7 +119,7 @@ main {
     position: absolute;
     width: 100%;
     border-radius: 10px;
-    background-color: #eeeeee;
+    background-color: #f1eded;
     padding: 10px 20px;
     display: flex;
     flex-wrap: wrap;
@@ -145,7 +145,7 @@ main {
   
   .product-info h2 {
     font-size: 16px;
-    color: #4e5150;
+    color: #4a4b4a;
     margin: 5px 0;
   }
   
