@@ -183,7 +183,7 @@ main {
   .quantity-controller button {
     margin: 5px 0;
     border: 0;
-    background-color: #e0e0e0;
+    background-color: #dfdbdb;
     border-radius: 5px;
     padding: 5px;
     text-align: center;
@@ -195,7 +195,7 @@ main {
   
   .buy-detail {
     margin: 5px 0;
-    border-top: 1px solid #bdbdbd;
+    border-top: 1px solid #c0bfbf;
     display: flex;
     position: relative;
     width: 90%;
