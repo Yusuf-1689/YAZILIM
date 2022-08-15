@@ -269,7 +269,7 @@ main {
   
     .data-form h1 {
       font-size: 18px;
-      color: #333;
+      color: rgb(51, 51, 51);
       margin: 15px 0;
     }
   
@@ -290,10 +290,10 @@ main {
     }
   
     .data-form .campo .input-field input {
-      border: 1px solid #828282;
+      border: 1px solid #858383;
       padding: 8px 5px 8px 35px;
       color: #828282;
-      font-size: 14px;
+      font-size: 15px;
       border-radius: 5px;
       width: 100%;
     }
