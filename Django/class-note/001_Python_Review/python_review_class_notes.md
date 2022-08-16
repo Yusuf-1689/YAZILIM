@@ -1054,9 +1054,14 @@ if not type(x) is int:
 
 
 ## pip
+
  pip is the standard package manager for Python. It allows you to install and manage additional packages that are not part of the Python standard library.
 
  pip is already installed if you are using Python 2 >=2.7.9 or Python 3 >=3.4 downloaded from python.org or if you are working in a Virtual Environment created by virtualenv or venv. Just make sure to upgrade pip.
+
+ #  pip, Python için standart paket yöneticisidir. Python standart kitaplığının parçası olmayan ek paketleri kurmanıza ve yönetmenize olanak tanır.
+
+  #  python.org'dan indirilen Python 2 >=2.7.9 veya Python 3 >=3.4 kullanıyorsanız veya virtualenv veya venv tarafından oluşturulan bir Sanal Ortamda çalışıyorsanız, pip zaten kuruludur. Sadece pip'i yükselttiğinizden emin olun.
 
  https://pip.pypa.io/en/stable/installing/
 
