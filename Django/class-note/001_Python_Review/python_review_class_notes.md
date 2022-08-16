@@ -270,16 +270,19 @@ index()	  # Returns the index of the first element with the specified value
 insert(index, elem)  # Adds an element at the specified position
   # insert= sokmak / Belirtilen konuma bir eleman ekler
 
-pop(index)	  # Removes the element at the specified position, assigning the popped item to a new variable (Atılan öğeyi yeni bir değişkene atayarak belirtilen konumdaki öğeyi kaldırır)
+pop(index)	  # Removes the element at the specified position, assigning the popped item to a new variable 
+   # (Atılan öğeyi yeni bir değişkene atayarak belirtilen konumdaki öğeyi kaldırır)
+
 remove()  # Removes the item with the specified value (the first value)
   # remove= kaldırmak / Belirtilen değere sahip öğeyi kaldırır (ilk değer)
 
 reverse() # Reverses the order of the list
   # reverse= tersi / Listenin sırasını tersine çevirir
-  
+
 ```
 
 reverse() actually reverses the elements in the container. reversed() doesn't actually reverse anything, it merely returns an object that can be used to iterate over the container's elements in reverse order.
+  # Reverse() aslında kaptaki öğeleri tersine çevirir. reversed() aslında hiçbir şeyi tersine çevirmez, yalnızca kabın öğelerini ters sırayla yinelemek için kullanılabilecek bir nesne döndürür.
 
 ```py
 sort()	  # Sorts the list
@@ -304,22 +307,40 @@ print(list3)
 ```
 
 
-### Tuples
-- Less memory
-- Stable, unchanged values
-- Faster
+### Tuples (demetler)
 
+- Less memory   
+  # Daha az bellek
+
+- Stable, unchanged values
+  # Kararlı, değişmeyen değerler
+
+- Faster
+  # Daha hızlı
+    
 Tuples are immutable sequences, typically used to store collections of heterogeneous data.
+  # Tuple'lar, tipik olarak heterojen veri koleksiyonlarını depolamak için kullanılan değişmez dizilerdir.
 
 Tuples may be constructed in a number of ways:
+  # Tuple'lar çeşitli şekillerde oluşturulabilir:
+
 - Using a pair of parentheses to denote the empty tuple: ()
+  # Boş demeti belirtmek için bir çift parantez kullanma: ()
+
 - Using a trailing comma for a singleton tuple: "a", or ("a",)
+  # Tek bir demet için sondaki virgül kullanma: "a" veya ("a",)
+
 - Separating items with commas: "a", "b", "c" or ("a", "b", "c")
+  # Öğeleri virgülle ayırma: "a", "b", "c" veya ("a", "b", "c")
+
 - Using the tuple() built-in: tuple() or tuple(iterable)
+  # Yerleşik tuple()'ı kullanma: tuple() veya tuple(yinelenebilir)
 
 Tuple items are ordered, unchangeable, and allow duplicate values.
+  # Tuple öğeleri sıralanır, değiştirilemez ve yinelenen değerlere izin verir.
 
 To create a tuple with only one item, you have to add a comma after the item
+  # Yalnızca bir öğe içeren bir demet oluşturmak için öğeden sonra virgül eklemeniz gerekir.
 
 ```py
 thistuple = ("apple",)
@@ -354,12 +375,17 @@ print(tuple3)
 # ('a', 'b', 'c', 1, 2, 3)
 ```
 
-### Dictionary
+### Dictionary = (Sözlük)
 Dictionaries are used to store data values in key:value pairs.
 
 A dictionary is a collection which is ordered, changeable and does not allow duplicates.
 
 Dictionaries are written with curly brackets, and have keys and values:
+# (Sözlükler, veri değerlerini anahtar:değer çiftlerinde depolamak için kullanılır.
+
+# Sözlük, sıralı, değiştirilebilir ve kopyalara izin vermeyen bir koleksiyondur.
+
+# Sözlükler küme parantezleri ile yazılır ve anahtarlara ve değerlere sahiptir)
 
 ```py
 thisdict = {
