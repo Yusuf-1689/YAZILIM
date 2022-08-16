@@ -116,17 +116,25 @@ string3 = "ol eyyyyy  "
 string3.strip("y")
 ```
 
-### Integer
+### Integer (tamsayı)
 
 - Literal integer values may not contain a decimal point.
+   #  (- Değişmez tamsayı değerleri ondalık nokta içeremez.)
 - Integers may be arbitrarily large and are stored exactly.
+   #  (- Tamsayılar keyfi olarak büyük olabilir ve tam olarak depolanır.)
 - Integers have normal operations, with usual precedence (highest listed first):
+    # (- Tamsayılar normal işlemlere sahiptir, her zamanki önceliğe sahiptir (en yüksek ilk sırada listelenir):)
     - \*\*: exponentiation (5\*\*3 means 5\*5\*5)
-    - *, multiplication
+        #   (- \*\*: üs alma (5\*\*3, 5\*5\*5 anlamına gelir))
+    - *, multiplication (- *, çarpma işlemi)
     - /, division with float result
+       # (- /, kayan nokta sonuçlu bölme)
     - //, floor divisions result int, integer division (ignoring any remainder)
-    - %, modulus just the remainder from division 
+         # (- //, kat bölmeleri sonuç int, tamsayı bölme (kalan yok sayılarak))
+    - %, modulus just the remainder from division
+        # (- %, modül bölmeden sadece kalan)
     - +, -: addition, subtraction
+        # (- +, -: toplama, çıkarma)
 
 
 ### Boolean
