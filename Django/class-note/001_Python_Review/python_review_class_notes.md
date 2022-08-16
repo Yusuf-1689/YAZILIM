@@ -140,8 +140,11 @@ string3.strip("y")
 ### Boolean
 
 - The Boolean data type can be one of two values, either True or False.
+    # (- Boolean veri türü, True veya False olmak üzere iki değerden biri olabilir.)
 - The values True and False will also always be with a capital T and F
+    # (- True ve False değerleri de her zaman büyük T ve F ile olacaktır.)
 - Comparison operators are used to compare values and evaluate down to a single Boolean value of either True or False
+    # (- Karşılaştırma operatörleri, değerleri karşılaştırmak ve True veya False olmak üzere tek bir Boolean değerine kadar değerlendirmek için kullanılır.)
 ```txt
 ==	Equal to
 !=	Not equal to
