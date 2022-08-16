@@ -836,12 +836,17 @@ def my_function(**kids):
 my_function(name = "John", last_name = "Smith")
 ```
 
-### Ordering Arguments in a Function
+### Ordering Arguments in a Function (Bir Fonksiyonda Argümanları Sıralama)
 
 The correct order for your parameters is:
 - Standard arguments
 - *args arguments
 - **kwargs arguments
+
+# Parametreleriniz için doğru sıra:
+# Standart argümanlar
+# *args argümanları
+# **kwargs argümanları
 
 ```py
 # correct_function_definition.py
@@ -849,9 +854,10 @@ def my_function(a, b, *args, **kwargs):
     pass
 ```
 
-### Default Parameter Value
+### 
 
 If we call the function without argument, it uses the default value:
+# Fonksiyonu argümansız çağırırsak, varsayılan değeri kullanır.
 
 ```py
 def my_function(country = "Norway"):
@@ -861,9 +867,11 @@ my_function("Sweden")
 my_function()
 ```
 
-### The pass Statement
+### The pass Statement (Geçiş Bildirimi)
 
 Function definitions cannot be empty, but if you for some reason have a function definition with no content, put in the pass statement to avoid getting an error.
+ # İşlev tanımları boş olamaz, ancak herhangi bir nedenle içeriği olmayan bir işlev tanımınız varsa, hata almamak için pass ifadesini girin.
+
 ```py
 def myfunction():
   pass
@@ -880,7 +888,19 @@ Decorators dynamically alter the functionality of a function, method or class wi
 
 Thanks to this our code will be more cleaner, more readable, maintainable (Which is no small thing), and reduce the boilerplate code allowing us to add functionality to multiple classes using a single method.
 
+# Dekoratör, Python'da, kullanıcının yapısını değiştirmeden mevcut bir nesneye yeni işlevler eklemesine izin veren bir tasarım kalıbıdır.
+
+# Dekoratör, argüman olarak başka bir işlevi alır ve bu işlevin davranışını açıkça değiştirmeden genişletir.
+
+# Dekoratörler genellikle süslemek istediğiniz bir fonksiyonun tanımından önce çağrılır.
+
+# Dekoratörler, bir işlevin, yöntemin veya sınıfın işlevselliğini, dekore edilmiş sınıfın alt sınıfları oluşturmak veya kaynak kodunu değiştirmek zorunda kalmadan dinamik olarak değiştirir.
+
+# Bu sayede kodumuz daha temiz, daha okunabilir, bakımı kolay olacak (ki bu hiç de küçük bir şey değil) ve tek bir yöntem kullanarak birden çok sınıfa işlevsellik eklememize izin veren ortak kodu azaltacaktır.
+
+
 ### Basic Template of Decorators
+
 ```py
 def my_decorator(func):
     def wrapper():
