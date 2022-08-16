@@ -459,6 +459,7 @@ Dictionary Methods
 Python has a set of built-in methods that you can use on dictionaries.
 
 ```py
+
 clear()	# Removes all the elements from the dictionary
 # clear = açık / # Sözlükteki tüm öğeleri kaldırır
 
@@ -485,7 +486,7 @@ values()	# Returns a list of all the values in the dictionary
 
 ```
 
-### Set
+### Set (Ayarlamak)
 
 Sets are used to store multiple type of items in a single variable.
 A set is a collection which is both unordered and unindexed.
@@ -494,6 +495,13 @@ A set can contain different data types:
 You cannot access items in a set by referring to an index or a key.
 
 It is possible to use the set() constructor to make a set.
+# (Kümeler, birden çok öğe türünü tek bir değişkende saklamak için kullanılır.
+# Küme, hem sırasız hem de indekslenmemiş bir koleksiyondur.
+# Kümeler küme parantezleri ile yazılır.
+# Bir küme farklı veri türleri içerebilir:
+# Bir dizindeki öğelere bir dizine veya anahtara başvurarak erişemezsiniz.
+
+# Bir küme oluşturmak için set() yapıcısını kullanmak mümkündür. )
 
 ```py
 # Create a Set
