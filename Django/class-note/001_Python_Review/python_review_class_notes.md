@@ -771,6 +771,12 @@ Arguments are specified after the function name, inside the parentheses.
 
 You can add as many arguments as you want, just separate them with a comma.
 
+#  Bilgiler, argümanlar olarak işlevlere aktarılabilir.
+
+#  Bağımsız değişkenler, işlev adından sonra parantez içinde belirtilir.
+
+#  İstediğiniz kadar argüman ekleyebilirsiniz, sadece virgülle ayırın
+
 ```py
 # The following example has a function with one argument (name). When the function is called, we pass along a name, which is used inside the function to print the full name.
 def my_function(name):
@@ -816,6 +822,9 @@ my_function(child1 = "Hans", child2 = "Angel", child3 = "Lilly")
 If you do not know how many keyword arguments that will be passed into your function, add two asterisk: ** before the parameter name in the function definition.
 
 This way the function will receive a dictionary of arguments, and can access the items accordingly:
+# Fonksiyonunuza kaç tane anahtar kelime argümanının iletileceğini bilmiyorsanız, fonksiyon tanımında parametre adından önce iki yıldız işareti ekleyin: **.
+
+# Bu şekilde işlev bir argüman sözlüğü alacak ve buna göre öğelere erişebilecek:
 
 ```py
 # If the number of keyword arguments is unknown, add a double ** before the parameter name:
