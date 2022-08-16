@@ -166,15 +166,19 @@ print("x <= y:", x <= y)
 print("x >= y:", x >= y)
 ```
 
-### Logical Operators
+### Logical Operators (Mantıksal operatörler)
 
 ```py
 and	True if both are true	x and y
+  # (ve her ikisi de doğruysa doğru x ve y)
 or	True if at least one is true	x or y
+  # (veya En az biri doğruysa doğru x veya y)
 not	True only if false not x
+  # (Doğru değil sadece yanlışsa x değil)
 ```
 
 - For example, they can be used to determine if the grade is passing and that the student is registered in the course. If both of these cases are true, then the student will be assigned a grade in the system.
+    # (Örneğin, notun geçip geçmediğini ve öğrencinin derse kayıtlı olup olmadığını belirlemek için kullanılabilirler. Bu durumların her ikisi de doğruysa, öğrenciye sistemde bir not verilir.)
 
 ```py
 print((9 > 7) and (2 < 4))  # Both original expressions are True
@@ -206,9 +210,10 @@ Nothing special.
 
 ![Data Types](data_types.png)
 
-### List
+### List (liste)
 
 Lists are mutable sequences, typically used to store collections of items (where the precise degree of similarity will vary by application).
+  # (Listeler, tipik olarak öğe koleksiyonlarını depolamak için kullanılan değişken dizilerdir (kesin benzerlik derecesi uygulamaya göre değişir)
 
 ```py
 list1 = ["Apple", 1, 3.5, True, [1, 3], {"Ready": "yes"}]
@@ -217,6 +222,10 @@ list1 = ["Apple", 1, 3.5, True, [1, 3], {"Ready": "yes"}]
 Lists may be constructed in several ways:
 - Using a pair of square brackets to denote the empty list: []
 - Using the type constructor: list() or list(iterable)
+    # ( Listeler birkaç şekilde oluşturulabilir:
+    # - Boş listeyi belirtmek için bir çift köşeli parantez kullanma: []
+    # - Tip yapıcısını kullanma: list() veya list(yinelenebilir) )
+
 ```py
 a = list()
 print(a)
@@ -253,7 +262,7 @@ count()	  # Returns the number of elements with the specified value
 extend()  # Add the elements of a list (or any iterable), to the end of the current list
 index()	  # Returns the index of the first element with the specified value
 insert(index, elem)  # Adds an element at the specified position
-pop(index)	  # Removes the element at the specified position, assigning the popped item to a new variable
+pop(index)	  # Removes the element at the specified position, assigning the popped item to a new variable (Atılan öğeyi yeni bir değişkene atayarak belirtilen konumdaki öğeyi kaldırır)
 remove()  # Removes the item with the specified value (the first value)
 reverse() # Reverses the order of the list
 ```
