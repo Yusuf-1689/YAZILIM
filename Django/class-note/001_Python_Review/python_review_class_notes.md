@@ -381,6 +381,7 @@ Dictionaries are used to store data values in key:value pairs.
 A dictionary is a collection which is ordered, changeable and does not allow duplicates.
 
 Dictionaries are written with curly brackets, and have keys and values:
+
 # (Sözlükler, veri değerlerini anahtar:değer çiftlerinde depolamak için kullanılır.
 
 # Sözlük, sıralı, değiştirilebilir ve kopyalara izin vermeyen bir koleksiyondur.
@@ -459,13 +460,29 @@ Python has a set of built-in methods that you can use on dictionaries.
 
 ```py
 clear()	# Removes all the elements from the dictionary
+# clear = açık / # Sözlükteki tüm öğeleri kaldırır
+
 get()	# Returns the value of the specified key
+#  get = almak /  Belirtilen anahtarın değerini döndürür
+
 items()	# Returns a list containing a tuple for each key value pair
+# items= öğeler /  Her bir anahtar değer çifti için bir tanımlama grubu içeren bir liste döndürür
+
 keys()	# Returns a list containing the dictionary's keys
+# key = anahtar / Sözlüğün anahtarlarını içeren bir liste döndürür
+
 pop()	# Removes the element with the specified key
+# Belirtilen anahtarla öğeyi kaldırır
+
 popitem()	# Removes the last inserted key-value pair
+# Son eklenen anahtar/değer çiftini kaldırır
+
 update()	# Updates the dictionary with the specified key-value pairs
+# update= güncelleme / Sözlüğü belirtilen anahtar/değer çiftleriyle günceller
+
 values()	# Returns a list of all the values in the dictionary
+# Sözlükteki tüm değerlerin bir listesini döndürür
+
 ```
 
 ### Set
