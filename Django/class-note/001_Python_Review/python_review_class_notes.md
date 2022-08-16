@@ -259,12 +259,24 @@ copy()	  # Returns a copy of the list
 
 ```py
 count()	  # Returns the number of elements with the specified value
+  ## count= saymak / Belirtilen değere sahip öğelerin sayısını döndürür
+
 extend()  # Add the elements of a list (or any iterable), to the end of the current list
+  # extend= uzatmak / Geçerli listenin sonuna bir listenin öğelerini (veya herhangi bir yinelenebilir) ekleyin
+
 index()	  # Returns the index of the first element with the specified value
+   # index= dizin / Belirtilen değere sahip ilk öğenin dizinini döndürür
+
 insert(index, elem)  # Adds an element at the specified position
+  # insert= sokmak / Belirtilen konuma bir eleman ekler
+
 pop(index)	  # Removes the element at the specified position, assigning the popped item to a new variable (Atılan öğeyi yeni bir değişkene atayarak belirtilen konumdaki öğeyi kaldırır)
 remove()  # Removes the item with the specified value (the first value)
+  # remove= kaldırmak / Belirtilen değere sahip öğeyi kaldırır (ilk değer)
+
 reverse() # Reverses the order of the list
+  # reverse= tersi / Listenin sırasını tersine çevirir
+  
 ```
 
 reverse() actually reverses the elements in the container. reversed() doesn't actually reverse anything, it merely returns an object that can be used to iterate over the container's elements in reverse order.
