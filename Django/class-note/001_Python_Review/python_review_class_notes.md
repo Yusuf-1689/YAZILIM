@@ -102,7 +102,7 @@ split() # Splits at any sequence of whitespace (blanks, newlines, tabs) and retu
 split(sep)  # Separator that gets removed from between the parts of the list.
 startswith() # True/False
 endswith() # True/False
-strip([chars]) # Returns a copy of the string with both leading and trailing characters removed
+strip([chars]) # Returns a copy of the string with both leading and trailing characters removed (strip = şerit anlamına gelir)
 ```
 
 ```py
