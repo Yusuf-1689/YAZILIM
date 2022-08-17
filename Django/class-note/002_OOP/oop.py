@@ -62,7 +62,6 @@ print("-----------------------------------")
 # person2.salute()
 
 
-
 #! special methods ( init, str)
 
 # class Person:
@@ -78,7 +77,6 @@ print("-----------------------------------")
     
 #     def __str__(self):
 #         return f"{self.name} - {self.age}"
-
 
 # person1 = Person("henry", 18)
 # # person1.get_details()
@@ -96,7 +94,6 @@ print("-----------------------------------")
 #* abstraction
 #* polymorhism
 #* inheritance
-
 
 #? encapsulation and abstraction
 # class Person:
