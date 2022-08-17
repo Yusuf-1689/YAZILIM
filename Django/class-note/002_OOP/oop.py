@@ -115,7 +115,6 @@ print("-----------------------------------")
 #     def get_details(self):
 #         print(self.name, self.age)
         
-
 # person1 = Person("henry", 18)
 # person1._id = 4000
 # print(person1._id)
@@ -198,10 +197,6 @@ emp1 = Employee("vic", 32, "FS", ["pyhton", "JS"])
 #     Polymorphism
 #        Overriding methods
 #* Inner class
-
-
-
-
 
 
 
