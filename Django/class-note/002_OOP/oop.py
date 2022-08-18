@@ -1,11 +1,12 @@
 import os
-os.system('cls' if os.name == 'nt' else 'clear')
+
+os.system("cls" if os.name == "nt" else "clear")
 
 print("-----------------------------------")
 # def print_types(data):
 #     for i in data:
 #         print(i, type(i))
-        
+
 
 # test = [122, 'victor', [1,2,3], (1,2,3), {1,2,3}, True, lambda x:x]
 
@@ -14,7 +15,7 @@ print("-----------------------------------")
 # class Person:
 #     name = "victor"
 #     age = 32
-    
+
 
 # person1 = Person()
 # person2 = Person()
@@ -23,28 +24,27 @@ print("-----------------------------------")
 # Person.job = "developer"
 # print(person2.job)
 
-#! class attributes vs instance attributes 
+#! class attributes vs instance attributes
 
 # class Person:
 #     company = "clarusway"
-    
+
 #     def test(self):
 #         print("test")
-        
+
 #     def set_details(self, name, age):
 #         self.name = name
 #         self.age = age
-        
+
 #     def get_details(self):
 #         print(self.name, self.age)
-    
+
 #     @staticmethod
 #     def salute():
 #         print("Hi there!")
 
 # person1 = Person()
 # person2 = Person()
-
 
 # person1.location = "Turkey"
 # # print(person2.location)
@@ -66,15 +66,15 @@ print("-----------------------------------")
 
 # class Person:
 #     company = "clarusway"
-    
+
 #     def __init__(self, name, age):
 #         self.name = name
 #         self.age = age
-    
-        
+
+
 #     def get_details(self):
 #         print(self.name, self.age)
-    
+
 #     def __str__(self):
 #         return f"{self.name} - {self.age}"
 
@@ -90,28 +90,28 @@ print("-----------------------------------")
 
 #! OOP Principles (4 pillars)
 
-#* encapsulation
-#* abstraction
-#* polymorhism
-#* inheritance
+# * encapsulation
+# * abstraction
+# * polymorhism
+# * inheritance
 
-#? encapsulation and abstraction
+# ? encapsulation and abstraction
 # class Person:
 #     company = "clarusway"
-    
+
 #     def __init__(self, name, age):
 #         self.name = name
 #         self.age = age
 #         self._id = 5000
 #         self.__id = 3000
-        
+
 
 #     def __str__(self):
 #         return f"{self.name} - {self.age}"
 
 #     def get_details(self):
 #         print(self.name, self.age)
-        
+
 # person1 = Person("henry", 18)
 # person1._id = 4000
 # print(person1._id)
@@ -122,10 +122,10 @@ print("-----------------------------------")
 # liste.sort()
 # print(liste)
 
-#? inheritance and polymorphism (and multiple inheritance)
+# ? inheritance and polymorphism (and multiple inheritance)
 class Person:
     company = "clarusway"
-    
+
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -136,10 +136,11 @@ class Person:
     def get_details(self):
         print(self.name, self.age)
 
+
 class Lang:
     def __init__(self, langs):
         self.langs = langs
-    
+
     def display_langs(self):
         print(self.langs)
 
@@ -157,6 +158,7 @@ class Employee(Person, Lang):
         # print(self.name, self.age, self.path)
         super().get_details()
         print(self.path)
+
 
 emp1 = Employee("vic", 32, "FS", ["pyhton", "JS"])
 # emp1.get_details()
@@ -179,23 +181,21 @@ emp1 = Employee("vic", 32, "FS", ["pyhton", "JS"])
 
 #!Topics to be Covered:
 
-#* Everything in Python is class
-#? Defining class
-#* Defining class attributes
-#? Difference between class attributes and instance attributes
-#* SELF keyword
-#? Static methods
-#* Special methods (init, str)
-#? 4 pillars of OOP:
+# * Everything in Python is class
+# ? Defining class
+# * Defining class attributes
+# ? Difference between class attributes and instance attributes
+# * SELF keyword
+# ? Static methods
+# * Special methods (init, str)
+# ? 4 pillars of OOP:
 #     Encapsulation
 #     Abstraction
 #     Inheritance
 #        Multiple inheritance
 #     Polymorphism
 #        Overriding methods
-#* Inner class
-
-
+# * Inner class
 
 
 print("-----------------------------------")
