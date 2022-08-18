@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+}
+
+
+//************************************
+// ! Variable Declaration
+//************************************
+
+$bgColor: pink;
+$fontColor: white;
+$fontSize: 1.2rem;
+$fontFamily: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$navBgColor: #30a7c3;
+$myBorder: 2px solid rgb(175, 29, 29);
+$myLinkSize: 19px;
+$bannerBgColor: #cc6699;
+
+//************************************
+// ! Variable Usage
+//************************************
+body{
+    font-family: $fontFamily;
+    background-color: $bgColor;
+    color: $fontColor;
+    font-size: $fontSize;
+}
+
+// ! ****************  HEADER ***************
+
+header{
+    background-color: $navBgColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    img{
+        width: 80px;
+        border: $myBorder;
+        border-radius: 10px;
+    }
+   nav{
+       ul{
+           list-style-type: none;
+       }
+       li{
+           //! içinde bulunduğumuz elementi refere etmek için   & işareti kullanılır..
+           display: inline-block;
+           &:hover{
+               text-decoration: underline;
+           }
+       }
+    a{
+        color:$fontColor ;
+        text-decoration: none;
+        padding: 0.5rem;
+    }
+   }
+}
+
+// ***********  HEADER  *************
+
+main{
+    .banner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $bannerBgColor;
+        padding: 1rem;
+        line-height:2rem;
+    }
+    button{
+        padding: 0.5rem;
+        background-color: $navBgColor;
+        border: none;
+        border-radius:10px ;
+        font-size: $myLinkSize;
+        width: 10rem;
+        margin-right: 0.5rem;
+        margin-top: 1.5rem;
+        &:hover{
+            background-color: $bgColor;
+            cursor: pointer;
+        }
+    }
+}
+img{
+    width: 30%;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+// ***********  CARDS  *************
+
+//! ***********  @MIXIM *************
+
+@mixin myBox ($bgColor, $fontColor) {
+    background-color: $bgColor;
+    color: $fontColor;
+    width:25%;
+    height: 20rem;
+    border: $myBorder;
+    border-radius: 5px;
+    margin: 0.5rem;
+}
+
+.cards{
+    display: flex;
+    padding: 1rem;
+    .card1{
+        @include myBox(brown, white );
+    }
+    .card2{
+        @include myBox(rgb(42, 165, 63), white );
+    }
+    .card3{
+        @include myBox(rgb(165, 157, 42), black);
+    }
+    .card4{
+        @include myBox(rgb(42, 46, 165), white );
+    }
+}
+
+// ***********  CARDS  *************
+
+//! ***********  @EXTEND *************
+
+.articles{
+    display: flex;
+    padding: 1rem;
+    .article1{
+    width: 50%;
+    background-color: grey;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 10rem;
+    margin: 1rem;
+    padding: 00.5rem;
+    }
+    .article2{
+        @extend .article1;
+        background-color: hotpink;
+    }
+   
+}
+
+// ***********  FOOTERS  *************
+//! ***********  FOR LOOP *************
+$textColor:#990000, #55004e, #0fa8a1, #121456, #64c217;
+
+.footer{
+    .socialIcons{
+        display: flex;
+        height: 8rem;
+        @for $i from 1 through 5 {
+            .social#{$i}{
+                width: 20%;
+                height: 100%;
+                background-color: lighten( rgba(60, 59, 59, 0.951), $i * 10);
+                color: nth($textColor, $i);
+                font-size: $i * 1rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
