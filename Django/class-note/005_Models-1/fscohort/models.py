@@ -13,8 +13,8 @@ class Student(models.Model):
     last_update_date = models.DateTimeField(auto_now=True)
     is_active = models.BooleanField(default=True)
 
-    # def __str__(self):
-    #     return f"{self.number} - {self.first_name}"
+    def __str__(self):
+        return f"{self.number} - {self.first_name}"
 
     # def student_year_status(self):
     #     "Returns the student's year status."
