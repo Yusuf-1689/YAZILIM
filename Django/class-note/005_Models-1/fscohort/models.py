@@ -16,16 +16,16 @@ class Student(models.Model):
     def __str__(self):
         return f"{self.number} - {self.first_name}"
 
-    # def student_year_status(self):
-    #     "Returns the student's year status."
-    #     import datetime
+    def student_year_status(self):
+        "Returns the student's year status."
+        import datetime
 
-    #     if self.register_date < datetime.date(2019, 1, 1):
-    #         return "Senior"
-    #     elif self.register_date < datetime.date(2020, 1, 1):
-    #         return "Junior"
-    #     else:
-    #         return "Freshman"
+        if self.register_date < datetime.date(2019, 1, 1):
+            return "Senior"
+        elif self.register_date < datetime.date(2020, 1, 1):
+            return "Junior"
+        else:
+            return "Freshman"
 
     class Meta:
         ordering = ["number"]
