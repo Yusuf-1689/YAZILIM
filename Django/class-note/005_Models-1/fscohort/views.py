@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse("welcome backend")
+    return HttpResponse("<h1>welcome backend</h1>")
