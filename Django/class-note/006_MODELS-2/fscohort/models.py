@@ -9,3 +9,12 @@ class Student(models.Model):
     number = models.IntegerField('Numara')
 
 
+    def __str__(self):
+        return f"{self.number} - {self.first_name} - {self.last_name}"
+
+
+    class Meta:
+        ordering = ['number']
+        verbose_name_plural = 'Öğrenciler'
+
+
