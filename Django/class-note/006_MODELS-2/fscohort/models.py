@@ -16,7 +16,7 @@ class Student(models.Model):
     last_name = models.CharField(max_length=50)
     number = models.IntegerField('Numara')
     about = models.TextField('Hakkında', blank=True, null=True)
-    country = models.CharField('Ülke', max_length=2 choices=COUNTRIES, default='TR')
+    country = models.CharField('Ülke', max_length=2, choices=COUNTRIES, default='TR')
     avatar = models.ImageField('Resim', blank=True, null=True, upload_to='media/')
     registered_date = models.DateTimeField(auto_now_add=True)
     update = models.DateTimeField(auto_now=True)
