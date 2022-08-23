@@ -4,4 +4,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home (request):
-    return HttpResponse('Hello FS')
+    print(request)
+    print(request.method)
+    print(request.COOKIES)
+    print(request.path)
+    print(request.user)
+    print(request.META)
+    
+    html="<html><body>hello FS</body></html>"
+    return HttpResponse(html)
