@@ -1,2 +1,16 @@
 <h1>This is fsApp index page</h1>
 {{ request.user }}
+<br />
+{{ caption | title }}
+<br />
+<ul>
+  {% for i in my_list %}
+  <br />
+  <li>{{ i }}</li>
+
+  <br />
+  {% endfor %}
+</ul>
+<!-- This is HTML comment -->
+
+{% comment %} fs comment {% endcomment %}
