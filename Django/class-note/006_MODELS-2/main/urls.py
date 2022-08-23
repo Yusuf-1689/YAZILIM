@@ -1,4 +1,5 @@
 """main URL Configuration
+
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
 Examples:
@@ -22,7 +23,7 @@ urlpatterns = [
     path('fscohort/', include('fscohort.urls')), # -> fscohort/urls.py
 ]
 
-# # View Static/Media Files:
+# View Static/Media Files:
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
