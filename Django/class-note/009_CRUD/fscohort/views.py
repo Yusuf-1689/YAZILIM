@@ -1,5 +1,5 @@
 from multiprocessing import context
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Student
 from .forms import StudentForm
 
@@ -18,8 +18,21 @@ def student_list(request):
     
 def student_add(request):
     form = StudentForm()
+    if request.method == 'POST':
+        form=StudentForm(request.POST)
+        print(form)
+        if form.is_valid():
+            form.save()
+            return redirect("list")
     context={
         'form': form
     }
     return render(request, 'fscohort/student_add.html', context)
     
+def student_update(request,id):
+    student=Student.objects.get(id=id)
+    form=StudentForm(instance=student)
+    context={
+        'form':form
+    }
+    return render(request,'fscohort/student_update.html',context)
