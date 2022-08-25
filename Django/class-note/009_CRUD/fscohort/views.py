@@ -12,3 +12,4 @@ def student_list(request):
         'students': students,
     }
     return render(request, 'fscohort/student_list.html', context)
+    # return render(request, 'fscohort/student_list.html', { 'students': students})
