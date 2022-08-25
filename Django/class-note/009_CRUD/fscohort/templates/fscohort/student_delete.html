@@ -1,6 +1,6 @@
 {% extends 'fscohort/base.html' %} {% block container %}
 <form action="" method="POST">
-  <p>Are You Sure!</p>
+  <p>Are You Sure! {{ student }}</p>
   {% csrf_token %}
   <input type="submit" value="Yes" />
 </form>
