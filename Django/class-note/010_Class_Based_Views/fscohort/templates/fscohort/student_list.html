@@ -3,7 +3,7 @@
 <h2>Student List</h2>
 
 <ul>
-  {% for student in students %}
+  {% for student in student_list %}
   <a href="{% url 'detail' student.id  %}">
     <li>{{student}}</li>
   </a>
