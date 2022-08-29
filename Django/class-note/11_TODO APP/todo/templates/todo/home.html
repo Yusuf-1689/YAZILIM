@@ -1,18 +1,24 @@
-{% extends 'todo/base.html' %} {% block content %}
+{% extends 'todo/base.html' %}
 
-<div>
-  <form action="/add/" method="POST">
-    {% csrf_token %} {{form.as_p}}
-    <input type="submit" value="ADD" />
-  </form>
+{% block content %}
 
-  <ul>
+<div class="container">
+    <div>
+
+<form action="/add/" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="ADD">
+</form>
+</div>
+
+<div></div>
+<ul>
     {% for todo in todos %}
-
-    <li>{{todo}}</li>
-
+        <li><a href="{% url 'update' todo.id %}">{{todo}}</a></li>
     {% endfor %}
-  </ul>
+</ul> 
+</div>
 </div>
 
 {% endblock content %}
