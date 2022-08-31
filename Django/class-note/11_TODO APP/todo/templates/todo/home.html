@@ -26,7 +26,9 @@
           <td>
             <button><a href="{% url 'update' todo.id %}">Update </a></button>
           </td>
-          <td><a href="#">Delete </a></td>
+          <td>
+            <button><a href="{% url 'delete' todo.id %}">Delete </a></button>
+          </td>
         </tr>
         {% endfor %}
       </tbody>
