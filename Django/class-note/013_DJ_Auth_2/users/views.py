@@ -6,3 +6,6 @@ from django.contrib import messages
 
 def home(request):
     return render(request, 'users/home.html')
+
+def user_logout(request):
+    logout(request)
