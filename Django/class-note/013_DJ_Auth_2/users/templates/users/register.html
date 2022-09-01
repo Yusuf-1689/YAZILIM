@@ -10,7 +10,11 @@
 
 <h3>Fill out the form please!</h3>
 <form action="" method="post" enctype="multipart/form-data">
-  {% csrf_token %} {{ form_user | crispy }} {{ form_profile | crispy }}
+  
+  {% csrf_token %} 
+  {{ form_user | crispy }} 
+  {{ form_profile | crispy }}
+  
   <button type="submit" class="btn btn-danger">Register</button>
 </form>
 {% endif %} {% endblock content %}
