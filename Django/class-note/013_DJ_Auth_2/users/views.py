@@ -1,42 +1,53 @@
-from multiprocessing import context
 from django.shortcuts import render, redirect, HttpResponse
-from django.contrib.auth import logout,login
-
 
 from django.contrib import messages
 
-from users.forms import UserForm, UserProfileForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from .forms import UserForm
+# add authenticate and login
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 
 def home(request):
     return render(request, 'users/home.html')
 
+def register(request):
+    form = UserForm()
+
+    if request.method == 'POST':
+        # pass in post data when instantiate the form.
+        form = UserForm(request.POST, request.FILES)
+        # if the form is ok with the info filled:
+        if form.is_valid():
+            user = form.save()
+            
+            # want user to login right after registered, import login
+            login(request, user)
+            # want to redirect to home page, import redirect
+            return redirect('home')
+
+    context = {
+        'form_user': form
+    }
+
+    return render(request, "users/register.html", context)
+
 def user_logout(request):
+    messages.success(request, "You Logout!")
     logout(request)
     return redirect('home')
 
-def register(request):
-    form_user=UserForm()
-    form_profile=UserProfileForm()
-    if request.method=='POST':
-        form_user=UserForm(request.POST)
-        form_profile=UserProfileForm(request.POST, request.FILES)
-        if form_user.is_valid() and form_profile.is_valid():
-            form_user.save()
-            # form_profile.save()
-            profile=form_profile.save(commit=False)          
-            profile.user=form_user.save()
-            profile.save()
-            login(request,user)
-            
+def user_login(request):
+
+    form = AuthenticationForm(request, data=request.POST)
+
+    if form.is_valid():
+        user = form.get_user()
+        if user:
+            messages.success(request, "Login successfull")
+            login(request, user)
             return redirect('home')
-            
-    
-    
-    
-    context={
-        'form_profile':form_profile,
-        'form_user':form_user
-    }
-    return render(request,'users/register.html',context)
+    return render(request, 'users/user_login.html', {"form": form})
