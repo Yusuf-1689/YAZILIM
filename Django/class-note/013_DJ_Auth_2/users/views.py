@@ -50,4 +50,4 @@ def user_login(request):
         login(request,user)
         return redirect('home')
     
-    return render(request, 'users/login.html',{'forn':form})
+    return render(request, 'users/user_login.html',{'forn':form})
