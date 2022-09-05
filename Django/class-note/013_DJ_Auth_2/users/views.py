@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, HttpResponse
+import django.contrib.auth import logout
 
 from django.contrib import messages
 
@@ -6,3 +7,7 @@ from django.contrib import messages
 
 def home(request):
     return render(request, 'users/home.html')
+
+def user_logout(request):
+    logout(request)
+    return redirect('home')
