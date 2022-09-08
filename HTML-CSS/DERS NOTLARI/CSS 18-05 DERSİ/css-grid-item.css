@@ -26,7 +26,7 @@
 
 .content{
     background-color: lightskyblue;
-    border: 1px solid blue;
+    border: 1.5px solid blue;
 }
 
 .content1{
@@ -48,7 +48,7 @@
     grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 4;*/
-    background-color: coral; 
+    background-color: rgb(243, 125, 82); 
     /* grid-area: 4 /1 / span 3 / span 4 ; */
     grid-area: 2/3 / span 2 / span 2 ;
 }
