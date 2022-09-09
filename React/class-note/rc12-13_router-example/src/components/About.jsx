@@ -31,6 +31,7 @@ const About = () => {
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Praesentium veniam tempore odio, distinctio neque enim eveniet
             consequatur magnam vero ut.
+            Lorem ipsum dolor sit amet.
           </p>
         </div>
       </div>
