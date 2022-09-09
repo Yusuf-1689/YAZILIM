@@ -21,6 +21,7 @@ const About = () => {
             consequatur magnam vero ut. Lorem ipsum dolor, sit amet consectetur
             adipisicing elit. Assumenda sit inventore quae cupiditate, unde
             voluptate.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quidem.
           </p>
         </div>
         <div className="col-sm-12 col-md-6 col-lg-3">
