@@ -10,6 +10,7 @@ const About = () => {
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Praesentium veniam tempore odio, distinctio neque enim eveniet
             consequatur magnam vero ut.
+            Voluptatem quae accusantium omnis, nobis earum sit?
           </p>
         </div>
         <div className="col-sm-12 col-md-6 col-lg-5">
@@ -21,7 +22,7 @@ const About = () => {
             consequatur magnam vero ut. Lorem ipsum dolor, sit amet consectetur
             adipisicing elit. Assumenda sit inventore quae cupiditate, unde
             voluptate.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quidem.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
         <div className="col-sm-12 col-md-6 col-lg-3">
