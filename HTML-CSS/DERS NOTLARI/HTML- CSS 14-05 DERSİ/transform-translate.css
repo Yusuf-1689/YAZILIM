@@ -85,7 +85,7 @@
 .transition-btn {
     width: 5rem;
     padding: 1rem;
-    background-color: lightgreen;
+    background-color: rgb(135, 236, 135);
     border: none;
     border-radius: 5px;
     font-weight: 600;
@@ -95,6 +95,6 @@
 }
 
 .transition-btn:hover {
-    background-color: darkgreen;
+    background-color: rgb(2, 107, 2);
     color: white;
 }
