@@ -61,7 +61,7 @@ body {
 }
 
 .box1 {
-    box-shadow: 2px 2px 10px rgb(126, 124, 124);
+    box-shadow: 2px 2px 10px rgb(133, 130, 130);
     box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
     /* box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px; */
     /*!google den aldık hoca link attı birden fazlada kullanılabiliyor yukarıda da yaptık */
@@ -72,5 +72,5 @@ body {
 }
 
 .box3 {
-    box-shadow: 10px -10px 32px rgb(30, 255, 0);
+    box-shadow: 10px -10px 32px rgb(32, 252, 3);
 }
