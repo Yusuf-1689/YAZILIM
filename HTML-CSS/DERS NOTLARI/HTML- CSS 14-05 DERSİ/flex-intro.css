@@ -19,6 +19,6 @@
 .container div {
     width: 5rem;
     height: 5rem;
-    background-color: violet;
+    background-color: rgb(248, 123, 248);
     margin: 1rem;
 }
