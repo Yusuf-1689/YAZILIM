@@ -8,7 +8,7 @@
   h2 {
     font-family: sans-serif;
     text-align: center;
-    color: black;
+    color: rgb(7, 7, 7);
   }
   .logo {
     display: block;
@@ -32,7 +32,7 @@
   body {
     font-family: system-ui;
     color: #555;
-    background-color: #f7f7f7;
+    background-color: #f7efef;
     min-height: 96vh;
     background: linear-gradient(to top left, #5e0674, #c0ceee);
     display: block;
