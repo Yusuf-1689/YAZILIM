@@ -68,3 +68,18 @@ class UnitTestCase(TestCase):
         pulled_hash = Hash.objects.get(hash='2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824')
         # Check if the db value is equal to the true one
         self.assertEqual(hash.text,pulled_hash.text)
+        
+    def test_viewing_hash(self):
+        # Inherit from Hash form:
+        hash = Hash()
+        # sample text will be 'hello' as always:
+        hash.text = 'hello'
+        # sample hash is the same as always
+        hash.hash = '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824'
+        # save to the test db
+        hash.save()
+        # the url pattern should be as fallows, hash/<hash value>
+        response = self.client.get('/hash/2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824')
+        self.assertContains(response,'hello')
+        
+    
