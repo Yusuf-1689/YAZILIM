@@ -13,4 +13,4 @@ class FunctionalTestCase(TestCase):
         
     def test_there_is_homepage(self):
         self.browser.get('http://localhost:8000')
-        self.assertIn('Enter Hash Here',self.browser.page_source)
+        self.assertIn('Enter hash here',self.browser.page_source)
