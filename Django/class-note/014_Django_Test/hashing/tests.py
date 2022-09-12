@@ -52,3 +52,5 @@ class UnitTestCase(TestCase):
         # Go to any of the website to generate hash
         self.assertEqual('2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824', text_hash)
         # No need to write extra code for that, because it checks the library of hashlib only.
+        
+        
