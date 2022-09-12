@@ -5,6 +5,8 @@ from .forms import HashForm
 
 import hashlib
 
+from .models import Hash
+
 # browser = webdriver.Chrome()
 # browser.get('http://localhost:8000')
 
@@ -54,3 +56,15 @@ class UnitTestCase(TestCase):
         # No need to write extra code for that, because it checks the library of hashlib only.
         
         
+    def test_hash_object(self):
+        # First create a hash object:
+        hash = Hash()
+        # the first property will be a sample text, and second will be the corresponding hash value of that text
+        hash.text = 'hello'
+        hash.hash = '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824'
+        # save new test properties to the db
+        hash.save()
+        # Get the object from db, django will search for this hash from the db, and bring us the object
+        pulled_hash = Hash.objects.get(hash='2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824')
+        # Check if the db value is equal to the true one
+        self.assertEqual(hash.text,pulled_hash.text)
