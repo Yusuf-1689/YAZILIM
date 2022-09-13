@@ -28,7 +28,7 @@
     </form>
     <br>
     
-    {% for i in city_data  %}
+    {% for i in city_data reversed %}
     {{i.city}} <br>
     {{i.temp}} &#8451 <br>
     <img src="http://openweathermap.org/img/wn/{{i.icon}}@2x.png" alt=""> <br>

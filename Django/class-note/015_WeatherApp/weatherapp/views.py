@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from decouple import config
 import requests
 from pprint import pprint
@@ -46,3 +46,7 @@ def index(request):
     }
     
     return render(request, 'weatherapp/index.html', context)
+
+def delete_city(request, id):
+    # city = City.objects.get(id=id)
+    city = City.objects.get(get_object_or_404)
