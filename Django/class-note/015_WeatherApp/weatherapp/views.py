@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404,redirect
 from decouple import config
 import requests
 from pprint import pprint
@@ -33,14 +33,14 @@ def index(request):
         response = requests.get(url)
         content = response.json()
         data = {
-            "city" : content["name"],
+            "city" : city,
             "temp" : content["main"]["temp"],
             "icon" : content["weather"][0]["icon"],
             "desc" : content["weather"][0]["description"]
         }
         city_data.append(data)
 
-
+    # pprint(city_data)
     context = {
         "city_data": city_data
     }
@@ -49,4 +49,7 @@ def index(request):
 
 def delete_city(request, id):
     # city = City.objects.get(id=id)
-    city = City.objects.get(get_object_or_404)
+    city = get_object_or_404(City, id=id)
+    city.delete()
+    messages.warning(request, "City deleted.")
+    return redirect("home")
