@@ -1,6 +1,6 @@
 from django.contrib import admin
 # Register your models here.
-from .models import Product
+from .models import Product,Review
 from django.utils import timezone
 class ProductAdmin(admin.ModelAdmin):
     # readonly_fields = ("create_date",)
@@ -32,11 +32,12 @@ class ProductAdmin(admin.ModelAdmin):
     def added_days_ago(self, product):
         fark = timezone.now() - product.create_date
         return fark.days
-    
-    
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ('__str__', 'created_date', 'is_released')
+    list_per_page = 50
+    raw_id_fields = ('product',)
 admin.site.register(Product,ProductAdmin)
-
-
+admin.site.register(Review,ReviewAdmin)
 admin.site.site_title = "Clarusway Title"
 admin.site.site_header = "Clarusway Admin Portal"
 admin.site.index_title = "Welcome to Clarusway Admin Portal"
