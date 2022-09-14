@@ -2,13 +2,12 @@ from django.contrib import admin
 # Register your models here.
 from .models import Product,Review
 from django.utils import timezone
-
 class ReviewInline(admin.TabularInline):  # StackedInline farklı bir görünüm aynı iş
     '''Tabular Inline View for '''
     model = Review
-    extra = 1
+    extra = 3
     classes = ('collapse',)
-    # min_num = 3
+    #min_num = 3
     # max_num = 20
 class ProductAdmin(admin.ModelAdmin):
     # readonly_fields = ("create_date",)
@@ -45,10 +44,6 @@ class ReviewAdmin(admin.ModelAdmin):
     list_display = ('__str__', 'created_date', 'is_released')
     list_per_page = 50
     raw_id_fields = ('product',)
-    
-    
-
-    
 admin.site.register(Product,ProductAdmin)
 admin.site.register(Review,ReviewAdmin)
 admin.site.site_title = "Clarusway Title"
