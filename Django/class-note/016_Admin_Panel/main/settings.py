@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'django_admin_listfilter_dropdown',
     'rangefilter',
+    'import_export'
     
 ]
 
