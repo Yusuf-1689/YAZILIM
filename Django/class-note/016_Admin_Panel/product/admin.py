@@ -17,7 +17,7 @@ class ProductAdmin(admin.ModelAdmin):
     # readonly_fields = ("create_date",)
     list_display = ("name", "create_date", "is_in_stock", "update_date","added_days_ago","how_many_reviews")
     list_editable = ( "is_in_stock", )
-    list_display_links = ("create_date",)
+    list_display_links = ("create_date","name")
     search_fields = ("name","create_date")
     prepopulated_fields = {'slug' : ('name',)}
     list_per_page = 15
