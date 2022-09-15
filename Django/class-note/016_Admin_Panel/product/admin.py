@@ -23,6 +23,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_per_page = 15
     date_hierarchy = "update_date"
     inlines = (ReviewInline,)
+    readonly_fields = ("bring_image",)
     # fields = (('name', 'slug'), 'description', "is_in_stock")
     fieldsets = (
         ("General fields", {
