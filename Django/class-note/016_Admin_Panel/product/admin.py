@@ -4,6 +4,7 @@ from django.utils.safestring import mark_safe
 from .models import Category, Product,Review
 from django.utils import timezone 
 from django_admin_listfilter_dropdown.filters import RelatedDropdownFilter, DropdownFilter
+from rangefilter.filters import DateRangeFilter, DateTimeRangeFilter
 
 
 class ReviewInline(admin.TabularInline):  # StackedInline farklı bir görünüm aynı iş
@@ -18,7 +19,7 @@ class ProductAdmin(admin.ModelAdmin):
     # readonly_fields = ("create_date",)
     list_display = ("name", "create_date", "is_in_stock", "update_date","added_days_ago","how_many_reviews", "bring_img_to_list")
     list_editable = ( "is_in_stock", )
-    list_filter = ("is_in_stock", "create_date", ("name", DropdownFilter))
+    list_filter = ("is_in_stock", ("create_date", DateTimeRangeFilter), ("name", DropdownFilter))
     list_display_links = ("name",)
     search_fields = ("name","create_date")
     prepopulated_fields = {'slug' : ('name',)}
