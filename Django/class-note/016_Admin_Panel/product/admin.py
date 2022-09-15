@@ -58,6 +58,11 @@ class ProductAdmin(admin.ModelAdmin):
         if obj.product_img:
             return mark_safe(f"<img src={obj.product_img.url} width=50 height=50></img>")
         return mark_safe("******")
+    
+    def bring_image(self, obj):
+        if obj.product_img:
+            return mark_safe(f"<img src={obj.product_img.url} width=400 height=400></img>")
+        return mark_safe(f"<h3>{obj.name} has not image </h3>")
 
 
 class ReviewAdmin(admin.ModelAdmin):
