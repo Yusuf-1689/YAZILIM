@@ -1,5 +1,5 @@
 from django.contrib import admin
-# Register your models here.
+
 from .models import Product,Review
 from django.utils import timezone
 class ReviewInline(admin.TabularInline):  # StackedInline farklı bir görünüm aynı iş
