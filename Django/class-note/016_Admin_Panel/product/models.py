@@ -23,7 +23,6 @@ class Product(models.Model):
     slug = models.SlugField(null=True, blank=True)
     categories = models.ManyToManyField(Category, related_name="products")
     product_img = models.ImageField(null=True, blank=True, default="defaults/clarusway.png", upload_to="product/")
-    
     class Meta:
         verbose_name = "Product"
         verbose_name_plural = "Products"
