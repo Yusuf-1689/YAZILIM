@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
-
+from django_admin_listfilter_dropdown.filters import RelatedDropdownFilter
 # Register your models here.
 from .models import Category, Product,Review
 from django.utils import timezone 
@@ -18,6 +18,7 @@ class ProductAdmin(admin.ModelAdmin):
     # readonly_fields = ("create_date",)
     list_display = ("name", "create_date", "is_in_stock", "update_date","added_days_ago","how_many_reviews", "bring_img_to_list")
     list_editable = ( "is_in_stock", )
+    list_filter = ("is_in_stock", "create_date",)
     list_display_links = ("create_date","name")
     search_fields = ("name","create_date")
     prepopulated_fields = {'slug' : ('name',)}
@@ -68,7 +69,10 @@ class ProductAdmin(admin.ModelAdmin):
 class ReviewAdmin(admin.ModelAdmin):
     list_display = ('__str__', 'created_date', 'is_released')
     list_per_page = 50
-    raw_id_fields = ('product',) 
+    raw_id_fields = ('product',)
+    list_filter = (
+        ('product', RelatedDropdownFilter),
+    ) 
     
 
 

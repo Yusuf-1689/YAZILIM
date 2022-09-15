@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     # myapp
     'product',
     'ckeditor',
+     'django_admin_listfilter_dropdown',
+    
 ]
 
 MIDDLEWARE = [
