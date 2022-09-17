@@ -3,7 +3,7 @@ from .models import Student
 
 
 
-# # 1. Yöntem 
+#  ----------------------------------1. Yöntem ---------------------------------
 # class StudentSerializer(serializers.Serializer):
 #     first_name = serializers.CharField(max_length=30)
 #     last_name = serializers.CharField(max_length=30)
@@ -20,11 +20,14 @@ from .models import Student
 #         return instance
 
 
-# 2. Yöntem
+# -------------------------------2. Yöntem-------------------------------------------
 
 class StudentSerializer(serializers.ModelSerializer):
+    full_name=serializers.SerializerMethodField()
+    def get_full_name(self,obj):
+        return f'{obj.first_name}{obj.last_name}'
     class Meta:
         model = Student
-        fields = ["id", "first_name", "last_name", "number"]
+        fields = ["id","full_name", "first_name", "last_name", "number"]
         # fields = '__all__'
         # exclude = ['number']
