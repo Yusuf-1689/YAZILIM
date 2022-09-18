@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Student
+from .models import Student,Path
 
 
 
@@ -24,10 +24,27 @@ from .models import Student
 
 class StudentSerializer(serializers.ModelSerializer):
     full_name=serializers.SerializerMethodField()
+    number_name=serializers.SerializerMethodField()
+    
     def get_full_name(self,obj):
         return f'{obj.first_name}{obj.last_name}'
+    
+    def get_number_name(self,obj):
+        return f'{obj.number}{obj.last_name}'
     class Meta:
         model = Student
-        fields = ["id","full_name", "first_name", "last_name", "number"]
+        fields = ["id","number_name","full_name", "first_name", "last_name", "number"]
         # fields = '__all__'
         # exclude = ['number']
+        
+class PathSerializer(serializers.ModelSerializer):
+    students = serializers.PrimaryKeyRelatedField(read_only=True, many=True)
+    class Meta:
+        model = Path
+        fields = "__all__"
+
+class StudentSerializer(serializers.ModelSerializer):
+    path = serializers.StringRelatedField()
+    class Meta:
+        model = Student
+        fields = "__all__"
