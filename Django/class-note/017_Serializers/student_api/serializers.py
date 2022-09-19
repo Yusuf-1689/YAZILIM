@@ -22,6 +22,11 @@ from .models import Student,Path
 
 # -------------------------------2. Yöntem-------------------------------------------
 
+class PathSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Path
+        fields = ["id", "path_name"]
+
 class StudentSerializer(serializers.ModelSerializer):
     full_name=serializers.SerializerMethodField()
     number_name=serializers.SerializerMethodField()
