@@ -1,12 +1,12 @@
 from rest_framework import serializers
-from .models import Student,Path
+from .models import Student, Path
 
-#1. yöntem
+# 1. yöntem
 # class StudentSerializer(serializers.Serializer):
 #     first_name = serializers.CharField(max_length=30)
 #     last_name = serializers.CharField(max_length=30)
 #     number = serializers.IntegerField(required=False)
-    
+
 #     def create(self, validated_data):
 #         return Student.objects.create(**validated_data)
 
@@ -16,12 +16,9 @@ from .models import Student,Path
 #         instance.number = validated_data.get('number', instance.number)
 #         instance.save()
 #         return instance
-#2. yöntem
-class PathSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Path
-        fields = ["id", "path_name"]
-    
+# 2. yöntem
+
+
 class StudentSerializer(serializers.ModelSerializer):
     # full_name=serializers.SerializerMethodField()
     # number_name=serializers.SerializerMethodField()
@@ -30,10 +27,19 @@ class StudentSerializer(serializers.ModelSerializer):
     #     return f'{obj.first_name}{obj.last_name}'
     # def get_number_name(self,obj):
     #     return f'{obj.number}{obj.first_name}'
-    path=serializers.StringRelatedField()
-    path_id=serializers.IntegerField()
+    path = serializers.StringRelatedField()
+    path_id = serializers.IntegerField()
+
     class Meta:
         model = Student
-        fields = ["id","path_id","path","first_name", "last_name", "number"]
+        fields = ["id", "path", "path_id", "first_name", "last_name", "number"]
         # fields = '__all__'
         # exclude = ['number']
+
+
+class PathSerializer(serializers.ModelSerializer):
+    students = StudentSerializer(many=True)
+
+    class Meta:
+        model = Path
+        fields = ["id", "path_name", "students"]
