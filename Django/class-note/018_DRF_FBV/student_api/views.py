@@ -99,6 +99,19 @@ def student_detail(request, pk):
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 
+@api_view(['PUT'])
+def student_update(request, pk):
+    student = get_object_or_404(Student, pk=pk)
+    serializer = StudentSerializer(student, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        data = {
+            "message": f"Student {student.last_name} updated successfully"
+        }
+        return Response(data, status=status.HTTP_200_OK)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
 @api_view(['GET', 'POST'])
 def path_api(request):
     # from rest_framework.decorators import api_view
