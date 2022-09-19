@@ -42,6 +42,11 @@ def student_list(request):
     return Response(serializer.data)
 
 
+@api_view(['GET'])
+def student_detail(request, pk):
+    student = get_object_or_404(Student, pk=pk)
+    
+
 
 @api_view(['POST'])
 def student_create(request):
