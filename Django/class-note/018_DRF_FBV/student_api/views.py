@@ -32,7 +32,26 @@ def student_api(request):
                 "message": f"Student {serializer.validated_data.get('first_name')} saved successfully!"}
             return Response(data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    
 
+@api_view(['PATCH'])
+def student_update_partial(request, pk):
+    student = get_object_or_404(Student, pk=pk)
+    serializer= StudentSerializer
+    
+
+
+
+@api_view(['DELETE'])
+def student_delete(request, pk):
+    student = get_object_or_404(Student, pk=pk)
+    student.delete()
+    data = {
+        "message": f"Student {student.last_name} deleted successfully..."
+    }
+    return Response(data, status=status.HTTP_200_OK)
+    
 
 @api_view(['GET'])
 def student_list(request):
