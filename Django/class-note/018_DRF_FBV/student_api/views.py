@@ -1,3 +1,4 @@
+from importlib.resources import path
 from django.shortcuts import render
 
 # Create your views here.
@@ -30,6 +31,31 @@ def student_api(request):
                 "message": f"Student {serializer.validated_data.get('first_name')} saved successfully!"}
             return Response(data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    
+    
+@api_view(['GET'])        #   , 'POST'
+def student_list(request):
+    students = Student.objects.filter(path=1)
+    serializer = StudentSerializer(students, many=True)
+    print(serializer)
+    return Response(serializer.data)
+
+
+
+@api_view(['POST'])
+def student_create(request):
+    print(request.data)
+    serializer = StudentSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        data = {
+            "message": 'Student create successfully....'
+        }
+        return Response(data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors)
+
+
 
 @api_view(['GET', 'PUT', 'DELETE', 'PATCH'])
 def student_api_get_update_delete(request, pk):
