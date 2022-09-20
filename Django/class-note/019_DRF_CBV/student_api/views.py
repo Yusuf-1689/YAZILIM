@@ -1,4 +1,6 @@
 from email.policy import HTTP
+import imp
+from itertools import count
 from msilib.schema import ServiceInstall
 from django.shortcuts import render
 
@@ -15,6 +17,7 @@ from rest_framework import status
 from rest_framework.views import APIView 
 from rest_framework.generics import GenericAPIView,mixins,ListCreateAPIView,RetrieveUpdateAPIView
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.decorators import action
 # Create your views here.
 
 ### CBV ###
@@ -106,6 +109,14 @@ class StudentRUD(RetrieveUpdateAPIView):
 class StudentGRUD(ModelViewSet):
     queryset=Student.objects.all()
     serializer_class=StudentSerializer
+    
+    @action(detail=False,methods=['GET'])
+    def student_count(self,request):
+        count={
+            'student-count':self.queryset.count()
+            
+        }
+        return Response(count)
         
 ### FBV ###
 
