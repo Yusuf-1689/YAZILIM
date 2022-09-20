@@ -13,6 +13,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from rest_framework.views import APIView 
+from rest_framework.generics import GenericAPIView,mixins
 # Create your views here.
 
 ### CBV ###
@@ -58,16 +59,24 @@ class StudentDetail(APIView):
         }
         return Response(data,status=status.HTTP_204_NO_CONTENT)
         
+###  CBV  ### ###  Generic APIView  ###
 
-
+class StudentListCreate(mixins.ListModelMixin,mixins.CreateModelMixin,GenericAPIView):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializer
+    def get(self,request,*args,**kwargs):
+        return self.list(request,*args,**kwargs)
+    
+    def post(self,request,*args,**kwargs):
+        return self.create(request,*args,**kwargs)
+    
+    
+        
 
 
 
         
 ### FBV ###
-
-
-
 
 
 
