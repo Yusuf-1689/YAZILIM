@@ -13,7 +13,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from rest_framework.views import APIView 
-from rest_framework.generics import GenericAPIView,mixins
+from rest_framework.generics import GenericAPIView,mixins,ListCreateAPIView,RetrieveUpdateAPIView
 # Create your views here.
 
 ### CBV ###
@@ -87,13 +87,20 @@ class StudentURD(
     def delete(self,request,*args,**kwargs):
         return self.destroy(request,*args,**kwargs)
     
-    
+
+###  CBV  ### ###  Concreate APIView  ###
         
 
+class StudentLC(ListCreateAPIView):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializer
 
-
+class StudentRUD(RetrieveUpdateAPIView):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializer
         
 ### FBV ###
+
 
 
 
