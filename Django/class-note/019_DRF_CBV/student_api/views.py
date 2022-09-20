@@ -43,6 +43,20 @@ class StudentDetail(APIView):
     def put(seld,request,pk):
         student=self.get_obj(pk)
         serializer=StudentSerializer(student,data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            new_data=serializer.data
+            new_data['success']=f"student {student.last_name} updated successfuly"
+            return Response(new_data)
+        return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
+    
+    def delete(self,request,pk):
+        student=self.get_obj(pk)
+        student.delete()
+        data={
+            "message": f"student {student.last_name} updated successfuly"
+        }
+        return Response(data,status=status.HTTP_204_NO_CONTENT)
         
 
 
