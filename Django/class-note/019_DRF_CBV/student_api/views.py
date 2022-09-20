@@ -14,6 +14,7 @@ from rest_framework import status
 
 from rest_framework.views import APIView 
 from rest_framework.generics import GenericAPIView,mixins,ListCreateAPIView,RetrieveUpdateAPIView
+from rest_framework.viewsets import ModelViewSet
 # Create your views here.
 
 ### CBV ###
@@ -96,6 +97,13 @@ class StudentLC(ListCreateAPIView):
     serializer_class=StudentSerializer
 
 class StudentRUD(RetrieveUpdateAPIView):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializer
+    
+###  CBV  ### ###  ViewSet ###
+    
+    
+class StudentGRUD(ModelViewSet):
     queryset=Student.objects.all()
     serializer_class=StudentSerializer
         

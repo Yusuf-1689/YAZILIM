@@ -1,4 +1,8 @@
-from django.urls import path
+
+from django.urls import path,include
+
+
+# path('',include(router))
 from .views import (
     home,
     StudentList,
@@ -7,6 +11,8 @@ from .views import (
     StudentURD,
     StudentLC,
     StudentRUD,
+    StudentGRUD,
+    
 
 
     # student_api,
@@ -19,6 +25,9 @@ from .views import (
     # student_delete
 
 )
+from rest_framework import routers
+router=routers.DefaultRouter()
+router.register('student',StudentGRUD)
 urlpatterns = [
     path('', home),
 
@@ -27,8 +36,13 @@ urlpatterns = [
     # path('student/<int:pk>/',StudentDetail.as_view()), #APIView
     # path('student/',StudentListCreate.as_view()), #Generic APIVie
     # path('student/<int:pk>/',StudentURD.as_view()), #Generic APIVie
-    path('student/',StudentLC.as_view()), #Concrate APIVie
-    path('student/<int:pk>/',StudentRUD.as_view()), #Concrate APIVie
+    # path('student/',StudentLC.as_view()), #Concrate APIVie
+    # path('student/<int:pk>/',StudentRUD.as_view()), #Concrate APIVie
+    path('',include(router.urls)), 
+    
+    
+    
+    
 
 #### FBV URLS ####
 
@@ -40,7 +54,7 @@ urlpatterns = [
     # path('student_detail/<int:pk>/', student_detail, name='student_detail'),
     # path('student_update/<int:pk>/', student_update, name='student_update'),
     # path('student_update_partial/<int:pk>/',
-    #      student_update_partial, name='student_update_partial'),
+    # student_update_partial, name='student_update_partial'),
     # path('student_delete/<int:pk>/', student_delete, name='student_delete'),
  
 
