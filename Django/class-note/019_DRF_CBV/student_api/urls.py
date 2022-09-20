@@ -18,7 +18,7 @@ urlpatterns = [
 
 #### CBV URLS ####
     path('student/',StudentList.as_view()),
-    path('detail/<int:pk>/',StudentDetail.as_view())
+    path('student/<int:pk>/',StudentDetail.as_view())
 
 #### FBV URLS ####
 
