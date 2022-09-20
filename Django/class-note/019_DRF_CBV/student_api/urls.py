@@ -4,6 +4,7 @@ from .views import (
     StudentList,
     StudentDetail,
     StudentListCreate,
+    StudentURD,
 
     # student_api,
     # student_api_get_update_delete, path_api,
@@ -19,8 +20,9 @@ urlpatterns = [
 
 #### CBV URLS ####
     # path('student/',StudentList.as_view()),
-    path('student/<int:pk>/',StudentDetail.as_view()),
-    path('student/',StudentListCreate.as_view())
+    # path('student/<int:pk>/',StudentDetail.as_view()),
+    path('student/',StudentListCreate.as_view()),
+    path('student/<int:pk>/',StudentURD.as_view()),
 
 #### FBV URLS ####
 

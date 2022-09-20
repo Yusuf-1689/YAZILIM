@@ -85,7 +85,7 @@ class StudentURD(
         return self.update(request,*args,**kwargs)
     
     def delete(self,request,*args,**kwargs):
-        return self.upddestroyate(request,*args,**kwargs)
+        return self.destroy(request,*args,**kwargs)
     
     
         
