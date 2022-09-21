@@ -1,4 +1,3 @@
-
 from django.shortcuts import render
 
 # Create your views here.
@@ -99,15 +98,21 @@ class StudentRUD(RetrieveUpdateDestroyAPIView):
 
 ### CBV ### ### ViewSet ###
 
-from rest_framework.pagination import CursorPagination
-from .pagination import SmallPageNumberPagination, MyLimitOffsetPagination,MycursorPagination
+from .pagination import SmallPageNumberPagination, MyLimitOffsetPagination, MyCursorPagination
 
 class StudentGRUD(ModelViewSet):
 
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
-    pagination_class = MyLimitOffsetPagination
-    pagination_class = MycursorPagination
+    pagination_class = MyCursorPagination
+
+    def get_queryset(self):
+        queryset = Student.objects.all()
+        path = self.request.query_params.get('path')
+        if path is not None:
+            mypath = Path.objects.get(path_name=path)
+            queryset = queryset.filter(path=mypath.id)
+        return queryset
 
     @action(detail = False, methods = ['GET'])
     def student_count(self, request):
@@ -126,10 +131,6 @@ class StudentGRUD(ModelViewSet):
 
 
 """
-
-
-
-
 @api_view(['GET', 'POST'])
 def student_api(request):
     if request.method == 'GET':
@@ -144,16 +145,12 @@ def student_api(request):
                 "message": f"Student {serializer.validated_data.get('first_name')} saved successfully!"}
             return Response(data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
 @api_view(['GET'])
 def student_list(request):
     students = Student.objects.all()
     serializer = StudentSerializer(students, many=True)
     # print(serializer.data)
     return Response(serializer.data)
-
-
 @api_view(['POST'])
 def student_create(request):
     print(request.data)
@@ -165,8 +162,6 @@ def student_create(request):
         }
         return Response(data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors)
-
-
 @api_view(['GET', 'PUT', 'DELETE', 'PATCH'])
 def student_api_get_update_delete(request, pk):
     student = get_object_or_404(Student, pk=pk)
@@ -198,8 +193,6 @@ def student_api_get_update_delete(request, pk):
             "message": f"Student {student.last_name} deleted successfully"
         }
         return Response(data)
-
-
 @api_view(['GET'])
 def student_detail(request, pk):
     # try:
@@ -209,8 +202,6 @@ def student_detail(request, pk):
     student = get_object_or_404(Student, pk=pk)
     serializer = StudentSerializer(student)
     return Response(serializer.data, status=status.HTTP_200_OK)
-
-
 @api_view(['PUT'])
 def student_update(request, pk):
     student = get_object_or_404(Student, pk=pk)
@@ -222,8 +213,6 @@ def student_update(request, pk):
         }
         return Response(data, status=status.HTTP_200_OK)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
 @api_view(['PATCH'])
 def student_update_partial(request, pk):
     student = get_object_or_404(Student, pk=pk)
@@ -235,7 +224,6 @@ def student_update_partial(request, pk):
         }
         return Response(data, status=status.HTTP_200_OK)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 @api_view(['DELETE'])
 def student_delete(request, pk):
     student = get_object_or_404(Student, pk=pk)
@@ -244,14 +232,11 @@ def student_delete(request, pk):
         "message": f"Student {student.last_name} deleted successfully..."
     }
     return Response(data, status=status.HTTP_200_OK)
-
-
 @api_view(['GET', 'POST'])
 def path_api(request):
     # from rest_framework.decorators import api_view
     # from rest_framework.response import Response
     # from rest_framework import status
-
     if request.method == 'GET':
         paths = Path.objects.all()
         serializer = PathSerializer(
@@ -268,4 +253,3 @@ def path_api(request):
             return Response(data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 """
-
