@@ -1,8 +1,8 @@
 # PageNumberPagination Local Settings:
 from rest_framework.pagination import PageNumberPagination
 class SmallPageNumberPagination(PageNumberPagination):
-    page_size = 8
-    page_query_param = "sayfa"
+    page_size = 25
+    # page_query_param = "sayfa"
 
 # LimitOffsetPagination Local Settings:
 from rest_framework.pagination import LimitOffsetPagination
