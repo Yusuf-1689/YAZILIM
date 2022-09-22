@@ -13,7 +13,7 @@ def home(request):
 class StudentList(generics.ListCreateAPIView):
     serializer_class = StudentSerializer
     queryset = Student.objects.all()
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticated]
 
        
 
