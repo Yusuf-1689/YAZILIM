@@ -2,7 +2,7 @@ from django.shortcuts import HttpResponse
 from .models import Student
 from .serializers import StudentSerializer
 from rest_framework import generics
-from rest_framework.permissions import IsAuthenticated,IsAdminUser
+from rest_framework.permissions import IsAuthenticated,IsAdminUser,IsAuthenticatedOrReadOnly
 
 
 
@@ -13,7 +13,7 @@ def home(request):
 class StudentList(generics.ListCreateAPIView):
     serializer_class = StudentSerializer
     queryset = Student.objects.all()
-    permission_classes = [IsAdminUser]
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
        
 
