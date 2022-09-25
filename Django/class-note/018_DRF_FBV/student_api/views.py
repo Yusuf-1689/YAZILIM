@@ -91,7 +91,7 @@ def student_detail(request, pk):
     # except Objdkdlşdş:
     #     raise HTTP404
     student = get_object_or_404(Student, pk=pk)
-    serializer = StudentSerializer(student)
+    serializer = StudentSerializer(student)  
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 
