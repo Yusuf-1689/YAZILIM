@@ -108,7 +108,7 @@ def student_update(request, pk):
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['PATCH'])
+@api_view(['PATCH'])  
 def student_update_partial(request, pk):
     student = get_object_or_404(Student, pk=pk)
     serializer = StudentSerializer(student, data=request.data, partial=True)
