@@ -33,6 +33,10 @@ class Quiz(UpdateCreateDate):
 
     class Meta:
         verbose_name_plural = 'Quizzes'
+        
+    @property
+    def quiz_count(self):
+        return self.quizz.count()
 
 
 class Question(UpdateCreateDate):

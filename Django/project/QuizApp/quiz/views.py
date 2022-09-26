@@ -13,3 +13,6 @@ from .serializers import (
 class CategoryList(generics.ListAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerialzier
+    
+class QuizList(generics.ListAPIView):
+    
