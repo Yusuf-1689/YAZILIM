@@ -39,10 +39,12 @@ class OptionSerializer(serializers.ModelSerializer):
         )
         
 class QuestionSerializer(serializers.ModelSerializer):
+    option = OptionSerializer(many=True)
     class Meta:
         model = Option
         fields = (
             'id',
-            'option_text',
-            'is_right',
+            'title',
+            'options',
+            'diffuculty',
         )
