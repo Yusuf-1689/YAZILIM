@@ -1,3 +1,15 @@
-from django.shortcuts import render
+from django.contrib import admin
+from .models import (
+    Category,
+    Quiz,
+    Question,
+    Option
+)
 
-# Create your views here.
+from .serializers import(
+    CategorySerializer,
+)
+
+class CategoryList(generics.ListAPIViews):
+    queryset = Category.objects.all()
+    serializer_class = 
