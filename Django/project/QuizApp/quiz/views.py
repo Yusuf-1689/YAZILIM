@@ -18,3 +18,5 @@ class CategoryList(generics.ListAPIView):
 class QuizList(generics.ListAPIView):
     queryset = Quiz.objects.all()
     serializer_class = ''
+    
+    
