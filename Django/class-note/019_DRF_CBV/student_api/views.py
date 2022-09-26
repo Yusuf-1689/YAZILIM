@@ -1,7 +1,4 @@
-from email.policy import HTTP
-import imp
-from itertools import count
-from msilib.schema import ServiceInstall
+
 from django.shortcuts import render
 
 # Create your views here.
@@ -15,12 +12,13 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from rest_framework.views import APIView 
-from rest_framework.generics import GenericAPIView,mixins,ListCreateAPIView,RetrieveUpdateAPIView
+from rest_framework.generics import GenericAPIView,mixins,ListCreateAPIView,RetrieveUpdateDestroyAPIView
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.decorators import action
 # Create your views here.
 
 ### CBV ###
+### CBV ### ### APIView ###
 def home(request):
     return HttpResponse('<h1>API Page</h1>')
 
@@ -45,85 +43,87 @@ class StudentDetail(APIView):
         student=self.get_obj(pk)
         serializer=StudentSerializer(student)
         return Response(serializer.data)
-    def put(seld,request,pk):
+    
+    def put(self,request,pk):
         student=self.get_obj(pk)
         serializer=StudentSerializer(student,data=request.data)
         if serializer.is_valid():
             serializer.save()
             new_data=serializer.data
             new_data['success']=f"student {student.last_name} updated successfuly"
-            return Response(new_data)
-        return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
+            return Response(new_data)    
+        return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)   
     
     def delete(self,request,pk):
         student=self.get_obj(pk)
         student.delete()
         data={
-            "message": f"student {student.last_name} updated successfuly"
+            "message":f"student {student.last_name} deleted successfuly"
         }
         return Response(data,status=status.HTTP_204_NO_CONTENT)
-        
-###  CBV  ### ###  Generic APIView  ###
 
+### CBV ### ### Generic APIView ###
 class StudentListCreate(mixins.ListModelMixin,mixins.CreateModelMixin,GenericAPIView):
     queryset=Student.objects.all()
     serializer_class=StudentSerializer
     def get(self,request,*args,**kwargs):
         return self.list(request,*args,**kwargs)
-    
+
     def post(self,request,*args,**kwargs):
         return self.create(request,*args,**kwargs)
-    
-class StudentURD(
-    mixins.UpdateModelMixin,
-    mixins.RetrieveModelMixin,
-    mixins.DestroyModelMixin,
-    GenericAPIView
-    ):
+
+class StudentURD(mixins.UpdateModelMixin,
+                mixins.RetrieveModelMixin,
+                mixins.DestroyModelMixin,
+                GenericAPIView
+            ):   
     queryset=Student.objects.all()
     serializer_class=StudentSerializer
     def get(self,request,*args,**kwargs):
         return self.retrieve(request,*args,**kwargs)
-    
+
     def put(self,request,*args,**kwargs):
         return self.update(request,*args,**kwargs)
-    
+
     def delete(self,request,*args,**kwargs):
         return self.destroy(request,*args,**kwargs)
-    
 
-###  CBV  ### ###  Concreate APIView  ###
-        
-
+### CBV ### ### Concrate APIView ###
 class StudentLC(ListCreateAPIView):
     queryset=Student.objects.all()
     serializer_class=StudentSerializer
 
-class StudentRUD(RetrieveUpdateAPIView):
+class StudentRUD(RetrieveUpdateDestroyAPIView):
     queryset=Student.objects.all()
     serializer_class=StudentSerializer
-    
-###  CBV  ### ###  ViewSet ###
-    
-    
+
+### CBV ### ### ViewSet ###
+
 class StudentGRUD(ModelViewSet):
     queryset=Student.objects.all()
     serializer_class=StudentSerializer
-    
+
     @action(detail=False,methods=['GET'])
     def student_count(self,request):
         count={
             'student-count':self.queryset.count()
-            
         }
         return Response(count)
-        
+
+
+
+
+
 ### FBV ###
 
 
 
 
 """
+
+
+
+
 @api_view(['GET', 'POST'])
 def student_api(request):
     if request.method == 'GET':
@@ -138,12 +138,16 @@ def student_api(request):
                 "message": f"Student {serializer.validated_data.get('first_name')} saved successfully!"}
             return Response(data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
 @api_view(['GET'])
 def student_list(request):
     students = Student.objects.all()
     serializer = StudentSerializer(students, many=True)
     # print(serializer.data)
     return Response(serializer.data)
+
+
 @api_view(['POST'])
 def student_create(request):
     print(request.data)
@@ -155,6 +159,8 @@ def student_create(request):
         }
         return Response(data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors)
+
+
 @api_view(['GET', 'PUT', 'DELETE', 'PATCH'])
 def student_api_get_update_delete(request, pk):
     student = get_object_or_404(Student, pk=pk)
@@ -186,6 +192,8 @@ def student_api_get_update_delete(request, pk):
             "message": f"Student {student.last_name} deleted successfully"
         }
         return Response(data)
+
+
 @api_view(['GET'])
 def student_detail(request, pk):
     # try:
@@ -195,6 +203,8 @@ def student_detail(request, pk):
     student = get_object_or_404(Student, pk=pk)
     serializer = StudentSerializer(student)
     return Response(serializer.data, status=status.HTTP_200_OK)
+
+
 @api_view(['PUT'])
 def student_update(request, pk):
     student = get_object_or_404(Student, pk=pk)
@@ -206,6 +216,8 @@ def student_update(request, pk):
         }
         return Response(data, status=status.HTTP_200_OK)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
 @api_view(['PATCH'])
 def student_update_partial(request, pk):
     student = get_object_or_404(Student, pk=pk)
@@ -217,6 +229,7 @@ def student_update_partial(request, pk):
         }
         return Response(data, status=status.HTTP_200_OK)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 @api_view(['DELETE'])
 def student_delete(request, pk):
     student = get_object_or_404(Student, pk=pk)
@@ -225,11 +238,14 @@ def student_delete(request, pk):
         "message": f"Student {student.last_name} deleted successfully..."
     }
     return Response(data, status=status.HTTP_200_OK)
+
+
 @api_view(['GET', 'POST'])
 def path_api(request):
     # from rest_framework.decorators import api_view
     # from rest_framework.response import Response
     # from rest_framework import status
+
     if request.method == 'GET':
         paths = Path.objects.all()
         serializer = PathSerializer(
@@ -246,3 +262,4 @@ def path_api(request):
             return Response(data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 """
+
