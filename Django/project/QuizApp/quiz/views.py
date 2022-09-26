@@ -1,15 +1,15 @@
-from django.contrib import admin
+from rest_framework import generics
 from .models import (
     Category,
     Quiz,
     Question,
     Option
 )
-
-from .serializers import(
-    CategorySerializer,
+from .serializers import (
+    CategorySerialzier,
 )
 
-class CategoryList(generics.ListAPIViews):
+
+class CategoryList(generics.ListAPIView):
     queryset = Category.objects.all()
-    serializer_class = 
+    serializer_class = CategorySerialzier
