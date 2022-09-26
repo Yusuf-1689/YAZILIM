@@ -7,7 +7,7 @@ from .models import (
 )
 
 
-class CategorySerialzier(serializers.ModelSerializer):
+class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = (
@@ -15,13 +15,15 @@ class CategorySerialzier(serializers.ModelSerializer):
             'name',
             'quiz_count'
         )
-        
-        
-class QuizSerialzier(serializers.ModelSerializer):
+
+
+class QuizSerializer(serializers.ModelSerializer):
+    category = serializers.StringRelatedField()
     class Meta:
         model = Quiz
         fields = (
             'id',
             'title',
-            'category'
+            'category',
+            'question_count'
         )
