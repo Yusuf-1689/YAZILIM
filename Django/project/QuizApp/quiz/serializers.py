@@ -27,3 +27,22 @@ class QuizSerializer(serializers.ModelSerializer):
             'category',
             'question_count'
         )
+        
+        
+class OptionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Option
+        fields = (
+            'id',
+            'option_text',
+            'is_right',
+        )
+        
+class QuestionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Option
+        fields = (
+            'id',
+            'option_text',
+            'is_right',
+        )
