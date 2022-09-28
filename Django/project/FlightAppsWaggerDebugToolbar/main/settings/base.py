@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     # 'debug_toolbar',
+    
+    # My Apps
+    'users'
 ]
 
 MIDDLEWARE = [

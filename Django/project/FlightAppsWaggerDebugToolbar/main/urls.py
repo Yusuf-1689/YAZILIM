@@ -29,3 +29,4 @@ urlpatterns = [
          cache_timeout=0), name="schemaredoc"),
     path('__debug__/', include('debug_toolbar.urls')),
 ]
+
