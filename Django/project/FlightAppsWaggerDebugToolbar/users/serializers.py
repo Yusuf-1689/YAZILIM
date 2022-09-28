@@ -1,11 +1,31 @@
 
 
+from asyncore import write
 from dataclasses import fields
 from statistics import mode
-from rest_framework import serializers
+from tkinter.ttk import Style
+from rest_framework import serializers,validators
 from django.contrib.auth.models import User
+from django.contrib.auth.password_validation import validate_password
 
 class RegisterSerializer(serializers.ModelSerializer):
+    email = serializers.EmailField(
+        required=True,
+        validators=[validators.UniqueValidator(queryset=User.objects.all())]
+    )
+    password = serializers.CharField(
+        write_only=True,
+        required=True,
+        validators=[validate_password],
+        style={"input_type": "password"}
+    )
+    
+    password1 = serializers.CharField(
+        write_only=True,
+        required=True,
+        validators=[validate_password],
+        style={"input_type": "password"}
+    )
     class Meta:
         model = User
         fields = (
