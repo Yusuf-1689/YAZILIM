@@ -6,6 +6,7 @@ from statistics import mode
 from tkinter.ttk import Style
 from rest_framework import serializers,validators
 from django.contrib.auth.models import User
+from django.conf import settings
 from django.contrib.auth.password_validation import validate_password
 
 class RegisterSerializer(serializers.ModelSerializer):
@@ -27,7 +28,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         style={"input_type": "password"}
     )
     class Meta:
-        model = User
+        model = settings.AUTH_USER_MODEL
         fields = (
             'username',
             'email',
@@ -36,3 +37,20 @@ class RegisterSerializer(serializers.ModelSerializer):
             'password',
             'password1',
         )
+        
+    def validate(self, data):
+        if data['password'] != data['password']:
+            raise serializers.ValidationError(
+                {"password: Password didn't match...."}
+            )
+        return data
+    
+    def create(self, validated_data):
+        password = validated_data.pop("password")
+        validated_data.pop('password1')
+        user = User.objects.create(**validated_data)
+        user.set_password(password)
+        user.save()
+        return user
+        
+        
