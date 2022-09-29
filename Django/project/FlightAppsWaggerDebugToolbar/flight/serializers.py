@@ -1,7 +1,3 @@
-from asyncore import write
-from pyexpat import model
-from typing_extensions import Required
-from urllib import request
 from rest_framework import serializers
 from .models import Flight, Passenger, Reservation
 
@@ -20,19 +16,37 @@ class FlightSerializer(serializers.ModelSerializer):
             "etd"
         )
         
-        
 class PassengerSerializer(serializers.ModelSerializer):
-    class Meata:
+    
+    class Meta:
         model = Passenger
         fields = "__all__"
 
 class ReservationSerializer(serializers.ModelSerializer):
     
-    
-    passenger = PassengerSerializer(many=True, Required=False)
-    flight = serializers.StringRelatedField()
+    passenger = PassengerSerializer(many=True, required=True)
+    flight = serializers.StringRelatedField()     # default read_only=True
     flight_id = serializers.IntegerField(write_only=True)
-    
+    user = serializers.StringRelatedField()     # default read_only=True
+    user_id = serializers.IntegerField(write_only=True)
     class Meta:
         model = Reservation
-        fields = "__all__"
+        fields = (
+            "id",
+            "flight",  # GET
+            "flight_id",  # POST
+            "user",  # GET
+            "user_id",  # POST
+            "passenger"
+        )
+        
+    def create(self, validated_data):
+        passenger_data = validated_data.pop('passenger')
+        validated_data['user_id'] = self.context['request'].user.id
+        reservation = Reservation.objects.create(**validated_data)
+        
+        for passenger in passenger_data:
+            pas = Passenger.objects.create(**passenger)
+            reservation.passenger.add(pas)
+            reservation.save()
+            return reservation
