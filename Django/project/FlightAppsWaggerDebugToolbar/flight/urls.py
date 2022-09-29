@@ -5,7 +5,6 @@ from .views import FlightView
 router = routers.DefaultRouter()
 router.register('flights', FlightView)
 
-
 urlpatterns = [
     
 ]
