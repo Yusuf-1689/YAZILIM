@@ -1,3 +1,4 @@
+from pickle import TRUE
 from rest_framework import serializers
 from .models import Flight, Passenger, Reservation
 
@@ -48,6 +49,14 @@ class ReservationSerializer(serializers.ModelSerializer):
         for passenger in passenger_data:
             pas = Passenger.objects.create(**passenger)
             reservation.passenger.add(pas)
-            reservation.save()
-            return reservation
+        reservation.save()
+        return reservation
+            
         
+        
+class StaffFlightSerializer(serializers.ModelSerializer):
+    
+    reservation = ReservationSerializer(many=True, read_only=True)
+    class Meta:
+        model = Flight
+        fields = "__all__"
