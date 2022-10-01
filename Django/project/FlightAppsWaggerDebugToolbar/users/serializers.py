@@ -40,7 +40,7 @@ class RegisterSerializer(serializers.ModelSerializer):
             'password1'
         )
 
-    def validate(self, data):  # serializer komple validate yapmak için
+    def validate(self, data):  # serializer'ı komple validate yapmak için
         if data['password'] != data['password1']:
             raise serializers.ValidationError(
                 {"password": "Password didn't match..... "}
@@ -50,7 +50,7 @@ class RegisterSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         password = validated_data.pop("password")
         validated_data.pop('password1')
-        user = User.objects.create(**validated_data)
+        user = User.objects.create(**validated_data)  # ** --> 
         user.set_password(password)
         user.save()
         return user
