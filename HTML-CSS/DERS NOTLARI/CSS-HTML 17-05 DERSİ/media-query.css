@@ -26,9 +26,9 @@ h1{
 
 .header{
     background-color: var(--koyu-yeşil);
-    padding: 1rem;
+    padding: 1.2rem;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 
 .navbar{
@@ -42,7 +42,7 @@ h1{
     display: inline;
     text-decoration: none;
     color: var(--beyaz);
-    padding: 0.8rem 1rem;
+    padding: 0.9rem 1rem;
 }
 
 .navbar a:hover {
