@@ -52,13 +52,13 @@
       justify-content: center;
       width: 5rem;
       margin: 1rem 0;
-      background-color: lightskyblue;
+      background-color: rgb(125, 193, 235);
       text-align: center;
   }
 
   ul{
       height: 20rem;
-      background-color: rgb(255, 225, 0);
+      background-color: rgb(250, 222, 7);
       list-style-type:none;
       justify-content: center;
       display: flex;
@@ -72,7 +72,7 @@
   }
 
   ul li{
-      background-color: mediumorchid;
+      background-color: rgb(187, 94, 211);
       width: 4rem;
       height: 4rem;
   }
@@ -108,7 +108,7 @@
   }
 
   .container4{
-      background-color: indianred;
+      background-color: rgb(204, 98, 98);
       display: flex;
       text-align: center;
       justify-content: center;
