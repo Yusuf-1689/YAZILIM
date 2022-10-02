@@ -18,7 +18,7 @@ h1{
     background-color: var(--koyu-kırmızı);
     width: 20rem;
     padding: 0.3rem;
-    border: 1px solid black;
+    border: 1px solid rgb(12, 12, 12);
     border-radius: 4rem;
     text-align: center;
     margin: 2rem auto;
