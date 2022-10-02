@@ -29,7 +29,7 @@
   .container div {
     width: 5rem;
     height: 5rem;
-    background-color: violet;
+    background-color: rgb(240, 123, 240);
     margin: 1rem;
   }
   .container1{
