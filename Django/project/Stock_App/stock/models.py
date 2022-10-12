@@ -39,5 +39,13 @@ class Firm(UpdateCreate):
     def __str__(self):
         return self.name
     
+class Transaction(UpdateCreate):
+    TRANSACTİON = (
+        (1, 'IN'),
+        (0, 'OUT')
+    )
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    firm = models.ForeignKey(Firm, on_delete=models.SET_NULL, null=True, relate_name='transactions')
+    transaction = 
     
     
