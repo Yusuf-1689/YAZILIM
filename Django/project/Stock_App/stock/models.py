@@ -1,5 +1,8 @@
 from enum import auto
+from itertools import product
 from operator import mod
+from secrets import choice
+from unicodedata import decimal
 from django.db import models
 
 
@@ -46,6 +49,13 @@ class Transaction(UpdateCreate):
     )
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     firm = models.ForeignKey(Firm, on_delete=models.SET_NULL, null=True, relate_name='transactions')
-    transaction = 
+    transaction = models.SmallIntegerField(choices=TRANSACTİON)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='transaction')
+    quantitiy = models.SmallIntegerField()
+    price = models.DecimalField(max_digit=6, decimal_places=2)
+    price_total = models.DecimalField(max_digit=8, decimal_places=2)
+    
+    def __str__(self):
+        return f'{self.transaction} - {self.product} - {self.quantity}'
     
     
