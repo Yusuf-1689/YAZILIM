@@ -53,7 +53,7 @@ class Transaction(UpdateCreate):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='transaction')
     quantitiy = models.SmallIntegerField()
     price = models.DecimalField(max_digit=6, decimal_places=2)
-    price_total = models.DecimalField(max_digit=8, decimal_places=2)
+    price_total = models.DecimalField(max_digits=8, decimal_places=2)
     
     def __str__(self):
         return f'{self.transaction} - {self.product} - {self.quantity}'
