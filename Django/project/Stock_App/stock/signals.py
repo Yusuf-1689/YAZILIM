@@ -6,3 +6,6 @@ from .models import Transaction
 
 @receiver(pre_save, sender=Transaction)
 def calculate_total_price(sender, instance, **kwargs):
+    if not instance.price_total:
+        instance.price_total = instance.quantity * instance.price
+        
