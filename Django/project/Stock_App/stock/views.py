@@ -8,5 +8,9 @@ from .models import (
     Transaction
 )
 
+from .serializers import (
+    CategorySerializer
+)
 class CategoryView(viewsets.ModelViewSet):
     queryset = Category.objects.all()
+    serializer_class = CategorySerializer
