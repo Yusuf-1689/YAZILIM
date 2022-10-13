@@ -19,4 +19,8 @@ def update_stock(sender, instance, **kwargs):
             product.stock = instance.quatity
         else:
             product.stock += instance.quatity
+    else:
+        product.stock -= instance.quatity
+        
+    product.save()
         
