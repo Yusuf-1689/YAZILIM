@@ -1,9 +1,7 @@
-from enum import auto
-from itertools import product
-from operator import mod
+
 from secrets import choice
-from unicodedata import decimal
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class UpdateCreate(models.Model):

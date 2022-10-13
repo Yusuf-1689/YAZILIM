@@ -15,4 +15,8 @@ def calculate_total_price(sender, instance, **kwargs):
 def update_stock(sender, instance, **kwargs):
     product = Product.objects.get(id=instance.product_id)
     if instance.transection == 1:
+        if not product.stock:
+            product.stock = instance.quatity
+        else:
+            product.stock += instance.quatity
         
