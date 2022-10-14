@@ -1,4 +1,6 @@
 
+from asyncore import read
+from unicodedata import category
 from rest_framework import serializers
 from .models import(
     Category,
@@ -26,4 +28,24 @@ class BrandSerializer(serializers.ModelSerializer):
             'name'
         )
         
+class ProductSerializer(serializers.ModelSerializer):
+    category = serializers.StringRelatedField()
+    category_id = serializers.ImageField(write_only=True)
+    brand = serializers.StringRelatedField()
+    brand_id = serializers.ImageField(write_only=True)
+    
+    
+    class Meta:
+        model = Product
+        fields = (
+            'id',
+            'name',
+            'category',
+            'category_id',
+            'brand',
+            'brand_id',
+            'stock',
+        )
+        
+        read_only_fields = ('stock',)
         
