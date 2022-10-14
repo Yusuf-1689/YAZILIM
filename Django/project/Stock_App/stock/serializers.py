@@ -15,3 +15,15 @@ class CategorySerializer(serializers.ModelSerializer):
             'id',
             'name'
         )
+        
+
+class BrandSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = Brand
+        fields = (
+            'id',
+            'name'
+        )
+        
+        
