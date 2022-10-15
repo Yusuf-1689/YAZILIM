@@ -8,7 +8,7 @@ from .models import(
     Brand,
     Product,
     Firm,
-    Transaction
+    Transaction,
 )
 
 class CategorySerializer(serializers.ModelSerializer):
