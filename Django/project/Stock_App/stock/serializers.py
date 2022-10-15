@@ -1,5 +1,6 @@
 
 from asyncore import read
+from itertools import product
 from unicodedata import category
 from rest_framework import serializers
 from .models import(
@@ -60,3 +61,26 @@ class FirmSerializer(serializers.ModelSerializer):
             'phone',
             'address',
         )
+        
+class TransactionSerializer(serializers.ModelSerializer):
+    user = serializers.StringRelatedField()
+    firm = serializers.StringRelatedField()
+    firm_id = serializers.IntegerField()
+    product = serializers.StringRelatedField()
+    product_id = serializers.IntegerField()
+    
+    class Meta:
+        model = Transaction
+        fields = (
+            'id',
+            'user',
+            'firm',
+            'firm_id',
+            'product',
+            'product_id',
+            'quantity',
+            'price',
+            'price_total',
+        )
+        
+        read_only_fields = ('price_total',)
