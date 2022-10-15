@@ -49,3 +49,14 @@ class ProductSerializer(serializers.ModelSerializer):
         
         read_only_fields = ('stock',)
         
+        
+class FirmSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = Firm
+        fields = (
+            'id',
+            'name',
+            'phone',
+            'address',
+        )
