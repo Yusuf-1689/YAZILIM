@@ -1,6 +1,7 @@
 
 from rest_framework import viewsets, filters
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.permissions import DjangoModelPermissions
 from .models import (
     Category,
     Brand,
@@ -21,6 +22,7 @@ from .serializers import (
 class CategoryView(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+    permission_classes = [DjangoModelPermissions]
     filter_backends = [DjangoFilterBackend,filters.SearchFilter]
     search_fields = ['name']
     filterset_fields = ['name']
@@ -36,6 +38,7 @@ class CategoryView(viewsets.ModelViewSet):
 class BrandView(viewsets.ModelViewSet):
     queryset = Brand.objects.all()
     serializer_class = BrandSerializer
+    permission_classes = [DjangoModelPermissions]
     filter_backends = [filters.SearchFilter]
     search_fields = ['name']
     
@@ -43,6 +46,7 @@ class BrandView(viewsets.ModelViewSet):
 class ProductView(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    permission_classes = [DjangoModelPermissions]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     filterset_fields = ['category', 'brand']
     search_fields = ['name']
@@ -50,12 +54,14 @@ class ProductView(viewsets.ModelViewSet):
 class FirmView(viewsets.ModelViewSet):
     queryset = Firm.objects.all()
     serializer_class = FirmSerializer
+    permission_classes = [DjangoModelPermissions]
     filter_backends = [filters.SearchFilter]
     search_fields = ['name']
     
 class TransactionView(viewsets.ModelViewSet):
     queryset = Transaction.objects.all()
     serializer_class = TransactionSerializer
+    permission_classes = [DjangoModelPermissions]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     filterset_fields = ['firm', 'transaction', 'product']
     search_fields = ['firm']
