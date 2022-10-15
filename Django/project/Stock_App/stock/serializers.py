@@ -50,6 +50,16 @@ class ProductSerializer(serializers.ModelSerializer):
         
         read_only_fields = ('stock',)
         
+class CategoryProductsSerializer(serializers.ModelSerializer):
+    products = ProductSerializer(many=True)
+    
+    class Meta:
+        model = Category
+        fields = (
+            'name',
+            'products',
+        )
+        
         
 class FirmSerializer(serializers.ModelSerializer):
     
