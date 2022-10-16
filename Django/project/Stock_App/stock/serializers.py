@@ -1,15 +1,12 @@
-
-from asyncore import read
-from itertools import product
-from unicodedata import category
 from rest_framework import serializers
-from .models import(
+from .models import (
     Category,
     Brand,
     Product,
     Firm,
-    Transaction,
+    Transaction
 )
+
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
@@ -18,24 +15,23 @@ class CategorySerializer(serializers.ModelSerializer):
             'id',
             'name'
         )
-        
+
 
 class BrandSerializer(serializers.ModelSerializer):
-    
     class Meta:
         model = Brand
         fields = (
             'id',
             'name'
         )
-        
+
+
 class ProductSerializer(serializers.ModelSerializer):
     category = serializers.StringRelatedField()
-    category_id = serializers.ImageField(write_only=True)
+    category_id = serializers.IntegerField(write_only=True)
     brand = serializers.StringRelatedField()
-    brand_id = serializers.ImageField(write_only=True)
-    
-    
+    brand_id = serializers.IntegerField(write_only=True)
+
     class Meta:
         model = Product
         fields = (
@@ -45,40 +41,41 @@ class ProductSerializer(serializers.ModelSerializer):
             'category_id',
             'brand',
             'brand_id',
-            'stock',
+            'stock'
         )
-        
+
         read_only_fields = ('stock',)
-        
+
+
 class CategoryProductsSerializer(serializers.ModelSerializer):
     products = ProductSerializer(many=True)
-    
+
     class Meta:
         model = Category
         fields = (
             'name',
-            'products',
+            'products'
         )
-        
-        
+
+
 class FirmSerializer(serializers.ModelSerializer):
-    
     class Meta:
         model = Firm
         fields = (
             'id',
             'name',
             'phone',
-            'address',
+            'address'
         )
-        
+
+
 class TransactionSerializer(serializers.ModelSerializer):
     user = serializers.StringRelatedField()
     firm = serializers.StringRelatedField()
     firm_id = serializers.IntegerField()
     product = serializers.StringRelatedField()
     product_id = serializers.IntegerField()
-    
+
     class Meta:
         model = Transaction
         fields = (
@@ -91,17 +88,16 @@ class TransactionSerializer(serializers.ModelSerializer):
             'product_id',
             'quantity',
             'price',
-            'price_total',
+            'price_total'
         )
-        
+
         read_only_fields = ('price_total',)
-        
+
     def validate(self, data):
         if data.get('transaction') == 0:
             product = Product.objects.get(id=data.get('product_id'))
             if data.get('quantity') > product.stock:
                 raise serializers.ValidationError(
-                        f'Dont have enough stock. Current stock is {product.stock}'
+                    f'Dont have enough stock. Current stock is {product.stock}'
                 )
-                    
         return data
