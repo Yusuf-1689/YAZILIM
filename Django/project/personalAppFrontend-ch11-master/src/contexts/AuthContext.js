@@ -1,9 +1,14 @@
-import React from 'react'
+import { createContext } from "react";
 
-const AuthContext = () => {
-  return (
-    <div>AuthContext</div>
+
+export const AutContext = createContext();
+
+const url = "http://127.0.0.1:8000/"
+
+const AutContextProvider = (props) => {
+  return(
+    <AutContext.Provider value={}>
+      {props.children}
+    </AutContext.Provider>
   )
 }
-
-export default AuthContext
