@@ -1,4 +1,5 @@
-import { createContext } from "react";
+import axios from 'axios';
+import {createContext,useState} from 'react'
 import { toastSuccessNotify } from '../helper/ToastNotify';
 
 export const AutContext = createContext();
@@ -6,7 +7,7 @@ export const AutContext = createContext();
 const url = "http://127.0.0.1:8000/"
 
 const AutContextProvider = (props) => {
-  const [currentUser,setCurrentUser] = usestate(false);
+  const [currentUser,setCurrentUser] = useState(false);
   const [myKey, setMyKey] = useState("")
 
   const createUser = async (email,password,firstName,lastName,userName)=>{
@@ -17,7 +18,7 @@ const AutContextProvider = (props) => {
         "first_name": firstName,
         "last_name": lastName,
         "password": password,
-        "password2": password2
+        "password2": password
 
       })
 
@@ -47,7 +48,7 @@ let value = {
 
 
   return(
-    <AutContext.Provider value={}>
+    <AutContext.Provider value={value}>
       {props.children}
     </AutContext.Provider>
   )
