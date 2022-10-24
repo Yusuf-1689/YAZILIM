@@ -26,6 +26,8 @@ const AutContextProvider = (props) => {
         setCurrentUser(res.data.userName)
         sessionStorage.setItem('username',res.data.userName)
         const myToken = window.btoa(res.data.token)
+        sessionStorage.setItem('token', myToken)
+        toastSuccessNotify('User registered successfully.')
 
       }
       
