@@ -25,7 +25,7 @@ const AutContextProvider = (props) => {
         setMyKey(res.data.token)
         setCurrentUser(res.data.userName)
         sessionStorage.setItem('username',res.data.userName)
-        
+        const myToken = window.btoa(res.data.token)
 
       }
       
