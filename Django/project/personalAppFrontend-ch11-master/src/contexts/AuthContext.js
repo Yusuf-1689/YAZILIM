@@ -1,5 +1,5 @@
 import { createContext } from "react";
-
+import { toastSuccessNotify } from '../helper/ToastNotify';
 
 export const AutContext = createContext();
 
@@ -22,8 +22,9 @@ const AutContextProvider = (props) => {
       })
 
       if (res.data.token){
+        console.log(res)
         setMyKey(res.data.token)
-        setCurrentUser(res.data.userName)
+        setCurrentUser(res.data.username)
         sessionStorage.setItem('username',res.data.userName)
         const myToken = window.btoa(res.data.token)
         sessionStorage.setItem('token', myToken)
