@@ -4,11 +4,12 @@ import { toastSuccessNotify } from '../helper/ToastNotify';
 
 export const AutContext = createContext();
 
-const url = "http://127.0.0.1:8000/"
+const url = "https://anthonycw.pythonanywhere.com/"
 
-const AuthContextProvider = (props) => {
-  const [currentUser,setCurrentUser] = useState(false);
-  const [myKey, setMyKey] = useState("")
+const AuthContextProvider = (props)=>{
+  const [currentUser,setCurrentUser] = useState(sessionStorage.getItem('username') || false);
+  let keys = sessionStorage.getItem('token')
+  const [myKey,setMyKey] = useState(keys && window.atob(keys))
 
   const createUser = async (email,password,firstName,lastName,userName)=>{
     try {
