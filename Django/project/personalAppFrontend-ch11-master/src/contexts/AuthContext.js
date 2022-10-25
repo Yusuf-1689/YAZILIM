@@ -48,12 +48,13 @@ const AuthContextProvider = (props)=>{
         "password": password,
 
       })
-      if (res.data.token){
+      console.log(res)
+      if (res.data.key){
         console.log(res)
-        setMyKey(res.data.token)
+        setMyKey(res.data.key)
         setCurrentUser(res.data.user.username)
         sessionStorage.setItem('username',res.data.user.userName)
-        const myToken = window.btoa(res.data.token)
+        const myToken = window.btoa(res.data.key)
         sessionStorage.setItem('token', myToken)
         toastSuccessNotify('User login successfully.')
 
@@ -83,7 +84,8 @@ const AuthContextProvider = (props)=>{
 
 
 
-    } catch ("error") {
+    } catch (error) {
+      console.log(error)
       
     }
   }
