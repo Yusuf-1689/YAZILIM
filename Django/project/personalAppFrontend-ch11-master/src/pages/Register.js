@@ -13,13 +13,15 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from "react-router-dom";
 import {Formik,Form} from 'formik';
 import * as Yup from 'yup';
+import { useContext } from 'react';
+import AuthContextProvider from '../contexts/AuthContext';
 
 
 const theme = createTheme();
 
 export default function Register() {
   const navigate = useNavigate()
-  const {createUser} = useContext(AuthContext)
+  const {createUser} = useContext(AuthContextProvider)
 
 
   return (
