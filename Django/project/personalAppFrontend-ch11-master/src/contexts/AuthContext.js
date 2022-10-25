@@ -66,7 +66,23 @@ const AuthContextProvider = (props)=>{
 
   const logOut = async () =>{
     try {
-      
+      var config = {
+        method: 'post',
+        url: 'users/auth/logouts',
+        headers: {
+          'Authorization': `Token ${myKey}`,
+        }
+      }
+
+      const res = await axios(config)
+      if (res.status === 200) {
+        setCurrentUser(false)
+        setMyKey(false)
+        sessionStorage.clear()
+      }
+
+
+
     } catch ("error") {
       
     }
@@ -78,6 +94,7 @@ let value = {
   currentUser,
   myKey,
   signIn,
+  logOut,
   
 
 }
