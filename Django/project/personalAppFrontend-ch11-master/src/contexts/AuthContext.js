@@ -2,7 +2,7 @@ import axios from 'axios';
 import {createContext,useState} from 'react'
 import { toastSuccessNotify } from '../helper/ToastNotify';
 
-export const AutContext = createContext();
+export const AuthContext = createContext();
 
 const url = "https://anthonycw.pythonanywhere.com/"
 
@@ -11,7 +11,7 @@ const AuthContextProvider = (props)=>{
   let keys = sessionStorage.getItem('token')
   const [myKey,setMyKey] = useState(keys && window.atob(keys))
 
-  const createUser = async (email,password,firstName,lastName,userName)=>{
+  const createUser = async (email,password,firstName,lastName,userName,navigate)=>{
     try {
       const res = await axios.post(`${url}user/auth/register/`,{
         "username": userName,
@@ -49,9 +49,9 @@ let value = {
 
 
   return(
-    <AutContext.Provider value={value}>
+    <AuthContext.Provider value={value}>
       {props.children}
-    </AutContext.Provider>
+    </AuthContext.Provider>
   )
 }
 
