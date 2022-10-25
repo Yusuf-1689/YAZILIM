@@ -6,7 +6,7 @@ export const AutContext = createContext();
 
 const url = "http://127.0.0.1:8000/"
 
-const AutContextProvider = (props) => {
+const AuthContextProvider = (props) => {
   const [currentUser,setCurrentUser] = useState(false);
   const [myKey, setMyKey] = useState("")
 

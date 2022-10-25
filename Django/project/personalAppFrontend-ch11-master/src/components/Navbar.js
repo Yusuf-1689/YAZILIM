@@ -23,7 +23,7 @@ export default function NavBar() {
   const handleClose = (e) => {
     setAnchorEl(null);
     if (e.target.innerText=== 'Login') {
-      navigate('/login')
+      navigate('/')
     }else if (e.target.innerText === 'Sign Up') {
       navigate('/register')
     }else if (e.target.innerText === 'Logout'){
@@ -60,7 +60,7 @@ export default function NavBar() {
                 sx={{ flexGrow: 1,bgcolor:"white",color:"black",fontSize:40,width:"55px",height:"55px",marginLeft:"2px",'&:hover': {
                   backgroundColor: 'black',
                   color:"white",
-                  opacity: [0.8, 0.9, 0.7],
+                  opacity: [0.9, 0.8, 0.7],
                 } }}
               >
                 {currentUser ? currentUser[0].toUpperCase():<AccountCircle sx={{fontSize:55,width:"8vh",height:"8vh",color: "tomato"}}/> }
