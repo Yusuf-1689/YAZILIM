@@ -40,10 +40,45 @@ const AuthContextProvider = (props)=>{
     }
   }
 
+  const signIn = async (email, password,userName) =>{
+    try {
+      const res = await axios.post(`${url}users/auth/login`,{
+        "email":email,
+        "username": userName,
+        "password": password,
+
+      })
+      if (res.data.token){
+        console.log(res)
+        setMyKey(res.data.token)
+        setCurrentUser(res.data.user.username)
+        sessionStorage.setItem('username',res.data.user.userName)
+        const myToken = window.btoa(res.data.token)
+        sessionStorage.setItem('token', myToken)
+        toastSuccessNotify('User login successfully.')
+
+      }
+      
+    } catch (error) {
+      
+    }
+  }
+
+  const logOut = async () =>{
+    try {
+      
+    } catch ("error") {
+      
+    }
+  }
+  
+
 let value = {
   createUser,
   currentUser,
   myKey,
+  signIn,
+  
 
 }
 
