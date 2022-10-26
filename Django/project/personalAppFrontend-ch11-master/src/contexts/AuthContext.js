@@ -31,7 +31,7 @@ const AuthContextProvider = (props)=>{
         const myToken = window.btoa(res.data.token)
         sessionStorage.setItem('token', myToken)
         toastSuccessNotify('User registered successfully.')
-
+        navigate("/home")
       }
       
     } catch (error) {
@@ -40,7 +40,7 @@ const AuthContextProvider = (props)=>{
     }
   }
 
-  const signIn = async (email, password,userName) =>{
+  const signIn = async (email, password,userName,navigate) =>{
     try {
       const res = await axios.post(`${url}users/auth/login`,{
         "email":email,
@@ -65,7 +65,7 @@ const AuthContextProvider = (props)=>{
     }
   }
 
-  const logOut = async () =>{
+  const logOut = async (navigate) =>{
     try {
       var config = {
         method: 'post',
@@ -82,6 +82,7 @@ const AuthContextProvider = (props)=>{
         setMyKey(false)
         sessionStorage.clear()
         toastSuccessNotify('User log out successfully.')
+        navigate("/")
       }
 
 
