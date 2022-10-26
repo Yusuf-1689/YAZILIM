@@ -76,10 +76,12 @@ const AuthContextProvider = (props)=>{
       }
 
       const res = await axios(config)
+      console.log(res)
       if (res.status === 200) {
         setCurrentUser(false)
         setMyKey(false)
         sessionStorage.clear()
+        toastSuccessNotify('User log out successfully.')
       }
 
 
