@@ -41,7 +41,8 @@ export default function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    signIn(email,password,userName)
+    console.log("aadsdasd")
+    signIn(email,password,userName,navigate)
 
   };
   
