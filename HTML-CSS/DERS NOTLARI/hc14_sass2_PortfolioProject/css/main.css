@@ -131,7 +131,7 @@
 .projects__item {
   width: 100%;
   cursor: pointer;
-  border-bottom: 5px solid #ff652f;
+  border-bottom: 5px solid #f35e28;
   position: relative;
 }
 .projects__item img {
@@ -156,7 +156,7 @@
   transition: all 1s;
 }
 .link-style a:hover, footer.middle a:hover, footer.vertical .social-icons a:hover, footer.horizontal a:hover {
-  color: #ff652f;
+  color: #ec5f2c;
 }
 
 footer.horizontal {
@@ -260,7 +260,7 @@ footer.middle {
 
   .contact h2 {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.6rem;
   }
   .contact__list {
     gap: 2.5rem 2rem;
