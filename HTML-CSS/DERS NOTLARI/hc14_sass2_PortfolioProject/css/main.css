@@ -303,7 +303,7 @@ footer.middle {
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
-  color: #eee;
+  color: rgb(248, 242, 242);
   background-color: #202020;
   height: 100vh;
 }
