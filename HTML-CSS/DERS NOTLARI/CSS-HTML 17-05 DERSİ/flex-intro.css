@@ -88,8 +88,8 @@
 
   .container3 div{
       background-color: mediumvioletred;
-      width: 5rem;
-      margin: 1rem;
+      width: 4.5rem;
+      margin: 1.2rem;
       flex-grow: 1; 
       /*? tüm div'lerin büyüme oranına 1 verdik.*/
   }
