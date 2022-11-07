@@ -32,7 +32,7 @@ ul li {
 }
 
 header ul li a {
-    color: black;
+    color: rgb(12, 12, 12);
     padding: 0.5rem;
     opacity: 0.8;
 }
