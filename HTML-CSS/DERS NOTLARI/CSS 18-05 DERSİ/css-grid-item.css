@@ -58,7 +58,7 @@
 } */
 
 .content9{
-    background-color: rgb(230, 23, 64);
+    background-color: rgb(240, 20, 64);
     /* grid-row: 4/6; */
     /* grid-column: 2/4; */
 
@@ -68,5 +68,5 @@
 
 .content10{
     grid-area: 4/4/6/4;
-    background-color: cyan;
+    background-color: rgb(9, 243, 243);
 }
