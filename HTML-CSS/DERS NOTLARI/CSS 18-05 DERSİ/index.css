@@ -6,7 +6,7 @@
   .container{
       display: grid;
       grid-template-columns: 150px 50vw 150px;
-      grid-template-rows: 100px 500px 20vh 3rem;
+      grid-template-rows: 100px 500px 20vh 3.5rem;
       /* justify-content: space-between; */
       /* justify-content: space-evenly; */
       justify-content: center;
