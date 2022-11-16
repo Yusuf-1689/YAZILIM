@@ -15,7 +15,7 @@
   }
 
   .content{
-      border: 2px solid red;
+      border: 2px solid rgb(247, 6, 6);
       background-color: lightcyan;
       display: flex;
       justify-content: center;
