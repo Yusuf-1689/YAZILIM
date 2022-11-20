@@ -10,7 +10,7 @@ body {
 
 .text1 {
     color: red;
-    text-shadow: 5px 5px 5px gray;
+    text-shadow: 5px 5px 5px rgb(124, 121, 121);
 }
 
 .text2 {
