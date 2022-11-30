@@ -34,7 +34,7 @@ body {
 .movie-over {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.7);
-  color: #000;
+  color: rgb(10, 10, 10);
   bottom: 0;
   left: 0;
   right: 0;
