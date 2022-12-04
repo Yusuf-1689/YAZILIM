@@ -10,7 +10,7 @@ export const GlobalStlyes = createGlobalStyle`
 
   body {
     background: ${({ theme }) => theme.colors.body};
-    color: "#00252e";
+    color: "#01242c";
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
   }
