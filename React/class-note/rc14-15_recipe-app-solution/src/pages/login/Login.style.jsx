@@ -45,7 +45,7 @@ export const StyledForm = styled.form`
 export const StyledButton = styled.button`
   font-size: 2rem;
   background: rgba(0, 0, 0, 0.6);
-  color: white;
+  color: #f5eded;
   border: none;
   margin: 1rem;
   cursor: pointer;
