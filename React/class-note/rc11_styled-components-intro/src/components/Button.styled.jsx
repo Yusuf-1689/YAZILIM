@@ -5,8 +5,8 @@ const Button = styled.button`
   color: ${({ primary }) => (primary ? 'white' : 'purple')};
   background: ${(props) => (props.primary ? 'purple' : 'white')};
   cursor: pointer;
-  padding: 0.7rem 1.5rem;
-  border: 2px solid purple;
+  padding: 0.6rem 1.5rem;
+  border: 3px solid purple;
   border-radius: 5px;
   font-family: 'tahoma';
   &:hover {
