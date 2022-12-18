@@ -34,6 +34,7 @@ const About = () => {
             Praesentium veniam tempore odio, distinctio neque enim eveniet
             consequatur magnam vero ut.
             Lorem ipsum dolor sit amet.
+            Eveniet velit, ipsa dolore enim, et ratione optio asperiores dolorum deleniti fuga nihil facere libero officiis esse? Recusandae consequatur deserunt consequuntur accusamus tempore! Accusamus temporibus, eligendi inventore facilis harum molestias.
           </p>
         </div>
       </div>
