@@ -11,6 +11,7 @@ const About = () => {
             Praesentium veniam tempore odio, distinctio neque enim eveniet
             consequatur magnam vero ut.
             Voluptatem quae accusantium omnis, nobis earum sit?
+            Repellat dolorum asperiores ratione laboriosam commodi, ipsam quo perspiciatis placeat consequatur ad fugit odio, quibusdam, est repudiandae velit perferendis nam cupiditate veritatis architecto minima dolore neque. Tenetur porro explicabo a laborum doloremque nisi?
           </p>
         </div>
         <div className="col-sm-12 col-md-6 col-lg-5">
