@@ -19,8 +19,8 @@ const StudentItem = ({ student }) => {
       style={{
         background: student.color,
         paddingBottom: '2rem',
-        paddingTop: '1rem',
-        marginBottom: '1rem',
+        paddingTop: '1.2rem',
+        marginBottom: '1.2rem',
       }}
     >
       <h3>NAME:{name}</h3>
