@@ -12,7 +12,7 @@ const TypoButtons = () => {
           align="center"
           color="error"
           sx={{
-            background: '#eee',
+            background: '#f1eaea',
             mt: 4,
             border: '1px solid green',
           }}
