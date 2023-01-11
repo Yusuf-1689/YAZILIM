@@ -27,7 +27,7 @@ code {
 .useref {
   height: 100vh;
   background-color: bisque;
-  padding: 3rem;
+  padding: 3.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
