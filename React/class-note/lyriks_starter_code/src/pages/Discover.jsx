@@ -35,7 +35,7 @@ const Discover = () => {
         >
 
         </SongCard>
-                ))}
+    ))}
 
         </div>
 
