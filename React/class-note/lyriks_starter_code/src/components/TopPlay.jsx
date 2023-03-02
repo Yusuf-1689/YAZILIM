@@ -18,6 +18,12 @@ const TopPlay = () => {
   const { data } = useGetTopChartsQuery();
   const divRef = useRef(null);
 
+  useEffect(() => {
+    divRef.current.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  const topPlays = data?.slice(0,5);
+
   const handlePauseClick = () => {
     dispatch(playPause(false));
   };
@@ -26,6 +32,14 @@ const TopPlay = () => {
     dispatch(setActiveSong({ song, data, i}));
     dispatch(playPause(true));
   };
+
+  return (
+    <div ref={divRef} className="xl:ml-6 ml-0 xl:mb-0 mb-6 flex-1 xl:max-w-[500px] max-w-full flex flex-col">
+      <div className="w-full flex flex-col">
+
+      </div>
+    </div>
+  )
 
 };
 export default TopPlay;
