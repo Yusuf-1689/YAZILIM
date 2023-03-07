@@ -13,7 +13,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 
 const TopChartChard = ({ song, i }) => (
-  <div className="w-full flex flex-row items-center hover:bg-[#4c426e] py-2 p-4 rounded-lg curor-pointer mb-2">
+  <div className="w-full flex flex-row items-center hover:bg-[#53487a] py-2 p-4 rounded-lg curor-pointer mb-2">
     {song.title}
   </div>
 )
