@@ -68,6 +68,9 @@ const TopPlay = () => {
 
         <Swiper
           slidePerView="auto"
+          spaceBetween={15}
+          freeMode
+          centeredSlides
         >
 
         </Swiper>
