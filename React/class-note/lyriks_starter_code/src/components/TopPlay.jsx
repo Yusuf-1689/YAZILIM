@@ -73,8 +73,13 @@ const TopPlay = () => {
           centeredSlides
           centeredSlidesBounds
           modules={[FreeMode]}
+          className="mt-4"
         >
-
+          {topPlays?.map((song, i) => (
+            <SwiperSlide>
+              
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
       
