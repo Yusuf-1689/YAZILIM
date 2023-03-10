@@ -77,7 +77,7 @@ const TopPlay = () => {
         >
           {topPlays?.map((song, i) => (
             <SwiperSlide>
-              
+              key={song?.key}
             </SwiperSlide>
           ))}
         </Swiper>
