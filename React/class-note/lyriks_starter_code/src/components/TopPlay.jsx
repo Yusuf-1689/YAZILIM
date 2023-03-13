@@ -23,7 +23,7 @@ const TopChartChard = ({ song, i }) => (
           <p className="text-xl font-bold text-white">{song?.title}</p>
         </Link>
         <Link to={`/artists/${song?.artists[0].adamid}`}>
-          <p className="text-ase font-bold text-gray-300">{song?.title}</p>
+          <p className="text-ase text-gray-300 mt-1">{song?.subtitle}</p>
         </Link>
       </div>
     </div>
@@ -66,6 +66,10 @@ const TopPlay = () => {
               key={song.key}
               song={song}
               i={i}
+              isPlaying={isPlaying}
+              setActiveSong={setActiveSong}
+              handlePauseClick={handlePauseClick}
+              handlePlayClick={handlePlayClick}
             />
           ))}
         </div>
