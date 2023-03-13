@@ -12,7 +12,7 @@ import { useGetTopChartsQuery } from "../redux/services/shazamCore";
 import 'swiper/css';
 import 'swiper/css/free-mode';
 
-const TopChartChard = ({ song, i }) => (
+const TopChartChard = ({ song, i, isPlaying, activeSong, handlePauseClick, handlePlayClick }) => (
   <div className="w-full flex flex-row items-center hover:bg-[#53487a] py-2 p-4 rounded-lg curor-pointer mb-2">
     <h3 className="fot-bold text-base text-white mr-3">{i + 1}.
     </h3>
@@ -27,6 +27,13 @@ const TopChartChard = ({ song, i }) => (
         </Link>
       </div>
     </div>
+    <PlayPause
+      isPlaying={isPlaying}
+      activeSong={activeSong}
+      song={song}
+      handlePause={handlePauseClick}
+      handlePlay={handlePlayClick}
+    />
   </div>
 );
 
