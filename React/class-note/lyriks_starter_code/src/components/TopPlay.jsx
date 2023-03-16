@@ -53,7 +53,7 @@ const TopPlay = () => {
     dispatch(playPause(false));
   };
 
-  const handlePlayClick = () => {
+  const handlePlayClick = (song, i) => {
     dispatch(setActiveSong({ song, data, i}));
     dispatch(playPause(true));
   };
@@ -76,7 +76,7 @@ const TopPlay = () => {
               isPlaying={isPlaying}
               setActiveSong={setActiveSong}
               handlePauseClick={handlePauseClick}
-              handlePlayClick={handlePlayClick}
+              handlePlayClick={() => handlePlayClick(song, i)}
             />
           ))}
         </div>
