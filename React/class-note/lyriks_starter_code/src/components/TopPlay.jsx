@@ -93,8 +93,16 @@ const TopPlay = () => {
           slidePerView="auto"
           spaceBetween={15}
           freeMode
+          centeredSlides
+          centeredSlidesBounds
+          modules={[FreeMode]}
+          className="mt-4"
         >
-
+          {topPlays?.map((song, i) =>(
+            <SwiperSlide>
+              
+            </SwiperSlide>
+          ))}
         </Swiper>
 
         <Swiper
