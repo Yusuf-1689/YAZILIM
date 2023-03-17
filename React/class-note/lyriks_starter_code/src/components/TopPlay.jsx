@@ -90,6 +90,14 @@ const TopPlay = () => {
         </div>
 
         <Swiper
+          slidePerView="auto"
+          spaceBetween={15}
+          freeMode
+        >
+
+        </Swiper>
+
+        <Swiper
           slidesPerView="auto"
           spaceBetween={15}
           freeMode
