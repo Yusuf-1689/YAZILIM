@@ -74,7 +74,7 @@ const TopPlay = () => {
               song={song}
               i={i}
               isPlaying={isPlaying}
-              setActiveSong={setActiveSong}
+              activeSong={activeSong}
               handlePauseClick={handlePauseClick}
               handlePlayClick={() => handlePlayClick(song, i)}
             />
