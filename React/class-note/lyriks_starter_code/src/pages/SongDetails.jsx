@@ -22,7 +22,7 @@ const SongDetails = () => {
           <h2 className="text-white text-3xl font-bold">Lyrics:</h2>
         </div>
     </div>
-  )
+  );
 };
 
 export default SongDetails;
