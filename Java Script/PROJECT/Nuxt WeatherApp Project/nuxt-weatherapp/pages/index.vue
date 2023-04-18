@@ -65,7 +65,7 @@ export default {
   text-align: center;
   font-family: "Arial, sans-serif";
   display: block;
-  font-weight: 300;
+  font-weight: 320;
   font-size: 20px;
   color: #083a70;
   letter-spacing: 2px;
