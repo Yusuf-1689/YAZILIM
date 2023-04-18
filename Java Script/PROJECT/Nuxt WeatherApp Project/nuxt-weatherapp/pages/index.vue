@@ -55,7 +55,7 @@ export default {
 <style>
 
 .container {
-  background-color: rgb(32, 166, 228);
+  background-color: rgb(32, 149, 204);
   margin:0 auto;
   min-height: 100vh;
   flex-direction: column;
@@ -67,7 +67,7 @@ export default {
   display: block;
   font-weight: 300;
   font-size: 20px;
-  color: #08407c;
+  color: #083a70;
   letter-spacing: 2px;
 }
 
