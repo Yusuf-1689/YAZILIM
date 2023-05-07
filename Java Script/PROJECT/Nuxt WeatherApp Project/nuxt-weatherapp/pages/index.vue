@@ -67,7 +67,7 @@ export default {
   display: block;
   font-weight: 300;
   font-size: 20px;
-  color: #093666;
+  color: #0a4381;
   letter-spacing: 2px;
 }
 
