@@ -23,6 +23,15 @@ function Cards() {
                     path='/services'
                     />
                 </ul>
+                <ul className="cards_items">
+                    <CardItem
+                    src="images/img-3.jpg"
+                    text="Set sail in the Atlantic Ocean visiting Uncharted Waters"
+                    label='Adventure'
+                    path='/services'
+                    />
+                    
+                </ul>
             </div>
         </div>
     </div>
