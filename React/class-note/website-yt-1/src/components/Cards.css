@@ -94,7 +94,7 @@ h1 {
 }
 
 .cards__item__text {
-  color: #252e48;
+  color: #2a3453;
   font-size: 18px;
   line-height: 24px;
 }
@@ -113,6 +113,6 @@ h1 {
 
 @media only screen and (max-width: 1024px) {
   .cards__item {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
 }
