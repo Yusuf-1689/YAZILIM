@@ -1,5 +1,5 @@
 .footer-container {
-    background-color: #242424;
+    background-color: #272626;
     padding: 4rem 0 2rem 0;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@
   
     margin-bottom: 24px;
     padding: 24px;
-    color: #fff;
+    color: #f7f2f2;
   }
   
   .footer-subscription > p {
