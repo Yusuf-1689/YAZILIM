@@ -86,11 +86,11 @@
   }
   
   .footer-email-form h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
   
   .footer-input::placeholder {
-    color: #b1b1b1;
+    color: #bbb8b8;
   }
   
   /* Social Icons */
