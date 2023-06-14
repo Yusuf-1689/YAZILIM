@@ -90,7 +90,7 @@
   }
   
   .footer-input::placeholder {
-    color: #bbb8b8;
+    color: #c4bdbd;
   }
   
   /* Social Icons */
@@ -110,7 +110,7 @@
     align-items: center;
     width: 90%;
     max-width: 1000px;
-    margin: 40px auto 0 auto;
+    margin: 45px auto 0 auto;
   }
   
   .social-icons {
