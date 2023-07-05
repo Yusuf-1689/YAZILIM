@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+  <title>Finans Takibi</title>
+  <style>
+    .form-container {
+      margin-bottom: 10px;
+    }
+
+    .table-container {
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Gelir Ekle</h2>
+        <input type="text" id="gelir-aciklama" placeholder="Açıklama">
+        <input type="number" id="gelir-tutar" placeholder="Tutar">
+        <select id="gelir-para-birimi">
+          <option value="TRY">TRY - Türk Lirası</option>
+          <option value="USD">USD - Amerikan Doları</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="GBP">GBP - İngiliz Sterlini</option>
+          <option value="JPY">JPY - Japon Yeni</option>
+          <!-- Daha fazla para birimi seçeneği eklenebilir -->
+        </select>
+        <button onclick="gelirEkle()">Ekle</button>
+      </div>
+    
+      <div class="form-container">
+        <h2>Gider Ekle</h2>
+        <input type="text" id="gider-aciklama" placeholder="Açıklama">
+        <input type="number" id="gider-tutar" placeholder="Tutar">
+        <select id="gider-para-birimi">
+          <option value="TRY">TRY - Türk Lirası</option>
+          <option value="USD">USD - Amerikan Doları</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="GBP">GBP - İngiliz Sterlini</option>
+          <option value="JPY">JPY - Japon Yeni</option>
+          <!-- Daha fazla para birimi seçeneği eklenebilir -->
+        </select>
+        <button onclick="giderEkle()">Ekle</button>
+      </div>
+
+  <div class="table-container">
+    <h2>Gelirler</h2>
+    <table id="gelirler-tablosu">
+      <tr>
+        <th>Açıklama</th>
+        <th>Tutar</th>
+        <th></th>
+      </tr>
+    </table>
+  </div>
+
+  <div class="table-container">
+    <h2>Giderler</h2>
+    <table id="giderler-tablosu">
+      <tr>
+        <th>Açıklama</th>
+        <th>Tutar</th>
+        <th></th>
+      </tr>
+    </table>
+  </div>
+
+  <div>
+    <h2>Hesap Özeti</h2>
+    <p>Toplam Gelir: <span id="toplam-gelir"></span></p>
+    <p>Toplam Gider: <span id="toplam-gider"></span></p>
+    <p>Kâr: <span id="kar"></span></p>
+  </div>
+
+  <script>
+    const hesap = {
+      gelir: [],
+      gider: [],
+
+      gelirEkle() {
+        const aciklama = document.getElementById('gelir-aciklama').value;
+        const tutar = parseFloat(document.getElementById('gelir-tutar').value);
+
+        if (!aciklama || !tutar || tutar <= 0) {
+          alert("Lütfen geçerli bir açıklama ve tutar girin.");
+          return;
+        }
+
+        this.gelir.push({ aciklama, tutar });
+        this.guncelleTablo('gelirler-tablosu', this.gelir);
+        this.guncelleHesapOzeti();
+        this.temizleForm('gelir-aciklama', 'gelir-tutar');
+      },
+
+      giderEkle() {
+        const aciklama = document.getElementById('gider-aciklama').value;
+        const tutar = parseFloat(document.getElementById('gider-tutar').value);
+
+        if (!aciklama || !tutar || tutar <= 0) {
+          alert("Lütfen geçerli bir açıklama ve tutar girin.");
+          return;
+        }
+
+        this.gider.push({ aciklama, tutar });
+        this.guncelleTablo('giderler-tablosu', this.gider);
+        this.guncelleHesapOzeti();
+        this.temizleForm('gider-aciklama', 'gider-tutar');
+      },
+        guncelleTablo(tabloId, veri) {
+    const tablo = document.getElementById(tabloId);
+
+    // Tabloyu temizle
+    while (tablo.rows.length > 1) {
+      tablo.deleteRow(1);
+    }
+
+    // Veriyi tabloya ekle
+    veri.forEach((item, index) => {
+      const row = tablo.insertRow();
+      const aciklamaCell = row.insertCell();
+      const tutarCell = row.insertCell();
+      const silCell = row.insertCell();
+
+      aciklamaCell.textContent = item.aciklama;
+      tutarCell.textContent = item.tutar.toFixed(2);
+
+      const silButton = document.createElement('button');
+      silButton.textContent = 'Sil';
+      silButton.addEventListener('click', () => {
+        this.veriSil(tabloId, index);
+      });
+
+      silCell.appendChild(silButton);
+    });
+  },
+
+  veriSil(tabloId, index) {
+    if (tabloId === 'gelirler-tablosu') {
+      this.gelir.splice(index, 1);
+      this.guncelleTablo('gelirler-tablosu', this.gelir);
+    } else if (tabloId === 'giderler-tablosu') {
+      this.gider.splice(index, 1);
+      this.guncelleTablo('giderler-tablosu', this.gider);
+    }
+
+    this.guncelleHesapOzeti();
+  },
+
+  guncelleHesapOzeti() {
+    const toplamGelir = this.toplamGelir();
+    const toplamGider = this.toplamGider();
+    const kar = this.kar();
+
+    document.getElementById('toplam-gelir').textContent = toplamGelir.toFixed(2);
+    document.getElementById('toplam-gider').textContent = toplamGider.toFixed(2);
+    document.getElementById('kar').textContent = kar.toFixed(2);
+  },
+
+  temizleForm(...elementIds) {
+    elementIds.forEach((id) => {
+      document.getElementById(id).value = '';
+    });
+  },
+
+  toplamGelir() {
+    return this.gelir.reduce((toplam, gelir) => toplam + gelir.tutar, 0);
+  },
+
+  toplamGider() {
+    return this.gider.reduce((toplam, gider) => toplam + gider.tutar, 0);
+  },
+
+  kar() {
+    return this.toplamGelir() - this.toplamGider();
+  }
+};
+
+function gelirEkle() {
+  hesap.gelirEkle();
+}
+
+function giderEkle() {
+  hesap.giderEkle();
+}
+
+hesap.guncelleHesapOzeti();
+hesap.guncelleTablo('gelirler-tablosu', hesap.gelir);
+hesap.guncelleTablo('giderler-tablosu', hesap.gider);
+
+  </script>
+</body>
+</html>
