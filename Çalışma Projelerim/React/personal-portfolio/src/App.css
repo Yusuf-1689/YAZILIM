@@ -79,7 +79,7 @@ p.success {
 }
 
 p.danger {
-	color: red;
+	color: rgb(250, 3, 3);
 }
 /************ Navbar Css ************/
 nav.navbar {
