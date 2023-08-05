@@ -132,7 +132,7 @@ span.navbar-text {
 .social-icon a::before {
     content: "";
     width: 40px;
-    height: 42px;
+    height: 45px;
     position: absolute;
     background-color: #ffffff;
     border-radius: 50%;
