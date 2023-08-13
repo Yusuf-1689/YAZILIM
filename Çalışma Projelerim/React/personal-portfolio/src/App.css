@@ -176,7 +176,7 @@ span.navbar-text {
   transition: 0.3s ease-in-out;
 }
 .navbar-text button:hover {
-  color: #121212;
+  color: #131212;
 }
 .navbar-text button:hover::before {
 	content: "";
