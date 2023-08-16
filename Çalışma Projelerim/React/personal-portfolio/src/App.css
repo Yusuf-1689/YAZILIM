@@ -199,7 +199,7 @@ nav.navbar .navbar-toggler-icon {
   top: -2px;
 }
 nav.navbar .navbar-toggler-icon:focus {
-	border-bottom: 2px solid #fff;
+	border-bottom: 2px solid #f1eded;
 }
 nav.navbar .navbar-toggler-icon:after,
 nav.navbar .navbar-toggler-icon:before {
