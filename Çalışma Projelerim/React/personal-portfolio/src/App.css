@@ -205,8 +205,8 @@ nav.navbar .navbar-toggler-icon:after,
 nav.navbar .navbar-toggler-icon:before {
 	width: 24px;
 	position: absolute;
-	height: 2px;
-	background-color: #fff;
+	height: 3px;
+	background-color: #f5f2f2;
 	top: 0;
 	left: 0;
 	content: '';
