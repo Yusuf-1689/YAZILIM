@@ -363,7 +363,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project .nav.nav-pills {
   width: 75%;
   margin: 0 auto;
-  border-radius: 50px;
+  border-radius: 55px;
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
 }
