@@ -376,11 +376,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 18px 0;
   color: #f3ecec;
   width: 100%;
-  font-size: 17px;
+  font-size: 18px;
   letter-spacing: 0.8px;
   font-weight: 500;
   position: relative;
-  transition: 0.3s ease-in-out;
+  transition: 0.4s ease-in-out;
   text-align: center;
   z-index: 0;
 }
