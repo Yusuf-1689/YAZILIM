@@ -389,11 +389,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #b33480 -5.91%, #4A2FBD 111.58%);
+    background: linear-gradient(90.21deg, #b33480 -5.91%, #4c2fcc 111.58%);
     top: 0;
     left: 0;
     z-index: -1;
-    transition: 0.3s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 .project .nav.nav-pills .nav-link.active::before {
     width: 100% !important;
