@@ -433,7 +433,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   border-radius: 32px;
   overflow: hidden;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 .proj-imgbx::before {
   content: "";
