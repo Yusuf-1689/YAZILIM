@@ -507,7 +507,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 500;
   font-size: 18px;
   letter-spacing: 0.8px;
-  transition: 0.3s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 .contact form input:focus,
 .contact form textarea:focus {
