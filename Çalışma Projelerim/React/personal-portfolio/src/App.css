@@ -516,7 +516,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .contact form input::placeholder,
 .contact form textarea::placeholder {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   color: #fff;
 }
