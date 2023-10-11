@@ -541,7 +541,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 .contact form button:hover {
-  color: #fff;
+  color: #eee7e7;
 }
 .contact form button::before {
   content: "";
