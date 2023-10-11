@@ -534,7 +534,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 24px;
   border-radius: 0;
   position: relative;
-  transition: 0.3s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 .contact form button span {
   z-index: 1;
