@@ -601,7 +601,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .new-email-bx::after {
   content: "";
-  background: #fff;
+  background: #f3f1f1;
   border-radius: 20px;
   position: absolute;
   z-index: -1;
