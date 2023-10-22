@@ -602,7 +602,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .new-email-bx::after {
   content: "";
   background: #f5f1f1;
-  border-radius: 20px;
+  border-radius: 22px;
   position: absolute;
   z-index: -1;
   top: 0;
