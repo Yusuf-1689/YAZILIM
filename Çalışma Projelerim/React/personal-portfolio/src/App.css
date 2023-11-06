@@ -103,14 +103,14 @@ nav.navbar {
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #181616;
+  background-color: #0c0c0c;
 }
 nav.navbar a.navbar-brand {
   width: 10%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #faf4f4 !important;
+  color: #f8f6f6 !important;
   letter-spacing: 0.9px;
   padding: 0 30px;
   font-size: 20px;
