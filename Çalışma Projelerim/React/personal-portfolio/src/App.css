@@ -292,11 +292,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner button svg {
   font-size: 25px;
   margin-left: 10px;
-  transition: 0.4s ease-in-out;
+  transition: 0.5s ease-in-out;
   line-height: 1;
 }
 .banner button:hover svg {
-  margin-left: 24px;
+  margin-left: 25px;
 }
 .banner img {
   animation: updown 3s linear infinite;
