@@ -523,7 +523,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form input:focus::placeholder,
 .contact form textarea:focus::placeholder {
   color: #111111;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 .contact form button {
   font-weight: 700;
