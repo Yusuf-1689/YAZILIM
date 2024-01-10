@@ -582,7 +582,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .new-email-bx {
   background: #fff;
   padding: 5px;
-  border-radius: 22px;
+  border-radius: 20px;
   position: relative;
   z-index: 0;
   display: flex;
