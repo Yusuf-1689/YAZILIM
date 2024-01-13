@@ -590,7 +590,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .new-email-bx::before {
   content: "";
-  background: linear-gradient(90.21deg, #b1347f -5.91%, #4a2fbd 111.58%);
+  background: linear-gradient(90.21deg, #b1347f -5.91%, #492dc7 111.58%);
   border-radius: 22px;
   position: absolute;
   z-index: -1;
