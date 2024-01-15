@@ -602,7 +602,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .new-email-bx::after {
   content: "";
   background: #fdfbfb;
-  border-radius: 22px;
+  border-radius: 20px;
   position: absolute;
   z-index: -1;
   top: 0;
@@ -612,7 +612,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .new-email-bx input {
   width: 100%;
-  color: #141313;
+  color: #0f0f0f;
   font-weight: 480;
   background: transparent;
   border: 0;
