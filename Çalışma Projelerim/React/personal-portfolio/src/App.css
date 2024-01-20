@@ -621,9 +621,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .new-email-bx button {
   background: linear-gradient(90.21deg, #af347e -5.91%, #4125c0 111.58%);
   padding: 18px 62px;
-  color: #faf5f5;
+  color: #f5efef;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
   border-radius: 18px;
 }
 .footer img {
