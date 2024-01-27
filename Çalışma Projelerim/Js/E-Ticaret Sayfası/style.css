@@ -280,6 +280,10 @@ button.white {
   padding: 30px;
 }
 
+#sm-banner .banner-box2 {
+  background-image: url(img/banner/b10.jpg);
+}
+
 #sm-banner h4 {
   color: #fff;
   font-size: 20px;
