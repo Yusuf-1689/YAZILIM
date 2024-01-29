@@ -245,9 +245,9 @@ button.normal {
 }
 
 button.white {
-  font-style: 13px;
+  font-style: 14px;
   font-weight: 600;
-  padding: 11px 18px;
+  padding: 12px 18px;
   color: #fff;
   background-color: transparent;
   cursor: pointer;
