@@ -321,3 +321,15 @@ button.white {
   padding: 20px;
   margin-bottom: 20px;
 }
+
+#banner3 h2 {
+  color: #fff;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+#banner3 h3 {
+  color: #ec544e;
+  font-weight: 800;
+  font-size: 15px;
+}
