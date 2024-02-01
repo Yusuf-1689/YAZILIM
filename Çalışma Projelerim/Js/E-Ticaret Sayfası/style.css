@@ -406,9 +406,23 @@ footer {
   justify-content: space-between;
 }
 
-footer col {
+footer .col {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 20px;
+}
+
+footer .logo {
+  margin-bottom: 30px;
+}
+
+footer h4 {
+  font-style: 14px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  font-style: 13px;
+  margin: 0 0 8px 0;
 }
