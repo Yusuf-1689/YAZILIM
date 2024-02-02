@@ -426,3 +426,21 @@ footer p {
   font-style: 13px;
   margin: 0 0 8px 0;
 }
+footer a {
+  font-style: 13px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  color: #465b52;
+  cursor: pointer;
+}
+
+footer .install .row img {
+}
