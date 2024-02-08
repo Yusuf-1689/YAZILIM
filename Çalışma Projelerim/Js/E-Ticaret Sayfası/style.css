@@ -460,3 +460,19 @@ footer .copyright {
   width: 100%;
   text-align: center;
 }
+
+@media (max-width: 799px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    height: 100vh;
+    width: 300px;
+    background-color: #e3e6f3;
+    box-shadow: 0 40px 60px rgb(0, 0, 0, 0.1);
+  }
+}
