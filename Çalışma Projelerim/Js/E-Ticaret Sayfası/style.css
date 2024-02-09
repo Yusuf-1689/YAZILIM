@@ -46,6 +46,11 @@
   left: 20px;
 }
 
+#mobile {
+  display: none;
+  align-items: center;
+}
+
 #hero {
   background-image: url("img/hero4.png");
   height: 90vh;
