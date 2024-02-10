@@ -480,6 +480,11 @@ footer .copyright {
     background-color: #e3e6f3;
     box-shadow: 0 40px 60px rgb(0, 0, 0, 0.1);
     padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+
+  #navbar.active {
+    right: 0px;
   }
   #navbar li {
     margin-bottom: 25px;
@@ -488,5 +493,17 @@ footer .copyright {
   #mobile {
     display: flex;
     align-items: center;
+  }
+  #mobile i {
+    color: #1a1a1a;
+    font-style: 24px;
+    padding-left: 20px;
+  }
+  #close {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    font-size: 24px;
   }
 }
