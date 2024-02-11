@@ -51,6 +51,10 @@
   align-items: center;
 }
 
+#close {
+  display: none;
+}
+
 #hero {
   background-image: url("img/hero4.png");
   height: 90vh;
@@ -505,5 +509,8 @@ footer .copyright {
     left: 30px;
     color: #222;
     font-size: 24px;
+  }
+  #lg-bag {
+    display: none;
   }
 }
