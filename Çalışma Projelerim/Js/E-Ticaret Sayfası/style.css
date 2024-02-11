@@ -525,4 +525,10 @@ footer .copyright {
   #feature .fe-box {
     margin: 15px 15px;
   }
+  #product .pro-container {
+    justify-content: center;
+  }
+  #product1 .pro {
+    margin: 15px;
+  }
 }
