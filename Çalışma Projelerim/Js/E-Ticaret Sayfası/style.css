@@ -544,4 +544,7 @@ footer .copyright {
   #banner3 .banner-box {
     width: 28%;
   }
+  #newsletter {
+    width: 70%;
+  }
 }
