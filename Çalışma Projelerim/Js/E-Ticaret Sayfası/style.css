@@ -566,8 +566,20 @@ footer .copyright {
     padding: 0 20px;
     background-position: 55%;
   }
+  #feature {
+    justify-content: space-between;
+  }
   #feature .fe-box {
     width: 155px;
     margin: 0 0 15px 0;
+  }
+  #product1 .pro {
+    width: 100%;
+  }
+  #banner {
+    height: 40vh;
+  }
+  #sm-banner .banner-box {
+    height: 40vh;
   }
 }
