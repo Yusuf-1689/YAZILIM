@@ -597,4 +597,7 @@ footer .copyright {
   #newsletter .form {
     width: 100%;
   }
+  footer .copyright {
+    text-align: start;
+  }
 }
