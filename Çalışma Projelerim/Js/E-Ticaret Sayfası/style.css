@@ -513,6 +513,15 @@ footer .copyright {
   justify-content: space-between;
 }
 
+.small-img-col {
+  flex-basis: 24%;
+  cursor: pointer;
+}
+.small-img-col {
+  flex-basis: 24%;
+  cursor: pointer;
+}
+
 @media (max-width: 799px) {
   #navbar {
     display: flex;
