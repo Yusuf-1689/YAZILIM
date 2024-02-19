@@ -235,6 +235,11 @@
 
     <script>
       var MainImg = document.getElementById("MainImg");
+      var smallimg = document.getElementsByClassName("smallimg");
+
+      smallimg[0].onclick = function () {
+        MainImg.src = smallimg[0].src;
+      };
     </script>
 
     <script src="script.js"></script>
