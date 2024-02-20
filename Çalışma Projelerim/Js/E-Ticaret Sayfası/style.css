@@ -562,6 +562,10 @@ footer .copyright {
   color: #fff;
 }
 
+#prodetails .single-pro-details span {
+  line-height: 25px;
+}
+
 @media (max-width: 799px) {
   #navbar {
     display: flex;
