@@ -696,4 +696,16 @@ footer .copyright {
   footer .copyright {
     text-align: start;
   }
+  #prodetails {
+    display: flex;
+    flex-direction: column;
+  }
+  #prodetails .single-pro-image {
+    width: 100%;
+    margin-right: 0px;
+  }
+  #prodetails .single-pro-details {
+    width: 100%;
+    padding-top: 30px;
+  }
 }
