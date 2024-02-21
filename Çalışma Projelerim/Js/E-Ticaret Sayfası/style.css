@@ -566,6 +566,10 @@ footer .copyright {
   line-height: 25px;
 }
 
+#page-header.blog-header {
+  background-image: url("img/banner/b19.jpg");
+}
+
 @media (max-width: 799px) {
   #navbar {
     display: flex;
