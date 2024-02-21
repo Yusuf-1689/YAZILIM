@@ -595,6 +595,23 @@ footer .copyright {
   width: 50%;
 }
 
+#blog .blog-details a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #000;
+  font-weight: 700;
+}
+
+#blog .blog-details a::after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 4px;
+  right: -60px;
+}
+
 @media (max-width: 799px) {
   #navbar {
     display: flex;
