@@ -644,6 +644,10 @@ footer .copyright {
   padding: 10px;
 }
 
+#about-head h2 {
+  font-size: 35px;
+}
+
 #about-head img {
   width: 50%;
   height: auto;
