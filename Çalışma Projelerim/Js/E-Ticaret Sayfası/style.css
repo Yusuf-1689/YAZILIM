@@ -836,4 +836,11 @@ footer .copyright {
   #blog .blog-details {
     width: 100%;
   }
+  #about-head {
+    flex-direction: column;
+  }
+
+  #about-head img {
+    width: 100%;
+  }
 }
