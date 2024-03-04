@@ -747,6 +747,22 @@ footer .copyright {
   color: #fff;
 }
 
+#form-details .people div {
+  padding-bottom: 25px;
+}
+#form-details .people div img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+#form-details .people div p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 25px;
+}
+
 @media (max-width: 799px) {
   .section-p1 {
     padding: 40px 40px;
