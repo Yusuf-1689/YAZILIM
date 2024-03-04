@@ -733,6 +733,15 @@ footer .copyright {
   align-items: flex-start;
 }
 
+#form-details form input,
+#form-details form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid #e1e1e1;
+}
+
 @media (max-width: 799px) {
   .section-p1 {
     padding: 40px 40px;
