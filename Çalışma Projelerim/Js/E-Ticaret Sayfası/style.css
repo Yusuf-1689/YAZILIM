@@ -686,10 +686,12 @@ footer .copyright {
 #contact-details .details {
   width: 40%;
 }
-#contact-details .details span {
+#contact-details .details span,
+#form-details form span {
   font-size: 12px;
 }
-#contact-details .details h2 {
+#contact-details .details h2,
+#form-details form h2 {
   font-size: 26px;
   line-height: 35px;
   padding: 20px 0;
@@ -722,6 +724,13 @@ footer .copyright {
 #contact-details .map iframe {
   width: 100%;
   height: 100%;
+}
+
+#form-details form {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 @media (max-width: 799px) {
