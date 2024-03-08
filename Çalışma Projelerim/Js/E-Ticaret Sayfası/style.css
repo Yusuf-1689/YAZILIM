@@ -780,6 +780,10 @@ footer .copyright {
   color: #000;
 }
 
+#cart {
+  overflow: auto;
+}
+
 #cart table {
   width: 100%;
   border-collapse: collapse;
@@ -830,6 +834,16 @@ footer .copyright {
 
 #cart table tbody tr td {
   padding-top: 15px;
+}
+
+#cart table tbody td {
+  font-size: 13px;
+}
+
+#cart-add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 @media (max-width: 799px) {
@@ -1037,5 +1051,16 @@ footer .copyright {
   #form-details form {
     width: 100%;
     margin-bottom: 30px;
+  }
+
+  #cart-add {
+    flex-direction: column;
+  }
+  #coupon {
+    width: 100%;
+  }
+  #subtotal {
+    width: 100%;
+    padding: 20px;
   }
 }
