@@ -846,6 +846,16 @@ footer .copyright {
   justify-content: space-between;
 }
 
+#coupon {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+#coupon h3,
+#subtotal h3 {
+  padding-bottom: 15px;
+}
+
 @media (max-width: 799px) {
   .section-p1 {
     padding: 40px 40px;
