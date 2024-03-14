@@ -871,6 +871,13 @@ footer .copyright {
   padding: 12px 20px;
 }
 
+#subtotal {
+  width: 50%;
+  margin-bottom: 30px;
+  border: 1px solid #e2e9e1;
+  padding: 30px;
+}
+
 @media (max-width: 799px) {
   .section-p1 {
     padding: 40px 40px;
