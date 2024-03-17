@@ -884,6 +884,13 @@ footer .copyright {
   margin-bottom: 20px;
 }
 
+#subtotal table td {
+  width: 50%;
+  border: 1px solid #e2e9e1;
+  padding: 10px;
+  font-size: 13px;
+}
+
 @media (max-width: 799px) {
   .section-p1 {
     padding: 40px 40px;
