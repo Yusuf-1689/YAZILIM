@@ -815,7 +815,7 @@ footer .copyright {
 }
 
 #cart table td:nth-child(5) input {
-  width: 70px;
+  width: 68px;
   padding: 10px 5px 10px 15px;
 }
 
@@ -828,7 +828,7 @@ footer .copyright {
 #cart table thead td {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 14px;
   padding: 16px 0;
 }
 
