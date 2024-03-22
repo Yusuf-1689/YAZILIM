@@ -792,7 +792,7 @@ footer .copyright {
 }
 
 #cart table img {
-  width: 70px;
+  width: 68px;
 }
 
 #cart table td:nth-child(1) {
@@ -800,7 +800,7 @@ footer .copyright {
   text-align: center;
 }
 #cart table td:nth-child(2) {
-  width: 150px;
+  width: 145px;
   text-align: center;
 }
 #cart table td:nth-child(3) {
