@@ -761,10 +761,10 @@ footer .copyright {
   align-items: flex-start;
 }
 #form-details .people div img {
-  width: 65px;
-  height: 65px;
+  width: 64px;
+  height: 64px;
   object-fit: cover;
-  margin-right: 15px;
+  margin-right: 14px;
 }
 
 #form-details .people div p {
