@@ -729,8 +729,8 @@ footer .copyright {
 #form-details {
   display: flex;
   justify-content: space-between;
-  margin: 30px;
-  padding: 80px;
+  margin: 28px;
+  padding: 75px;
   border: 1px solid #e1e1e1;
 }
 
