@@ -674,7 +674,7 @@ footer .copyright {
 #about-app .video video {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: 18px;
 }
 
 #contact-details {
@@ -688,7 +688,7 @@ footer .copyright {
 }
 #contact-details .details span,
 #form-details form span {
-  font-size: 12px;
+  font-size: 13px;
 }
 #contact-details .details h2,
 #form-details form h2 {
