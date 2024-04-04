@@ -628,7 +628,7 @@ footer .copyright {
   position: absolute;
   top: -40px;
   left: 0;
-  font-size: 70px;
+  font-size: 68px;
   font-weight: 700;
   color: #c9cbce;
   z-index: -9;
@@ -641,7 +641,7 @@ footer .copyright {
 #about-head {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 9px;
 }
 
 #about-head h2 {
