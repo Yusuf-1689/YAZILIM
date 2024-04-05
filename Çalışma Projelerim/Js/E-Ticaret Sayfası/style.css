@@ -608,7 +608,7 @@ footer .copyright {
 
 #blog .blog-details a::after {
   content: "";
-  width: 50px;
+  width: 48px;
   height: 1px;
   background-color: #000;
   position: absolute;
@@ -621,7 +621,7 @@ footer .copyright {
 }
 
 #blog .blog-details a:hover::after {
-  background-color: #088178;
+  background-color: #098d84;
 }
 
 #blog .blog-box h1 {
