@@ -500,13 +500,13 @@ footer .copyright {
 }
 
 #pagination a i {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
 }
 
 #prodetails {
   display: flex;
-  margin-top: 20px;
+  margin-top: 19px;
 }
 
 #prodetails .single-pro-image {
