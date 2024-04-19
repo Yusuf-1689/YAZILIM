@@ -447,12 +447,12 @@ footer .follow {
 }
 
 footer .follow i {
-  color: #4b5f56;
+  color: #5e7a6e;
   cursor: pointer;
 }
 
 footer .install .row img {
-  border: 1px solid #088178;
+  border: 1px solid #078f86;
   border-radius: 6px;
 }
 
@@ -495,7 +495,7 @@ footer .copyright {
   background-color: #098f86;
   padding: 15px 20px;
   border-radius: 5px;
-  color: #e9e3e3;
+  color: #f7f1f1;
   font-weight: 600;
 }
 
