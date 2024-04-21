@@ -403,7 +403,7 @@ button.white {
 
 #newsletter button {
   background-color: #088178;
-  color: #fff;
+  color: #f3eeee;
   white-space: nowrap;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -436,7 +436,7 @@ footer p {
   margin: 0 0 8px 0;
 }
 footer a {
-  font-style: 13px;
+  font-style: 14px;
   text-decoration: none;
   color: #141414;
   margin-bottom: 10px;
@@ -447,7 +447,7 @@ footer .follow {
 }
 
 footer .follow i {
-  color: #5e7a6e;
+  color: #5b7e6f;
   cursor: pointer;
 }
 
@@ -455,8 +455,7 @@ footer .install .row img {
   border: 1px solid #078f86;
   border-radius: 6px;
 }
-
-footer .install img {
+s footer .install img {
   margin: 10px 0 15px 0;
 }
 
