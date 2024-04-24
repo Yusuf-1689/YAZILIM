@@ -352,7 +352,7 @@ button.white {
 }
 
 #banner3 h3 {
-  color: #ec544e;
+  color: #f0504a;
   font-weight: 800;
   font-size: 15px;
 }
@@ -365,13 +365,13 @@ button.white {
   background-image: url("img/banner/b14.png");
   background-repeat: no-repeat;
   background-position: 20% 30%;
-  background-color: #041e42;
+  background-color: #072857;
 }
 
 #newsletter h4 {
   font-size: 22px;
   font-weight: 700;
-  color: #fff;
+  color: #f5efef;
 }
 
 #newsletter p {
