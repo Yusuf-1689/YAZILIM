@@ -266,8 +266,8 @@ button.white {
 }
 
 #banner button:hover {
-  background-color: #0b8b83;
-  color: #fff;
+  background-color: #0ea198;
+  color: #f7f1f1;
 }
 
 #sm-banner {
@@ -294,7 +294,7 @@ button.white {
 }
 
 #sm-banner h4 {
-  color: #fff;
+  color: #f5eded;
   font-size: 20px;
   font-weight: 300;
 }
