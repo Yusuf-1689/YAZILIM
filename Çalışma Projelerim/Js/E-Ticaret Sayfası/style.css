@@ -241,11 +241,11 @@
 }
 
 button.normal {
-  font-style: 14px;
+  font-style: 15px;
   font-weight: 600;
   padding: 15px 30px;
-  color: #000;
-  background-color: #fff;
+  color: #0a0a0a;
+  background-color: #f7f2f2;
   border-radius: 4px;
   cursor: pointer;
   border: none;
