@@ -79,9 +79,9 @@
 #hero button {
   background-image: url(img/button.png);
   background-color: transparent;
-  color: #088178;
+  color: #068a81;
   border: 0;
-  padding: 14px 80px 14px 65px;
+  padding: 15px 80px 15px 65px;
   background-repeat: no-repeat;
   cursor: pointer;
   font-weight: 700;
