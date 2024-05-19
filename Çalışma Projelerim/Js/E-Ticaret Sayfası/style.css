@@ -40,7 +40,7 @@
   content: "";
   width: 30%;
   height: 2px;
-  background-color: #088178;
+  background-color: #08756e;
   position: absolute;
   bottom: -4px;
   left: 20px;
@@ -73,7 +73,7 @@
 }
 
 #hero h1 {
-  color: #088178;
+  color: #0b8a81;
 }
 
 #hero button {
