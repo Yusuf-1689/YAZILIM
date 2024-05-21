@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 80px;
-  background-color: #e3e6f3;
+  background-color: #d7dbf0;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   z-index: 999;
   position: sticky;
@@ -885,9 +885,9 @@ footer .copyright {
 
 #subtotal table td {
   width: 50%;
-  border: 1px solid #e2e9e1;
+  border: 1px solid #dde7db;
   padding: 10px;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 @media (max-width: 799px) {
