@@ -866,14 +866,14 @@ footer .copyright {
 #coupon button,
 #subtotal button {
   background-color: #088178;
-  color: #fff;
+  color: #f1eded;
   padding: 12px 20px;
 }
 
 #subtotal {
   width: 50%;
   margin-bottom: 30px;
-  border: 1px solid #e7ebe6;
+  border: 1px solid #dde6da;
   padding: 30px;
 }
 
