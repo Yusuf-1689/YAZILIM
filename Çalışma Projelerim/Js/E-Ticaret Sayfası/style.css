@@ -860,13 +860,13 @@ footer .copyright {
   outline: none;
   width: 60%;
   margin-right: 10px;
-  border: 1px solid #e2e9e1;
+  border: 1px solid #deeedc;
 }
 
 #coupon button,
 #subtotal button {
-  background-color: #0b9b91;
-  color: #ece0e0;
+  background-color: #0f9c93;
+  color: #e2d5d5;
   padding: 15px 20px;
 }
 
