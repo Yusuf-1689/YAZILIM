@@ -819,7 +819,7 @@ footer .copyright {
 }
 
 #cart table thead {
-  border: 1px solid #e2e2e2;
+  border: 1px solid #dbd6d6;
   border-left: none;
   border-right: none;
 }
@@ -827,7 +827,7 @@ footer .copyright {
 #cart table thead td {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 15px;
   padding: 16px 0;
 }
 
