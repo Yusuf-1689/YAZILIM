@@ -814,12 +814,12 @@ footer .copyright {
 }
 
 #cart table td:nth-child(5) input {
-  width: 68px;
+  width: 70px;
   padding: 10px 5px 10px 15px;
 }
 
 #cart table thead {
-  border: 1.5px solid #dbd1d1;
+  border: 1.5px solid #d3c3c3;
   border-left: none;
   border-right: none;
 }
