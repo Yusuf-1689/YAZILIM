@@ -743,10 +743,10 @@ footer .copyright {
 #form-details form input,
 #form-details form textarea {
   width: 100%;
-  padding: 12px 15px;
+  padding: 15px 15px;
   outline: none;
   margin-bottom: 20px;
-  border: 1px solid #e1e1e1;
+  border: 1px solid #e6e0e0;
 }
 
 #form-details form button {
