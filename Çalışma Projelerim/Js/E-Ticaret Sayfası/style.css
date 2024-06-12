@@ -629,7 +629,7 @@ footer .copyright {
   left: 0;
   font-size: 65px;
   font-weight: 700;
-  color: #c9cbce;
+  color: #bcc3cc;
   z-index: -9;
 }
 
@@ -640,7 +640,7 @@ footer .copyright {
 #about-head {
   display: flex;
   align-items: center;
-  padding: 12px;
+  padding: 10px;
 }
 
 #about-head h2 {
