@@ -609,18 +609,18 @@ footer .copyright {
   content: "";
   width: 50px;
   height: 1px;
-  background-color: #0e0d0d;
+  background-color: #0f0f0f;
   position: absolute;
   top: 4px;
   right: -60px;
 }
 
 #blog .blog-details a:hover {
-  color: #0b948b;
+  color: #10a198;
 }
 
 #blog .blog-details a:hover::after {
-  background-color: #0f9c93;
+  background-color: #11aca1;
 }
 
 #blog .blog-box h1 {
