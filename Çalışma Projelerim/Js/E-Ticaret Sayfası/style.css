@@ -608,8 +608,8 @@ footer .copyright {
 #blog .blog-details a::after {
   content: "";
   width: 50px;
-  height: 1px;
-  background-color: #0f0f0f;
+  height: 1.5px;
+  background-color: #0e0d0d;
   position: absolute;
   top: 4px;
   right: -60px;
