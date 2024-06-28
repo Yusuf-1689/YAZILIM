@@ -599,7 +599,7 @@ footer .copyright {
 #blog .blog-details a {
   text-decoration: none;
   font-size: 16px;
-  color: #000;
+  color: #111111;
   font-weight: 700;
   position: relative;
   transition: 0.3s;
@@ -609,7 +609,7 @@ footer .copyright {
   content: "";
   width: 50px;
   height: 1.5px;
-  background-color: #0e0d0d;
+  background-color: #131212;
   position: absolute;
   top: 4px;
   right: -60px;
