@@ -482,7 +482,7 @@ footer .copyright {
 }
 #page-header h2,
 #page-header p {
-  color: #fff;
+  color: #f7f1f1;
 }
 
 #pagination {
@@ -491,10 +491,10 @@ footer .copyright {
 }
 #pagination a {
   text-decoration: none;
-  background-color: #099c92;
+  background-color: #07ada2;
   padding: 15px 20px;
   border-radius: 5px;
-  color: #ebdcdc;
+  color: #e4d9d9;
   font-weight: 600;
 }
 
