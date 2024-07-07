@@ -461,7 +461,7 @@ s footer .install img {
 
 footer .follow i:hover,
 footer a:hover {
-  color: #088178;
+  color: #0a8d84;
 }
 
 footer .copyright {
@@ -478,7 +478,7 @@ footer .copyright {
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  padding: 14px;
+  padding: 15px;
 }
 #page-header h2,
 #page-header p {
