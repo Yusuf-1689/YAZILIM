@@ -377,11 +377,11 @@ button.white {
 #newsletter p {
   font-size: 14px;
   font-weight: 600;
-  color: #7e92af;
+  color: #778eaf;
 }
 
 #newsletter p span {
-  color: #e2a81f;
+  color: #e4a719;
 }
 
 #newsletter .form {
@@ -395,7 +395,7 @@ button.white {
   font-size: 15px;
   width: 100%;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 5px;
   outline: none;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
