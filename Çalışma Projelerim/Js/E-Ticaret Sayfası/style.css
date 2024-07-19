@@ -256,11 +256,11 @@ button.normal {
 button.white {
   font-style: 15px;
   font-weight: 600;
-  padding: 12px 20px;
-  color: #f5ecec;
+  padding: 15px 20px;
+  color: #e9dede;
   background-color: transparent;
   cursor: pointer;
-  border: 1px solid #f5eeee;
+  border: 1px solid #e9e1e1;
   outline: none;
   transition: 0.3s;
 }
