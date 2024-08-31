@@ -865,15 +865,15 @@ footer .copyright {
 
 #coupon button,
 #subtotal button {
-  background-color: #0f9c93;
-  color: #e2d5d5;
+  background-color: #14aaa0;
+  color: #d4c9c9;
   padding: 15px 20px;
 }
 
 #subtotal {
   width: 50%;
   margin-bottom: 30px;
-  border: 1px solid #dde6da;
+  border: 1px solid #d4e0d0;
   padding: 30px;
 }
 
