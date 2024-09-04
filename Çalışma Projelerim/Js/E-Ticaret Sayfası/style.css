@@ -707,13 +707,13 @@ footer .copyright {
 }
 
 #contact-details .details li i {
-  font-size: 15px;
+  font-size: 14px;
   padding-right: 20px;
 }
 
 #contact-details .details li p {
   margin: 0;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 #contact-details .map {
@@ -746,7 +746,7 @@ footer .copyright {
   padding: 15px 15px;
   outline: none;
   margin-bottom: 20px;
-  border: 1px solid #e6e0e0;
+  border: 1px solid #f8f1f1;
 }
 
 #form-details form button {
