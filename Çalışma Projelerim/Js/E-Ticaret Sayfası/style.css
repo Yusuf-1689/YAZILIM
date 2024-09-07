@@ -625,7 +625,7 @@ footer .copyright {
 
 #blog .blog-box h1 {
   position: absolute;
-  top: -40px;
+  top: -42px;
   left: 0;
   font-size: 60px;
   font-weight: 700;
@@ -644,7 +644,7 @@ footer .copyright {
 }
 
 #about-head h2 {
-  font-size: 35px;
+  font-size: 34px;
 }
 
 #about-head img {
