@@ -609,7 +609,7 @@ footer .copyright {
   content: "";
   width: 50px;
   height: 1.5px;
-  background-color: #131212;
+  background-color: #0e0d0d;
   position: absolute;
   top: 5px;
   right: -60px;
@@ -629,7 +629,7 @@ footer .copyright {
   left: 0;
   font-size: 60px;
   font-weight: 700;
-  color: #c8cfd8;
+  color: #d6dde6;
   z-index: -9;
 }
 
