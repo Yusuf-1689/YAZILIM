@@ -438,7 +438,7 @@ footer p {
 footer a {
   font-style: 15px;
   text-decoration: none;
-  color: #111010;
+  color: #141414;
   margin-bottom: 10px;
 }
 
@@ -452,7 +452,7 @@ footer .follow i {
 }
 
 footer .install .row img {
-  border: 1px solid #0c9990;
+  border: 1px solid #089b91;
   border-radius: 5px;
 }
 s footer .install img {
