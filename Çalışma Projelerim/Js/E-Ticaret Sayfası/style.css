@@ -244,11 +244,11 @@ button.normal {
   font-style: 15px;
   font-weight: 600;
   padding: 15px 30px;
-  color: #0f0f0f;
-  background-color: #dfd3d3;
+  color: #141414;
+  background-color: #e0cdcd;
   border-radius: 5px;
   cursor: pointer;
-  border: none;
+  border: none;e
   outline: none;
   transition: 0.2s;
 }
@@ -294,7 +294,7 @@ button.white {
 }
 
 #sm-banner h4 {
-  color: #e7d1d1;
+  color: #e9d8d8;
   font-size: 20px;
   font-weight: 300;
 }
