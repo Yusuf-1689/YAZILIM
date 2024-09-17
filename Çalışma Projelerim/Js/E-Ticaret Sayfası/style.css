@@ -228,16 +228,16 @@
 }
 
 #banner h4 {
-  color: #e4d8d8;
+  color: #ddc6c6;
   font-size: 15px;
 }
 #banner h2 {
-  color: #eedfdf;
+  color: #e2d3d3;
   font-size: 30px;
   padding: 10px 0;
 }
 #banner h2 span {
-  color: #e21818;
+  color: #dd1111;
 }
 
 button.normal {
