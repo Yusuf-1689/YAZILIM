@@ -205,10 +205,10 @@
   height: 40px;
   line-height: 40px;
   border-radius: 50px;
-  background-color: #e8f6ea;
+  background-color: #daecdd;
   font-weight: 500;
-  color: #058077;
-  border: 1px solid #c2e2c7;
+  color: #098179;
+  border: 1px solid #b9dfbe;
   position: absolute;
   bottom: 20px;
   right: 10px;
@@ -229,7 +229,7 @@
 
 #banner h4 {
   color: #e6d3d3;
-  font-size: 15px;
+  font-size: 14px;
 }
 #banner h2 {
   color: #e2d3d3;
