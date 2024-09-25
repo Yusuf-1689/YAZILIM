@@ -157,8 +157,8 @@
   border: 1px solid #d2e9d6;
   border-radius: 25px;
   cursor: pointer;
-  box-shadow: 20px 20px 330px rgba(0, 0, 0, 0.02);
-  margin: 15px 0;
+  box-shadow: 20px 20px 330px rgba(8, 8, 8, 0.02);
+  margin: 14px 0;
   transition: 0.3s ease;
   position: relative;
 }
