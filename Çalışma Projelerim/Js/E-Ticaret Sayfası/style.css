@@ -158,8 +158,8 @@
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 20px 20px 330px rgba(8, 8, 8, 0.02);
-  margin: 14px 0;
-  transition: 0.3s ease;
+  margin: 15px 0;
+  transition: 0.4s ease;
   position: relative;
 }
 
