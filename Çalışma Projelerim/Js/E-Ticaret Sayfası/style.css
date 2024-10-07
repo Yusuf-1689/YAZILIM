@@ -111,12 +111,12 @@
 
 #feature .fe-box img {
   width: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 #feature .fe-box h6 {
   display: inline-block;
-  padding: 10px 8px 6px 8px;
+  padding: 10px 9px 5px 7px;
   line-height: 1;
   border-radius: 5px;
   color: #0f9188;
