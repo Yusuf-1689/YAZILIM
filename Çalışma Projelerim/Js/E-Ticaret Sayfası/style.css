@@ -836,7 +836,7 @@ footer .copyright {
 }
 
 #cart table tbody td {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 #cart-add {
@@ -860,7 +860,7 @@ footer .copyright {
   outline: none;
   width: 60%;
   margin-right: 10px;
-  border: 1px solid #cde6c9;
+  border: 1px solid #c7e4c2;
 }
 
 #coupon button,
