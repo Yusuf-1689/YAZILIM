@@ -828,11 +828,11 @@ footer .copyright {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 15px;
-  padding: 16px 0;
+  padding: 15px 0;
 }
 
 #cart table tbody tr td {
-  padding-top: 15px;
+  padding-top: 16px;
 }
 
 #cart table tbody td {
