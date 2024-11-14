@@ -653,7 +653,7 @@ footer .copyright {
 }
 
 #about-head div {
-  padding-left: 40px;
+  padding-left: 42px;
 }
 
 #about-app {
@@ -673,7 +673,7 @@ footer .copyright {
 #about-app .video video {
   width: 100%;
   height: 100%;
-  border-radius: 16px;
+  border-radius: 15px;
 }
 
 #contact-details {
