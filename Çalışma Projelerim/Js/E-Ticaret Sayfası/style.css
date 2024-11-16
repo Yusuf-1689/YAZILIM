@@ -625,11 +625,11 @@ footer .copyright {
 
 #blog .blog-box h1 {
   position: absolute;
-  top: -42px;
+  top: -40px;
   left: 0;
   font-size: 60px;
   font-weight: 700;
-  color: #d6dde6;
+  color: #e5ebf1;
   z-index: -9;
 }
 
