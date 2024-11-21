@@ -505,7 +505,7 @@ footer .copyright {
 
 #prodetails {
   display: flex;
-  margin-top: 19px;
+  margin-top: 20px;
 }
 
 #prodetails .single-pro-image {
@@ -518,7 +518,7 @@ footer .copyright {
 }
 
 .small-img-col {
-  flex-basis: 24%;
+  flex-basis: 25%;
   cursor: pointer;
 }
 .small-img-col {
