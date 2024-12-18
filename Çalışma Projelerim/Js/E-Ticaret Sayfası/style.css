@@ -402,8 +402,8 @@ button.white {
 }
 
 #newsletter button {
-  background-color: #0aa197;
-  color: #e7d8d8;
+  background-color: #10b1a6;
+  color: #d8caca;
   white-space: nowrap;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -438,7 +438,7 @@ footer p {
 footer a {
   font-style: 15px;
   text-decoration: none;
-  color: #0c0b0b;
+  color: #131010;
   margin-bottom: 10px;
 }
 
