@@ -313,8 +313,8 @@ button.white {
 }
 
 #sm-banner .banner-box:hover button {
-  background: #10a198;
-  border: 1px solid #0e948b;
+  background: #11b4a9;
+  border: 1px solid #0ea399;
 }
 
 #banner3 {
@@ -346,7 +346,7 @@ button.white {
 }
 
 #banner3 h2 {
-  color: #e9dada;
+  color: #e6cfcf;
   font-weight: 900;
   font-size: 20px;
 }
