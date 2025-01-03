@@ -257,10 +257,10 @@ button.white {
   font-style: 15px;
   font-weight: 600;
   padding: 15px 20px;
-  color: #e9dede;
+  color: #e7d5d5;
   background-color: transparent;
   cursor: pointer;
-  border: 1px solid #e9e1e1;
+  border: 1px solid #f0e1e1;
   outline: none;
   transition: 0.3s;
 }
