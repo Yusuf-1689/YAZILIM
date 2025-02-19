@@ -32,7 +32,7 @@
 
 #navbar li a:hover,
 #navbar li a.active {
-  color: #088178;
+  color: #0a8d84;
 }
 
 #navbar li a.active::after,
